@@ -1,10 +1,33 @@
 // Layout.jsx
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
-import { memo } from 'react';
+import { memo, useState, useEffect } from 'react';
 import Footer from './Footer';
 
 const Layout = memo(function Layout() {
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+
+  useEffect(() => {
+    const updateCursorPosition = (e) => {
+      setCursorPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', updateCursorPosition);
+    return () => window.removeEventListener('mousemove', updateCursorPosition);
+  }, []);
+
+  useEffect(() => {
+    const handleHoverState = () => {
+      const hoveredElement = document.elementFromPoint(cursorPosition.x, cursorPosition.y);
+      const isClickable = hoveredElement?.matches('a, button, [role="button"], input, select, textarea') ||
+                         hoveredElement?.closest('a, button, [role="button"], input, select, textarea');
+      setIsHovering(!!isClickable);
+    };
+
+    handleHoverState();
+  }, [cursorPosition]);
+
   return (
     <div 
       className="relative w-screen h-screen overflow-hidden"
@@ -13,12 +36,26 @@ const Layout = memo(function Layout() {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        // Keeps the background from moving while scrolling the content
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
+        cursor: 'none' // Hide the default cursor
       }}
     >
+      <div
+        className="fixed w-10 h-10 pointer-events-none z-[100]"
+        style={{
+          left: cursorPosition.x - 16,
+          top: cursorPosition.y - 16,
+          backgroundImage: `url('${isHovering ? '../../public/SelectCursor.png' : '../../public/RegularCursor.png'}')`,
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          transform: 'translate(0, 0)',
+          transition: 'background-image 0.1s ease-in-out',
+          cursor: 'none'
+        }}
+      />
+
       {/* Sticky/Fixed Navbar at top (optional) */}
-      <div className="w-full sticky top-100 flex justify-end z-50">
+      <div className="w-full sticky top-100 flex justify-start z-50 lg:justify-end">
         <Navbar />
       </div>
 

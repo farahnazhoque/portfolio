@@ -439,46 +439,46 @@
   dependencies:
     "@swc/counter" "^0.1.3"
 
-"@tailwindcss/node@4.0.7":
-  "integrity" "sha512-dkFXufkbRB2mu3FPsW5xLAUWJyexpJA+/VtQj18k3SUiJVLdpgzBd1v1gRRcIpEJj7K5KpxBKfOXlZxT3ZZRuA=="
-  "resolved" "https://registry.npmjs.org/@tailwindcss/node/-/node-4.0.7.tgz"
-  "version" "4.0.7"
+"@tailwindcss/node@4.0.8":
+  "integrity" "sha512-FKArQpbrbwv08TNT0k7ejYXpF+R8knZFAatNc0acOxbgeqLzwb86r+P3LGOjIeI3Idqe9CVkZrh4GlsJLJKkkw=="
+  "resolved" "https://registry.npmjs.org/@tailwindcss/node/-/node-4.0.8.tgz"
+  "version" "4.0.8"
   dependencies:
     "enhanced-resolve" "^5.18.1"
     "jiti" "^2.4.2"
-    "tailwindcss" "4.0.7"
+    "tailwindcss" "4.0.8"
 
-"@tailwindcss/oxide-darwin-arm64@4.0.7":
-  "integrity" "sha512-7yGZtEc5IgVYylqK/2B0yVqoofk4UAbkn1ygNpIJZyrOhbymsfr8uUFCueTu2fUxmAYIfMZ8waWo2dLg/NgLgg=="
-  "resolved" "https://registry.npmjs.org/@tailwindcss/oxide-darwin-arm64/-/oxide-darwin-arm64-4.0.7.tgz"
-  "version" "4.0.7"
+"@tailwindcss/oxide-darwin-arm64@4.0.8":
+  "integrity" "sha512-Lv9Isi2EwkCTG1sRHNDi0uRNN1UGFdEThUAGFrydRmQZnraGLMjN8gahzg2FFnOizDl7LB2TykLUuiw833DSNg=="
+  "resolved" "https://registry.npmjs.org/@tailwindcss/oxide-darwin-arm64/-/oxide-darwin-arm64-4.0.8.tgz"
+  "version" "4.0.8"
 
-"@tailwindcss/oxide@4.0.7":
-  "integrity" "sha512-yr6w5YMgjy+B+zkJiJtIYGXW+HNYOPfRPtSs+aqLnKwdEzNrGv4ZuJh9hYJ3mcA+HMq/K1rtFV+KsEr65S558g=="
-  "resolved" "https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.0.7.tgz"
-  "version" "4.0.7"
+"@tailwindcss/oxide@4.0.8":
+  "integrity" "sha512-KfMcuAu/Iw+DcV1e8twrFyr2yN8/ZDC/odIGta4wuuJOGkrkHZbvJvRNIbQNhGh7erZTYV6Ie0IeD6WC9Y8Hcw=="
+  "resolved" "https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.0.8.tgz"
+  "version" "4.0.8"
   optionalDependencies:
-    "@tailwindcss/oxide-android-arm64" "4.0.7"
-    "@tailwindcss/oxide-darwin-arm64" "4.0.7"
-    "@tailwindcss/oxide-darwin-x64" "4.0.7"
-    "@tailwindcss/oxide-freebsd-x64" "4.0.7"
-    "@tailwindcss/oxide-linux-arm-gnueabihf" "4.0.7"
-    "@tailwindcss/oxide-linux-arm64-gnu" "4.0.7"
-    "@tailwindcss/oxide-linux-arm64-musl" "4.0.7"
-    "@tailwindcss/oxide-linux-x64-gnu" "4.0.7"
-    "@tailwindcss/oxide-linux-x64-musl" "4.0.7"
-    "@tailwindcss/oxide-win32-arm64-msvc" "4.0.7"
-    "@tailwindcss/oxide-win32-x64-msvc" "4.0.7"
+    "@tailwindcss/oxide-android-arm64" "4.0.8"
+    "@tailwindcss/oxide-darwin-arm64" "4.0.8"
+    "@tailwindcss/oxide-darwin-x64" "4.0.8"
+    "@tailwindcss/oxide-freebsd-x64" "4.0.8"
+    "@tailwindcss/oxide-linux-arm-gnueabihf" "4.0.8"
+    "@tailwindcss/oxide-linux-arm64-gnu" "4.0.8"
+    "@tailwindcss/oxide-linux-arm64-musl" "4.0.8"
+    "@tailwindcss/oxide-linux-x64-gnu" "4.0.8"
+    "@tailwindcss/oxide-linux-x64-musl" "4.0.8"
+    "@tailwindcss/oxide-win32-arm64-msvc" "4.0.8"
+    "@tailwindcss/oxide-win32-x64-msvc" "4.0.8"
 
-"@tailwindcss/vite@^4.0.7":
-  "integrity" "sha512-GYx5sxArfIMtdZCsxfya3S/efMmf4RvfqdiLUozkhmSFBNUFnYVodatpoO/en4/BsOIGvq/RB6HwcTLn9prFnQ=="
-  "resolved" "https://registry.npmjs.org/@tailwindcss/vite/-/vite-4.0.7.tgz"
-  "version" "4.0.7"
+"@tailwindcss/vite@^4.0.8":
+  "integrity" "sha512-+SAq44yLzYlzyrb7QTcFCdU8Xa7FOA0jp+Xby7fPMUie+MY9HhJysM7Vp+vL8qIp8ceQJfLD+FjgJuJ4lL6nyg=="
+  "resolved" "https://registry.npmjs.org/@tailwindcss/vite/-/vite-4.0.8.tgz"
+  "version" "4.0.8"
   dependencies:
-    "@tailwindcss/node" "4.0.7"
-    "@tailwindcss/oxide" "4.0.7"
+    "@tailwindcss/node" "4.0.8"
+    "@tailwindcss/oxide" "4.0.8"
     "lightningcss" "^1.29.1"
-    "tailwindcss" "4.0.7"
+    "tailwindcss" "4.0.8"
 
 "@tanstack/react-virtual@^3.8.1":
   "integrity" "sha512-CchF0NlLIowiM2GxtsoKBkXA4uqSnY2KvnXo+kyUFD4a4ll6+J0qzoRsUPMwXV/H26lRsxgJIr/YmjYum2oEjg=="
@@ -2246,10 +2246,10 @@
   "resolved" "https://registry.npmjs.org/tabbable/-/tabbable-6.2.0.tgz"
   "version" "6.2.0"
 
-"tailwindcss@^4.0.7", "tailwindcss@4.0.7":
-  "integrity" "sha512-yH5bPPyapavo7L+547h3c4jcBXcrKwybQRjwdEIVAd9iXRvy/3T1CC6XSQEgZtRySjKfqvo3Cc0ZF1DTheuIdA=="
-  "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.0.7.tgz"
-  "version" "4.0.7"
+"tailwindcss@^4.0.8", "tailwindcss@4.0.8":
+  "integrity" "sha512-Me7N5CKR+D2A1xdWA5t5+kjjT7bwnxZOE6/yDI/ixJdJokszsn2n++mdU5yJwrsTpqFX2B9ZNMBJDwcqk9C9lw=="
+  "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.0.8.tgz"
+  "version" "4.0.8"
 
 "tapable@^2.2.0":
   "integrity" "sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ=="

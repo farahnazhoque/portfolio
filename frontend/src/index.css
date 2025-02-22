@@ -1,2 +1,8 @@
 @import "tailwindcss";
 
+  
+
+/* Remove default cursor from all elements */
+* {
+  cursor: none !important;
+}

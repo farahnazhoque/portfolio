@@ -20,7 +20,7 @@ function IntroPage() {
   }
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center bg-blue-950">
+    <div className="h-screen w-screen flex fixed items-center justify-center bg-blue-950">
       <div className="text-white font-mono text-4xl animate-bounce">
         Welcome to My Portfolio
       </div>
@@ -34,6 +34,7 @@ export default function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<IntroPage />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/where" element={<div>This page is located at frontend/src/pages/App.jsx</div>} />
       </Route>
     </Routes>
   );
