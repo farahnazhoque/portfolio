@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../style/App.css';
-
+import { Link } from 'react-router-dom';
 function Home() {
   const [isMinimized, setIsMinimized] = useState(false);
   const [activeSection, setActiveSection] = useState('space-landing');
@@ -44,9 +44,12 @@ function Home() {
             <button className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200">
               □
             </button>
-            <button className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200">
+            <Link
+              to="/layout"
+              className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
+            >
               ✖
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -89,7 +92,7 @@ function Home() {
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
             onClick={() => setIsSidebarExpanded(!isSidebarExpanded)}
           >
-            {isSidebarExpanded ? '⭐ Hide Sections' : '⭐ Show Sections'}
+            {isSidebarExpanded ? '⭐ Hide Favorites' : '⭐ Show Favorites'}
           </button>
         </div>
 
@@ -131,36 +134,24 @@ function Home() {
             {/* Sidebar content */}
             <div className={`${isSidebarExpanded ? 'opacity-100' : 'opacity-0 lg:opacity-100'} transition-opacity duration-300`}>
               <div className="p-4">
-                <div className="font-mono text-sm mb-4 font-bold rounded-lg text-[#000080]">✨ Sections ✨</div>
+                <div className="font-mono text-sm mb-4 font-bold rounded-lg text-[#000080]">✨ Favorites ✨</div>
                 <div className="space-y-2">
                   <div 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'mission' ? 'bg-[#4169E1] text-white' : ''}`}
                     onClick={() => handleSectionClick('mission')}
                   >
-                    <img
-                      src="../../public/FolderIcon.png"
-                      alt="Folder"
-                      className="w-5 h-5 mr-3"
-                    />
+                   
                     <span className="font-mono text-sm">🎯 Mission</span>
                   </div>
                   <div 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'experiences' ? 'bg-[#4169E1] text-white' : ''}`}
                     onClick={() => handleSectionClick('experiences')}
                   >
-                    <img
-                      src="../../public/FolderIcon.png"
-                      alt="Folder"
-                      className="w-5 h-5 mr-3"
-                    />
+                    
                     <span className="font-mono text-sm">💼 Experiences</span>
                   </div>
                   <div className="flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200">
-                    <img
-                      src="../../public/FolderIcon.png"
-                      alt="Folder"
-                      className="w-5 h-5 mr-3"
-                    />
+                    
                     <span className="font-mono text-sm">🛠️ Tech Stacks</span>
                   </div>
                 </div>
@@ -169,7 +160,7 @@ function Home() {
           </div>
 
           {/* Main Content */}
-          <div className="bg-white flex-1 ie-load overflow-y-auto custom-scrollbar" style={{
+          <div className="bg-white flex-1 ie-load overflow-y-auto custom-scrollbar pb-8" style={{
             scrollbarWidth: 'auto',
             scrollbarColor: '#c0c0c0 #f0f0f0',
             height: '100%'
@@ -179,10 +170,10 @@ function Home() {
                     <h1 key={flickerKey} className="text-3xl"></h1>
               </div>
             )}
-            <div className="p-8">
+            <div className="p-8 "style={{backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../public/Mission.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
               {activeSection === 'mission' && (
                 <>
-                  <h1 key={flickerKey} className="text-3xl text-indigo-900 font-bold font-mono mb-6 flicker">✨ My Mission ✨</h1>
+                  <h1 key={flickerKey} className="text-3xl text-indigo-900 font-bold font-mono mb-6 flicker" >✨ My Mission ✨</h1>
                   <div className="mb-8">
                     <img 
                       src="../../public/Farahnaz.webp" 

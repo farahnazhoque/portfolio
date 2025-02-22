@@ -1,41 +1,36 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Home from './Home';
 import Layout from './Layout';
-
-function IntroPage() {
-  const [redirect, setRedirect] = useState(false);
-
-  useEffect(() => {
-    // After 3 seconds, set redirect to true
-    const timer = setTimeout(() => {
-      setRedirect(true);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (redirect) {
-    return <Navigate to="/home" />;
-  }
-
-  return (
-    <div className="h-screen w-screen flex fixed items-center justify-center bg-blue-950">
-      <div className="text-white font-mono text-4xl animate-bounce">
-        Welcome to My Portfolio
-      </div>
-    </div>
-  );
-}
+import Loading from './Loading';
 
 export default function App() {
+  const [homeLoaded, setHomeLoaded] = useState(false);
+
   return (
     <Routes>
+      {/* Show Loading first, allowing Home to load in the background */}
+      <Route path="/loading" element={<Loading setHomeLoaded={setHomeLoaded} />} />
+
+      {/* Layout wraps all main pages */}
       <Route element={<Layout />}>
-        <Route path="/" element={<IntroPage />} />
-        <Route path="/home" element={<Home />} />
+        {/* Only show Home when loaded, otherwise redirect to loading */}
+        <Route 
+          path="/home" 
+          element={homeLoaded ? <Home /> : <Navigate to="/loading" replace />} 
+        />
+        <Route path="/experiences" element={<div>Experiences Page</div>} />
+        <Route path="/projects" element={<div>Projects Page</div>} />
+        <Route path="/about" element={<div>About Page</div>} />
         <Route path="/where" element={<div>This page is located at frontend/src/pages/App.jsx</div>} />
+        <Route path="/layout" element={<Layout />} />
       </Route>
+
+      {/* Default redirect to loading screen if not loaded, otherwise go to home */}
+      <Route 
+        path="*" 
+        element={<Navigate to={homeLoaded ? "/home" : "/loading"} replace />} 
+      />
     </Routes>
   );
 }
