@@ -11,7 +11,8 @@ function Footer() {
   const [currentTool, setCurrentTool] = useState('pencil');
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
-  const [showPinterest, setShowPinterest] = useState(false);
+  const [showShutdownWarning, setShowShutdownWarning] = useState(false);
+
   useEffect(() => {
     if (showPaint) {
       const canvas = canvasRef.current;
@@ -107,14 +108,8 @@ function Footer() {
               <Menu.Item>
                 {({ active }) => (
                   <button
-                    onClick={() => {
-                      if (window.opener) {
-                        window.close();
-                      } else {
-                        alert("Your browser prevents this page from closing automatically. Please close it manually.");
-                      }
-                    }}
-                    className={`block w-full text-left px-4 py-2 font-mono ${active ? 'bg-[#000080] text-white' : ''}`}
+                    onClick={() => setShowShutdownWarning(true)}
+                    className={`block w-full text-left px-4 py-2 font-mono ${active ? "bg-[#000080] text-white" : ""}`}
                   >
                     <span className="mr-2">🚪</span>Shut Down...
                   </button>
@@ -227,6 +222,32 @@ function Footer() {
               className="rounded-sm"
               style={{ cursor: 'none', pointerEvents: 'auto' }}
             ></iframe>
+          </div>
+        )}
+        {showShutdownWarning && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="w-96 border border-gray-900 bg-gray-200 shadow-md">
+              <div className="bg-[#000080] text-white px-2 py-1 flex justify-between items-center font-bold text-sm">
+                <span>Who have you told</span>
+                <button onClick={() => setShowShutdownWarning(false)} className="text-white hover:bg-gray-500 px-1">
+                  ✕
+                </button>
+              </div>
+              <div className="p-4 text-black font-mono text-sm">
+                <div className="flex items-start">
+                  <span className="text-xl mr-3">⚠️</span>
+                  <p>Your browser prevents this page from closing automatically. Please close it manually.</p>
+                </div>
+                <div className="mt-4 flex justify-center">
+                  <button
+                    onClick={() => setShowShutdownWarning(false)}
+                    className="border border-black px-4 py-1 bg-gray-300 hover:bg-gray-400 active:bg-gray-500 shadow-md"
+                  >
+                    OK!
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         )}
 

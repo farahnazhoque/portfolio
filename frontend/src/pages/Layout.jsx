@@ -55,7 +55,7 @@ const Layout = memo(function Layout() {
       />
 
       {/* Sticky/Fixed Navbar at top (optional) */}
-      <div className="w-full sticky top-100 flex justify-start z-50 lg:justify-end">
+      <div className="w-full sticky top-100 flex justify-start lg:z-0 z-50 lg:justify-end">
         <Navbar />
       </div>
 
