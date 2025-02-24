@@ -17,7 +17,7 @@ function Home() {
   const [showProgramModal, setShowProgramModal] = useState(false);
   const [showMLModal, setShowMLModal] = useState(false);
   const [showLAModal, setShowLAModal] = useState(false);
-  
+  const [showYouTubeModal, setShowYouTubeModal] = useState(false);
 
   const handleSectionClick = (newSection) => {
     setActiveSection(newSection);
@@ -158,6 +158,20 @@ function Home() {
                   </div>
                   <div className="flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200">
                     <span className="font-PerfectDOSVGA437 text-sm">🛠️ Tech Stacks</span>
+                  </div>
+                  <a 
+                    className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'pinterest' ? 'bg-[#4169E1] text-white' : ''}`}
+                    href="https://pin.it/427HWOdjJ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="font-PerfectDOSVGA437 text-sm">📌 Pinterest</span>
+                  </a>
+                  <div 
+                    className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'youtube' ? 'bg-[#4169E1] text-white' : ''}`}
+                    onClick={() =>  handleSectionClick('youtube')}
+                  >
+                    <span className="font-PerfectDOSVGA437 text-sm">🎥 YouTube</span>
                   </div>
                 </div>
               </div>
@@ -616,6 +630,34 @@ function Home() {
                     </div>
                   </Modal>
                   )}
+
+                </div>
+              )}
+              {activeSection === 'youtube' && (
+                <div className="p-6" style={{backgroundImage: "url('../../public/Youtube.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-6 bg-red-700 p-3 rounded-lg">
+                    <div className="flex items-center">
+                      <img src="../../public/YoutubeLogo.png" alt="Retro YouTube" className="w-12 h-12 mr-2" />
+                      <h1 className="text-white font-PerfectDOSVGA437 text-xl">Farahnaz's Current Favorite Videos</h1>
+                    </div>
+                  </div>
+
+                  {/* Embedded YouTube */}
+                  <div className="w-full aspect-[16/9] bg-black">
+                    <iframe
+                      width="100%"
+                      height="100%" 
+                      src="https://www.youtube.com/watch?v=zAQYtolfB4g&list=PL32z1p066aKhld-hXx6-T279zvA9sw1sD&pp=gAQB"
+                      title="YouTube Channel"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
+                  </div>
+
+                  
 
                 </div>
               )}
