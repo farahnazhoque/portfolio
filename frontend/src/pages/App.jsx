@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Home from './Home';
 import Layout from './Layout';
 import Loading from './Loading';
+import Experiences from './Experiences';
 
 export default function App() {
   const [homeLoaded, setHomeLoaded] = useState(false);
@@ -19,7 +20,7 @@ export default function App() {
           path="/home" 
           element={homeLoaded ? <Home /> : <Navigate to="/loading" replace />} 
         />
-        <Route path="/experiences" element={<div>Experiences Page</div>} />
+        <Route path="/experiences" element={<Experiences />} />
         <Route path="/projects" element={<div>Projects Page</div>} />
         <Route path="/about" element={<div>About Page</div>} />
         <Route path="/where" element={<div>This page is located at frontend/src/pages/App.jsx</div>} />
