@@ -54,15 +54,15 @@ const Layout = memo(function Layout() {
         }}
       />
 
-      {/* Sticky/Fixed Navbar at top (optional) */}
-      <div className="w-full sticky top-100 flex justify-start lg:z-0 z-50 lg:justify-end">
-        <Navbar />
-      </div>
-
       {/* Main content has bottom padding to avoid overlap with fixed footer */}
       <main className="pb-20">
         <Outlet /> {/* Renders Home or other pages */}
       </main>
+
+      {/* Fixed Navbar at bottom right */}
+      <div className="fixed bottom-20 right-0 z-50">
+        <Navbar />
+      </div>
 
       {/* Fixed Footer at the bottom */}
       <div className="w-full fixed bottom-0 left-0 right-0 z-50">

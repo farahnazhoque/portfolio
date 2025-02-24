@@ -1,4 +1,10 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500;700&display=swap');
+
+/* Apply Kodchasan to all elements by default */
+body {
+  font-family: 'Kodchasan', sans-serif;
+}
 
 @keyframes ie-load {
   0% { clip-path: inset(100% 0 0 0); opacity: 0; }
@@ -51,4 +57,20 @@
 /* Remove default cursor from all elements */
 * {
   cursor: none !important;
+}
+
+/* Then you can use it in your Tailwind classes like this:
+   font-[Kodchasan] or directly in CSS */
+
+@font-face {
+  font-family: 'Perfect DOS VGA 437';
+  src: url('../fonts/PerfectDOSVGA437.ttf') format('truetype'),
+       url('../fonts/PerfectDOSVGA437Win.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.font-PerfectDOSVGA437 {
+  font-family: 'Perfect DOS VGA 437', sans-serif;
 }

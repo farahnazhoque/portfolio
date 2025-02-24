@@ -17,6 +17,7 @@ function Home() {
   const [showProgramModal, setShowProgramModal] = useState(false);
   const [showMLModal, setShowMLModal] = useState(false);
   const [showLAModal, setShowLAModal] = useState(false);
+  
 
   const handleSectionClick = (newSection) => {
     setActiveSection(newSection);
@@ -53,7 +54,7 @@ function Home() {
               alt="IE Icon"
               className="w-5 h-5 mr-2 animate-pulse"
             />
-            <span className="text-white font-mono text-lg">Welcome - Home</span>
+            <span className="text-white font-PerfectDOSVGA437 text-lg">Welcome - Home</span>
           </div>
           <div className="flex gap-2">
             <button
@@ -75,7 +76,7 @@ function Home() {
         </div>
 
         {/* Window Menu Bar */}
-        <div className="bg-[#c0c0c0] border-b-2 border-gray-400 px-4 py-2 font-mono text-sm">
+        <div className="bg-[#c0c0c0] border-b-2 border-gray-400 px-4 py-2 font-PerfectDOSVGA437 text-sm">
           <a 
             href="https://www.linkedin.com/in/farahnazhoque/" 
             target="_blank" 
@@ -118,7 +119,7 @@ function Home() {
 
         {/* URL Bar */}
         <div className="bg-[#c0c0c0] border-b-2 border-gray-400 px-4 py-2 flex items-center">
-          <span className="font-mono text-sm mr-2">Address:</span>
+          <span className="font-PerfectDOSVGA437 text-sm mr-2">Address:</span>
           <div className="flex-1 bg-white border-2 border-gray-600 px-2 py-1">
             <input 
               type="text" 
@@ -130,7 +131,7 @@ function Home() {
                 }
               }}
               placeholder="Type and press Enter to search Google..."
-              className="w-full font-mono text-sm outline-none"
+              className="w-full font-PerfectDOSVGA437 text-sm outline-none"
             />
           </div>
         </div>
@@ -141,22 +142,22 @@ function Home() {
           <div className={`transition-all duration-300 ${isSidebarExpanded ? 'w-64' : 'w-12'} lg:w-64 bg-gradient-to-b from-[#c0c0c0] to-[#d3d3d3] border-r-2 border-gray-400 relative z-10`}>
             <div className={`${isSidebarExpanded ? 'opacity-100' : 'opacity-0 lg:opacity-100'} transition-opacity duration-300`}>
               <div className="p-4">
-                <div className="font-mono text-sm mb-4 font-bold rounded-lg text-[#000080]">✨ Favorites ✨</div>
+                <div className="font-PerfectDOSVGA437 text-sm mb-4 font-bold rounded-lg text-[#000080]">✨ Favorites ✨</div>
                 <div className="space-y-2">
                   <div 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'mission' ? 'bg-[#4169E1] text-white' : ''}`}
                     onClick={() => handleSectionClick('mission')}
                   >
-                    <span className="font-mono text-sm">🎯 Mission</span>
+                  <span className="font-PerfectDOSVGA437 text-sm">🎯 Mission</span>
                   </div>
                   <div 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'experiences' ? 'bg-[#4169E1] text-white' : ''}`}
                     onClick={() => handleSectionClick('experiences')}
                   >
-                    <span className="font-mono text-sm">💼 Experiences</span>
+                    <span className="font-PerfectDOSVGA437 text-sm">💼 Experiences</span>
                   </div>
                   <div className="flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200">
-                    <span className="font-mono text-sm">🛠️ Tech Stacks</span>
+                    <span className="font-PerfectDOSVGA437 text-sm">🛠️ Tech Stacks</span>
                   </div>
                 </div>
               </div>
@@ -181,21 +182,21 @@ function Home() {
               <div 
                 className="relative min-h-screen bg-[#f8f5ef] p-6 md:p-10 text-[#3d3d3d]" 
                 style={{
-                  // If you have a paper/grain texture image, uncomment and adjust:
-                  // backgroundImage: 'url("../../public/paper-texture.png")',
-                  // backgroundSize: 'cover',
-                  // backgroundRepeat: 'repeat',
+                  //If you have a paper/grain texture image, uncomment and adjust:
+                  backgroundImage: 'url("../../public/Mission.jpeg")',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'repeat',
                 }}
               >
                 {/* Top "Window" Bar */}
-                <div className="border-b border-black flex items-center justify-between px-2 py-1 mb-4">
-                  <span className="text-sm font-serif">The Mission</span>
+                <div className="border-b border-white flex items-center justify-between px-2 py-1 mb-4">
+                  <span className="text-sm text-white font-PerfectDOSVGA437">The Mission</span>
                   {/* You can place a small icon or close/minimize buttons on the right if you like */}
                 </div>
 
-                {/* Main content container (like a “window”) */}
+                {/* Main content container (like a "window") */}
                 <div className="border border-black p-4 md:p-8 bg-white/80 shadow-md">
-                  {/* Large image at the top, reminiscent of Poolsuite’s hero */}
+                  {/* Large image at the top, reminiscent of Poolsuite's hero */}
                   <div className="overflow-hidden border-b border-black pb-4 mb-4">
                     <img 
                       src="../../public/Mission.png" 
@@ -219,10 +220,10 @@ function Home() {
                       />
                     </a>
                     <div>
-                      <p className="font-mono text-gray-700 text-base md:text-lg mb-4">
+                      <p className="font-kodchasan text-gray-700 text-base md:text-lg mb-4">
                         I am a <span className="font-bold italic text-indigo-900">Computer Science</span> major specializing in <span className="font-bold italic text-indigo-900">Intelligent Systems</span> with a minor in <span className="font-bold italic text-indigo-900">Health Informatics</span>. I have a deep interest in <span className="font-bold italic text-indigo-900">AI-driven solutions for healthcare, safety, and community impact.</span> My mission is to leverage artificial intelligence, cloud computing, and data-driven insights to build scalable, innovative solutions that address real-world challenges.
                       </p>
-                      <p className="font-mono text-gray-700 text-base md:text-lg">
+                      <p className="font-kodchasan text-gray-700 text-base md:text-lg">
                         With a background in full-stack development, AI applications, and software engineering, <span className="font-bold italic text-indigo-900">I aim to bridge the gap between cutting-edge technology and practical implementation in industries such as:</span>
                       </p>
                     </div>
@@ -230,18 +231,18 @@ function Home() {
 
                   {/* Key Focus Areas */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                    <h2 className="font-mono font-bold text-lg text-indigo-900 col-span-full mb-2">Key Focus Areas:</h2>
+                    <h2 className="font-PerfectDOSVGA437 font-bold text-lg text-indigo-900 col-span-full mb-2">Key Focus Areas:</h2>
                     
                     {/* Healthcare Card */}
                     <div className="group [perspective:1000px] h-32">
                       <div className="relative transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] h-full">
                         {/* Front */}
-                        <div className="p-4 flex items-center justify-center bg-orange-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full">
-                          <h3 className="items-center text-center font-mono font-bold italic text-indigo-900">Healthcare Technology Innovation</h3>
+                        <div className="p-4 flex items-center justify-center bg-blue-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full">
+                          <h3 className="items-center text-center font-PerfectDOSVGA437 font-bold italic text-indigo-900">Healthcare Technology Innovation</h3>
                         </div>
                         {/* Back */}
-                        <div className="p-4 flex items-center justify-center bg-indigo-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full [transform:rotateY(180deg)]">
-                          <p className="text-center items-center font-mono text-gray-700">Developing AI-driven solutions for medical applications</p>
+                        <div className="p-4 flex items-center justify-center bg-green-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full [transform:rotateY(180deg)]">
+                          <p className="text-center items-center font-PerfectDOSVGA437 text-gray-700">Developing AI-driven solutions for medical applications</p>
                         </div>
                       </div>
                     </div>
@@ -249,11 +250,11 @@ function Home() {
                     {/* Intelligent Systems Card */}
                     <div className="group [perspective:1000px] h-32">
                       <div className="relative transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] h-full">
-                      <div className="p-4 flex items-center justify-center bg-orange-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full">
-                      <h3 className="text-center items-center justify-center font-mono font-bold italic text-indigo-900">Intelligent Systems & Automation</h3>
+                      <div className="p-4 flex items-center justify-center bg-blue-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full">
+                      <h3 className="text-center items-center justify-center font-PerfectDOSVGA437 font-bold italic text-indigo-900">Intelligent Systems & Automation</h3>
                         </div>
-                        <div className="p-4 flex items-center justify-center bg-indigo-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full [transform:rotateY(180deg)]">
-                          <p className="text-center items-center font-mono text-gray-700">Building smart systems that adapt and learn</p>
+                        <div className="p-4 flex items-center justify-center bg-green-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full [transform:rotateY(180deg)]">
+                          <p className="text-center items-center font-PerfectDOSVGA437 text-gray-700">Building smart systems that adapt and learn</p>
                         </div>
                       </div>
                     </div>
@@ -261,11 +262,11 @@ function Home() {
                     {/* Product Design Card */}
                     <div className="group [perspective:1000px] h-32">
                       <div className="relative transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] h-full">
-                        <div className="p-4 flex items-center justify-center bg-orange-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full">
-                          <h3 className="text-center items-center justify-center font-mono font-bold italic text-indigo-900">Product Design & Development</h3>
+                        <div className="p-4 flex items-center justify-center bg-blue-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full">
+                          <h3 className="text-center items-center justify-center font-PerfectDOSVGA437 font-bold italic text-indigo-900">Product Design & Development</h3>
                         </div>
-                        <div className="p-4 flex items-center justify-center bg-indigo-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full [transform:rotateY(180deg)]">
-                          <p className="text-center items-center font-mono text-gray-700">Creating intuitive and impactful user experiences</p>
+                        <div className="p-4 flex items-center justify-center bg-green-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full [transform:rotateY(180deg)]">
+                          <p className="text-center items-center font-PerfectDOSVGA437 text-gray-700">Creating intuitive and impactful user experiences</p>
                         </div>
                       </div>
                     </div>
@@ -273,18 +274,18 @@ function Home() {
                     {/* Cloud Solutions Card */}
                     <div className="group [perspective:1000px] h-32">
                       <div className="relative transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] h-full">
-                      <div className="p-4 flex items-center justify-center bg-orange-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full">
-                      <h3 className="text-center items-center justify-center font-mono font-bold italic text-indigo-900">Scalable Cloud Solutions</h3>
+                      <div className="p-4 flex items-center justify-center bg-blue-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full">
+                      <h3 className="text-center items-center justify-center font-PerfectDOSVGA437 font-bold italic text-indigo-900">Scalable Cloud Solutions</h3>
                         </div>
-                        <div className="p-4 flex items-center justify-center bg-indigo-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full [transform:rotateY(180deg)]">
-                          <p className="text-center items-center font-mono text-gray-700">Architecting robust distributed systems</p>
+                        <div className="p-4 flex items-center justify-center bg-green-100 border-2 border-black rounded-lg absolute backface-hidden w-full h-full [transform:rotateY(180deg)]">
+                          <p className="text-center items-center font-PerfectDOSVGA437 text-gray-700">Architecting robust distributed systems</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   {/* Final paragraph */}
-                  <p className="font-mono text-gray-700 text-base md:text-lg">
+                  <p className="font-kodchasan text-gray-700 text-base md:text-lg">
                     Since my days in High School, I have always been passionate about communities and solving large scale problems that affect the lives of many, resulting in me co-founding <span className="font-bold italic text-indigo-900">Iccheghuri</span>, a non-profit organization in Bangladesh.
                   </p>
                 </div>
@@ -295,218 +296,135 @@ function Home() {
 
               {activeSection === "experiences" && (
                 <div className="p-8" style={{
-                  backgroundImage: 'url(../../public/Experience.jpeg)', 
-                  backgroundSize: 'cover', 
-                  backgroundPosition: 'center', 
-                  backgroundRepeat: 'no-repeat'
+                  backgroundImage: 'url(../../public/Experience.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'repeat'
                 }}>
-                  <div className="bg-black border-2 border-purple-400 p-2 max-w-2xl w-full mx-2 rounded-sm shadow-[0_0_30px_rgba(255,0,255,0.3)] mb-10">
-                    <div className="flex justify-center items-center">
-                      <h2 className="text-2xl font-mono font-bold text-center text-purple-400 animate-pulse">PERSONAL DATABASE OF EXPERIENCES</h2>
-                    </div>
+                  <div className="flex justify-center items-center mb-4" >
+                    <img src="../../public/Experiences.gif" alt="saturn" className="justify-center items-center mx-auto"/>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* University ID Card */}
-                    <div className="border-2 border-pink-400 bg-black/80 p-4 rounded-sm">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                          <img src="../../public/jcwen.jpeg" alt="Joe C. Wen School" className="w-12 h-12 mr-3" />
-                          <div className="text-left">
-                            <h2 className="text-xl font-mono font-bold text-pink-400">JOE C. WEN SCHOOL OF POPULATION AND PUBLIC HEALTH</h2>
-                            <p className="font-mono text-sm text-pink-200">DATA SCIENCE RESEARCH ASSISTANT</p>
+                  <div className="border-4 border-dotted border-black p-6 space-y-4 bg-white/30 rounded-lg">
+                    {[
+                      {
+                        title: "JOE C. WEN SCHOOL OF POPULATION AND PUBLIC HEALTH",
+                        role: "DATA SCIENCE RESEARCH ASSISTANT",
+                        image: "../../public/jcwen.jpeg",
+                        period: "JANUARY 2025 - PRESENT",
+                        onClick: () => setShowUniversityModal(true),
+                        href: "https://www.jocwen.uci.edu/",
+                        badges: ["CLOUD COMPUTING", "AI SYSTEMS"],
+                        description: "Website Crawling, Data Collection, Data Analysis & Visualization"
+                      },
+                      {
+                        title: "STUDENT OUTREACH AND RETENTION CENTER",
+                        role: "WEBSITE AND COMMUNICATIONS COORDINATOR",
+                        image: "../../public/soar.jpeg", 
+                        href: "https://www.soar.uci.edu/",
+                        period: "AUGUST 2024 - PRESENT",
+                        onClick: () => setShowSOARModal(true),
+                        badges: ["WEB DEVELOPMENT", "WEB DESIGN", "ACCESSIBILITY"],
+                        description: "Website Design, Newsletter Creation, Engagement Campaigns"
+                      },
+                      {
+                        title: "SOLO",
+                        role: "LEAD SOFTWARE ENGINEER INTERN",
+                        image: "../../public/SOLOLogo.png",
+                        href: "https://www.linkedin.com/in/jenelle-king/",
+                        period: "MARCH 2024 - SEPTEMBER 2024",
+                        onClick: () => setShowSOLOModal(true),
+                        badges: ["MYSQL", "NODEJS", "AWS"],
+                        description: "Full Stack Development, App Design & Deployment"
+                      },
+                      {
+                        title: "STAND UP TO TRASH",
+                        role: "FULL STACK DEVELOPER",
+                        image: "../../public/standup.avif",
+                        href: "https://www.standuptotrash.com/",
+                        period: "MARCH 2024 - SEPTEMBER 2024",
+                        onClick: () => setShowCommitChangeModal(true),
+                        badges: ["REACT", "POSTGRESQL", "AWS"],
+                        description: "Volunteer Management System Development"
+                      },
+                      {
+                        title: "STUDENT OUTREACH AND RETENTION CENTER",
+                        role: "PROGRAM CO-DIRECTOR",
+                        image: "../../public/soar.jpeg",
+                        href: "https://www.soar.uci.edu/",
+                        period: "AUGUST 2022 - JUNE 2024",
+                        onClick: () => setShowProgramModal(true),
+                        badges: ["LEADERSHIP", "EVENT PLANNING", "ADVOCACY"],
+                        description: "Community Programs & Volunteer Management"
+                      },
+                      {
+                        title: "DONALD BREN SCHOOL OF ICS",
+                        role: "MACHINE LEARNING RESEARCH ASSISTANT",
+                        image: "../../public/dbh.jpeg",
+                        href: "https://www.ics.uci.edu/",
+                        period: "JANUARY 2023 - MARCH 2024",
+                        onClick: () => setShowMLModal(true),
+                        badges: ["PYTORCH", "TENSORFLOW", "ROS2"],
+                        description: "ML Research & Robotics Development"
+                      },
+                      {
+                        title: "DONALD BREN SCHOOL OF ICS",
+                        role: "LEARNING ASSISTANT",
+                        image: "../../public/dbh.jpeg",
+                        period: "JANUARY 2023 - MARCH 2024",
+                        onClick: () => setShowLAModal(true),
+                        badges: ["DISCRETE MATHEMATICS", "COURSE PLANNING", "TUTORING"],
+                        description: "Learning Assistant & Tutoring"
+                      }
+                    ].map((exp, index) => (
+                      <div key={index}
+                        className="bg-purple-50 border-2 border-black p-4 rounded hover:bg-purple-100 transition-all cursor-pointer"
+                        onClick={exp.onClick}
+                      >
+                        <div className="flex items-start gap-4">
+                          <img href={exp.href} src={exp.image} alt={exp.title} className="w-16 h-16 rounded-full border-2 border-black"/>
+                          <div className="flex-1">
+                            <div className="flex justify-between items-start">
+                              <div>
+                                <h3 className="font-PerfectDOSVGA437 text-xl font-bold text-s">{exp.title}</h3>
+                                <p className="font-PerfectDOSVGA437 text-sm text-gray-600">{exp.role}</p>
+                                <p className="font-PerfectDOSVGA437 text-xs text-gray-500 mt-1">{exp.period}</p>
+                              </div>
+                            </div>
+                            <div className="flex flex-wrap gap-2 mt-3">
+                              {exp.badges.map((badge, i) => (
+                                <span key={i} className="px-3 py-3 bg-blue-100 text-xs font-PerfectDOSVGA437 text-blue-600 rounded">
+                                  {badge}
+                                </span>
+                              ))}
+                            </div>
                           </div>
                         </div>
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setShowUniversityModal(true);
-                          }}
-                          className="text-pink-400 text-2xl hover:text-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer border-2 border-pink-400 px-3 py-1 rounded-sm hover:bg-pink-400/10"
-                        >
-                          →
-                        </button>
                       </div>
-                    </div>
-
-                    {/* SOAR ID Card */}
-                    <div
-                      onClick={() => setShowSOARModal(true)} 
-                      className="border-2 border-pink-400 bg-black/80 p-4 rounded-sm hover:border-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                          <img src="../../public/soar.jpeg" alt="SOAR" className="w-12 h-12 mr-3" />
-                          <div className="text-left">
-                            <h2 className="text-xl font-mono font-bold text-pink-400">STUDENT OUTREACH AND RETENTION CENTER</h2>
-                            <p className="font-mono text-sm text-pink-200">WEBSITE AND COMMUNICATIONS COORDINATOR</p>
-                          </div>
-                        </div>
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setShowSOARModal(true);
-                          }}
-                          className="text-pink-400 text-2xl hover:text-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer border-2 border-pink-400 px-3 py-1 rounded-sm hover:bg-pink-400/10"
-                        >
-                          →
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* SOLO ID Card */}
-                    <div
-                      onClick={() => setShowSOLOModal(true)} 
-                      className="border-2 border-pink-400 bg-black/80 p-4 rounded-sm hover:border-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                          <img src="../../public/SOLOLogo.png" alt="SOLO" className="w-12 h-12 mr-3" />
-                          <div className="text-left">
-                            <h2 className="text-xl font-mono font-bold text-pink-400">SOLO</h2>
-                            <p className="font-mono text-sm text-pink-200">LEAD SOFTWARE ENGINEER INTERN</p>
-                          </div>
-                        </div>
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setShowSOLOModal(true);
-                          }}
-                          className="text-pink-400 text-2xl hover:text-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer border-2 border-pink-400 px-3 py-1 rounded-sm hover:bg-pink-400/10 ml-10"
-                        >
-                          →
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Commit the Change ID Card */}
-                    <div
-                      onClick={() => setShowCommitChangeModal(true)} 
-                      className="border-2 border-pink-400 bg-black/80 p-4 rounded-sm hover:border-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                          <img src="../../public/standup.avif" alt="Stand Up to Trash" className="w-12 h-12 mr-3" />
-                          <div className="text-left">
-                            <h2 className="text-xl font-mono font-bold text-pink-400">STAND UP TO TRASH</h2>
-                            <p className="font-mono text-sm text-pink-200">FULL STACK DEVELOPER</p>
-                          </div>
-                        </div>
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setShowCommitChangeModal(true);
-                          }}
-                          className="text-pink-400 text-2xl hover:text-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer border-2 border-pink-400 px-3 py-1 rounded-sm hover:bg-pink-400/10 ml-10"
-                        >
-                          →
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Program ID Card */}
-                    <div
-                      onClick={() => setShowProgramModal(true)} 
-                      className="border-2 border-pink-400 bg-black/80 p-4 rounded-sm hover:border-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                          <img src="../../public/soar.jpeg" alt="SOAR" className="w-12 h-12 mr-3" />
-                          <div className="text-left">
-                            <h2 className="text-xl font-mono font-bold text-pink-400">STUDENT OUTREACH AND RETENTION CENTER</h2>
-                            <p className="font-mono text-sm text-pink-200">PROGRAM CO-DIRECTOR</p>
-                          </div>
-                        </div>
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setShowProgramModal(true);
-                          }}
-                          className="text-pink-400 text-2xl hover:text-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer border-2 border-pink-400 px-3 py-1 rounded-sm hover:bg-pink-400/10"
-                        >
-                          →
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* ML ID Card */}
-                    <div
-                      onClick={() => setShowMLModal(true)} 
-                      className="border-2 border-pink-400 bg-black/80 p-4 rounded-sm hover:border-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                          <img src="../../public/soar.jpeg" alt="SOAR" className="w-12 h-12 mr-3" />
-                          <div className="text-left">
-                            <h2 className="text-xl font-mono font-bold text-pink-400">DONALD BREN SCHOOL OF INFORMATION AND COMPUTER SCIENCES</h2>
-                            <p className="font-mono text-sm text-pink-200">MACHINE LEARNING RESEARCH ASSISTANT</p>
-                          </div>
-                        </div>
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setShowMLModal(true);
-                          }}
-                          className="text-pink-400 text-2xl hover:text-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer border-2 border-pink-400 px-3 py-1 rounded-sm hover:bg-pink-400/10"
-                        >
-                          →
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* LA ID Card */}
-                    <div
-                      onClick={() => setShowLAModal(true)} 
-                      className="border-2 border-pink-400 bg-black/80 p-4 rounded-sm hover:border-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                          <img src="../../public/soar.jpeg" alt="SOAR" className="w-12 h-12 mr-3" />
-                          <div className="text-left">
-                            <h2 className="text-xl font-mono font-bold text-pink-400">DONALD BREN SCHOOL OF INFORMATION AND COMPUTER SCIENCES</h2>
-                            <p className="font-mono text-sm text-pink-200">DISCRETE MATHEMATICS LEARNING ASSISTANT</p>
-                          </div>
-                        </div>
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setShowLAModal(true);
-                          }}
-                          className="text-pink-400 text-2xl hover:text-pink-300 hover:shadow-[0_0_15px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-pointer border-2 border-pink-400 px-3 py-1 rounded-sm hover:bg-pink-400/10"
-                        >
-                          →
-                        </button>
-                      </div>
-                    </div>
-
-                    
+                    ))}
                   </div>
 
-                  {/* University Modal */}
+                  {/* Keep all the modals as they were */}
                   {showUniversityModal && (
                     <Modal onClose={() => setShowUniversityModal(false)} useFixed={true}>
-                      <div className="flex justify-between items-center mb-4">
-                        <a 
-                          href="https://drwulab.net/" 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-2xl font-mono font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
-                        >
-                          PERSONNEL FILE: JOE C. WEN SCHOOL OF POPULATION AND PUBLIC HEALTHS
-                        </a>
-                        <button onClick={() => setShowUniversityModal(false)} className="text-cyan-400 hover:text-cyan-300">
-                          ✕
-                        </button>
-                      </div>
-                      <div className="font-mono text-cyan-200 space-y-4">
-                        <p>ROLE: Data Science Research Assistant</p>
-                        <p>DIVISION: HIGHER EDUCATION</p>
-                        <p>WORK: Website Crawling, Data Collection, Data Analysis & Visualization</p>
-                        <p>PERIOD: JANUARY 2025 - PRESENT</p>
-                        <div className="border-t border-cyan-400/30 pt-4">
-                          <h3 className="text-cyan-400 mb-2">CLEARANCE BADGES:</h3>
-                          <div className="flex gap-2">
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">CLOUD COMPUTING</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">AI SYSTEMS</span>
+                      <div className="bg-gradient-to-r from-purple-100 to-purple-50 p-6 rounded-sm border-4 border-purple-200">
+                        <div className="flex justify-between items-center mb-6">
+                            <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
+                            [THREAD] JOE C. WEN SCHOOL OF POPULATION AND PUBLIC HEALTH
+                          </h2>
+                          <button onClick={() => setShowUniversityModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                            [X]
+                          </button>
+                        </div>
+                        <div className="space-y-4 font-PerfectDOSVGA437">
+                          <div className="bg-white/50 p-4 rounded border border-black">
+                            <p className="text-purple-800 font-bold text-lg">ROLE: Data Science Research Assistant</p>
+                            <p className="text-gray-600 mt-2">PERIOD: JANUARY 2023 - PRESENT</p>
+                              <p className="text-gray-600 mt-2">RESPONSIBILITIES:</p>
+                              <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                                <li>Website Crawling</li>
+                                <li>Data Collection</li>
+                                <li>Data Analysis & Visualization</li>
+                              </ul>
                           </div>
                         </div>
                       </div>
@@ -516,30 +434,28 @@ function Home() {
                   {/* SOAR Modal */}
                   {showSOARModal && (
                     <Modal onClose={() => setShowSOARModal(false)} useFixed={true}>
-                      <div className="flex justify-between items-center mb-4">
-                        <a 
-                          href="https://www.soar.uci.edu/" 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-2xl font-mono font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
-                        >
-                          PERSONNEL FILE: STUDENT OUTREACH AND RETENTION CENTER
-                        </a>
-                        <button onClick={() => setShowSOARModal(false)} className="text-cyan-400 hover:text-cyan-300">
-                          ✕
-                        </button>
-                      </div>
-                      <div className="font-mono text-cyan-200 space-y-4">
-                        <p>ROLE: Data Science Research Assistant</p>
-                        <p>DIVISION: UNIVERSITY ORGANIZATION</p>
-                        <p>WORK: Website Design, Website Development, Accessible Interface, Newsletter Design, Newsletter Writing, Engagement Campaigns</p>
-                        <p>PERIOD: AUGUST 2024 - PRESENT</p>
-                        <div className="border-t border-cyan-400/30 pt-4">
-                          <h3 className="text-cyan-400 mb-2">CLEARANCE BADGES:</h3>
-                          <div className="flex gap-2">
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">WEB DEVELOPMENT</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">WEB DESIGN</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">ACCESSIBILITY</span>
+                      <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg border-4 border-blue-200">
+                        <div className="flex justify-between items-center mb-6">
+                        <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
+                        [THREAD] STUDENT OUTREACH AND RETENTION CENTER
+                          </h2>
+                          <button onClick={() => setShowSOARModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                            [X]
+                          </button>
+                        </div>
+                        <div className="space-y-4 font-PerfectDOSVGA437">
+                          <div className="bg-white/50 p-4 rounded border border-black">
+                          <p className="text-purple-800 font-bold text-lg">SUBJECT: Website and Communications Coordinator Role</p>
+                            <p className="text-gray-600 mt-2">PERIOD: AUGUST 2024 - PRESENT</p>
+                            <p className="text-gray-600 mt-2">STATUS: ACTIVE</p>
+                            <div className="mt-2 space-y-2">
+                              <p className="text-gray-600">RESPONSIBILITIES:</p>
+                              <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                                <li>Website Design & Development</li>
+                                <li>Newsletter Design & Writing</li>
+                                <li>Engagement Campaigns</li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -548,176 +464,158 @@ function Home() {
 
                   {/* SOLO Modal */}
                   {showSOLOModal && (
-                    <Modal onClose={() => setShowSOLOModal(false)} useFixed={true}>
-                      <div className="flex justify-between items-center mb-4">
-                        <a 
-                          href="https://www.standuptotrash.com/" 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-2xl font-mono font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
-                        >
-                          PERSONNEL FILE: SOLO
-                        </a>
-                        <button onClick={() => setShowSOLOModal(false)} className="text-cyan-400 hover:text-cyan-300">
-                          ✕
+                    <Modal onClose={() => setShowSOARModal(false)} useFixed={true}>
+                    <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg border-4 border-blue-200">
+                      <div className="flex justify-between items-center mb-6">
+                      <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
+                      [THREAD] SOLO
+                        </h2>
+                        <button onClick={() => setShowSOLOModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                          [X]
                         </button>
                       </div>
-                      <div className="font-mono text-cyan-200 space-y-4">
-                        <p>ROLE: LEAD SOFTWARE ENGINEER INTERN</p>
-                        <p>DIVISION: TECH STARTUP</p>
-                        <p>WORK: App Development, App Design, App Testing, App Deployment, App Maintenance, App Documentation, App Analytics</p>
-                        <p>PERIOD: MARCH 2024 - SEPTEMBER 2024</p>
-                        <div className="border-t border-cyan-400/30 pt-4">
-                          <h3 className="text-cyan-400 mb-2">CLEARANCE BADGES:</h3>
-                          <div className="flex gap-2">
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">MYSQL</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">NODEJS</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">AWS S3</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">AWS EC2</span>
+                      <div className="space-y-4 font-PerfectDOSVGA437">
+                        <div className="bg-white/50 p-4 rounded border border-black">
+                        <p className="text-purple-800 font-bold text-lg">ROLE: LEAD SOFTWARE ENGINEER INTERN</p>
+                          <p className="text-gray-600 mt-2">PERIOD: MARCH 2024 - SEPTEMBER 2024</p>
+                          <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
+                          <div className="mt-2 space-y-2">
+                            <p className="text-gray-600">RESPONSIBILITIES:</p>
+                            <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                              <li>Application Design & Development</li>
+                              <li>Database Creation & Management</li>
+                              <li>AWS Cloud Services Integration</li>
+                            </ul>
                           </div>
                         </div>
                       </div>
-                    </Modal>
+                    </div>
+                  </Modal>
                   )}
 
-                  {/* COMMIT CHANGE Modal */}
+                  {/* Commit Change Modal */}
                   {showCommitChangeModal && (
-                    <Modal onClose={() => setShowCommitChangeModal(false)} useFixed={true}>
-                      <div className="flex justify-between items-center mb-4">
-                        <a 
-                          href="https://www.standuptotrash.com/" 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-2xl font-mono font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
-                        >
-                          PERSONNEL FILE: STAND UP TO TRASH
-                        </a>
-                        <button onClick={() => setShowCommitChangeModal(false)} className="text-cyan-400 hover:text-cyan-300">
-                          ✕
-                        </button>
-                      </div>
-                      <div className="font-mono text-cyan-200 space-y-4">
-                        <p>ROLE: FULL STACK DEVELOPER</p>
-                        <p>DIVISION: NON-PROFIT ORGANIZATION</p>
-                        <p>WORK: Volunteer Management System, Volunteer Portal, Volunteer Dashboard, Volunteer Reporting, Volunteer Analytics</p>
-                        <p>PERIOD: MARCH 2024 - SEPTEMBER 2024</p>
-                        <div className="border-t border-cyan-400/30 pt-4">
-                          <h3 className="text-cyan-400 mb-2">CLEARANCE BADGES:</h3>
-                          <div className="flex gap-2">
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">AWS S3</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">POSTGRESQL</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">REACT</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">CHAKRA UI</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">EXPRESS</span>
+                  <Modal onClose={() => setShowCommitChangeModal(false)} useFixed={true}>
+                      <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg border-4 border-blue-200">
+                        <div className="flex justify-between items-center mb-6">
+                            <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
+                            [THREAD] STAND UP TO TRASH
+                          </h2>
+                          <button onClick={() => setShowCommitChangeModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                            [X]
+                          </button>
+                        </div>
+                        <div className="space-y-4 font-PerfectDOSVGA437">
+                          <div className="bg-white/50 p-4 rounded border border-black">
+                          <p className="text-purple-800 font-bold text-lg">ROLE: FULL STACK DEVELOPER</p>
+                            <p className="text-gray-600 mt-2">PERIOD: OCTOBER 2023 - JUNE 2024</p>
+                            <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
+                            <div className="mt-2 space-y-2">
+                              <p className="text-gray-600">RESPONSIBILITIES:</p>
+                              <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                                <li>Volunteer Management System</li>
+                                <li>Data Analytics Dashboard</li>
+                                <li>Cloud Infrastructure Setup</li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </Modal>
                   )}
 
-                  {/* PROGRAM Modal */}
+                  {/* Program Modal */}
                   {showProgramModal && (
                     <Modal onClose={() => setShowProgramModal(false)} useFixed={true}>
-                      <div className="flex justify-between items-center mb-4">
-                        <a 
-                          href="https://www.soar.uci.edu/" 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-2xl font-mono font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
-                        >
-                          PERSONNEL FILE: STUDENT OUTREACH AND RETENTION CENTER
-                        </a>
-                        <button onClick={() => setShowProgramModal(false)} className="text-cyan-400 hover:text-cyan-300">
-                          ✕
+                    <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg border-4 border-blue-200">
+                      <div className="flex justify-between items-center mb-6">
+                        <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
+                          [THREAD] STUDENT OUTREACH AND RETENTION CENTER
+                        </h2>
+                        <button onClick={() => setShowProgramModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                          [X]
                         </button>
                       </div>
-                      <div className="font-mono text-cyan-200 space-y-4">
-                        <p>ROLE: Program Co-Director</p>
-                        <p>DIVISION: UNIVERSITY ORGANIZATION</p>
-                        <p>WORK: Event Planning, Volunteer Management, Community Engagement, Outreach Campaigns, Event Management, Volunteer Training, Retention Programs</p>
-                        <p>PERIOD: AUGUST 2022 - JUNE 2024</p>
-                        <div className="border-t border-cyan-400/30 pt-4">
-                          <h3 className="text-cyan-400 mb-2">CLEARANCE BADGES:</h3>
-                          <div className="flex gap-2">
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">BUDGETING</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">LEADERSHIP</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">ADVOCACY</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">LARGE SCALE EVENT PLANNING</span>
+                      <div className="space-y-4 font-PerfectDOSVGA437">
+                        <div className="bg-white/50 p-4 rounded border border-black">
+                        <p className="text-purple-800 font-bold text-lg">ROLE: PROGRAM CO-DIRECTOR</p>
+                          <p className="text-gray-600 mt-2">PERIOD: AUGUST 2022 - JUNE 2024</p>
+                          <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
+                          <div className="mt-2 space-y-2">
+                            <p className="text-gray-600">RESPONSIBILITIES:</p>
+                            <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                              <li>Budget Allocation and Management</li>
+                              <li>Internship Management</li>
+                              <li>Event Creation and Management</li>
+                            </ul>
                           </div>
                         </div>
                       </div>
-                    </Modal>
+                    </div>
+                  </Modal>
                   )}
 
                   {/* ML Modal */}
                   {showMLModal && (
                     <Modal onClose={() => setShowMLModal(false)} useFixed={true}>
-                      <div className="flex justify-between items-center mb-4">
-                        <a 
-                          href="https://www.ics.uci.edu/" 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-2xl font-mono font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
-                        >
-                          PERSONNEL FILE: DONALD BREN SCHOOL OF INFORMATION AND COMPUTER SCIENCES
-                        </a>
-                        <button onClick={() => setShowMLModal(false)} className="text-cyan-400 hover:text-cyan-300">
-                          ✕
+                    <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg border-4 border-blue-200">
+                      <div className="flex justify-between items-center mb-6">
+                        <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
+                          [THREAD] DONALD BREN SCHOOL OF ICS
+                        </h2>
+                        <button onClick={() => setShowMLModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                          [X]
                         </button>
                       </div>
-                      <div className="font-mono text-cyan-200 space-y-4">
-                        <p>ROLE: Machine Learning Research Assistant</p>
-                        <p>DIVISION: HIGH EDUCATION</p>
-                        <p>WORK: Machine Learning, Data Analysis, Data Processing, Data Visualization, Internet of Things, Rover Development, Deep Learning, Natural Language Processing, Robotics</p>
-                        <p>PERIOD: JANUARY 2023 - MARCH 2024</p>
-                        <div className="border-t border-cyan-400/30 pt-4">
-                          <h3 className="text-cyan-400 mb-2">CLEARANCE BADGES:</h3>
-                          <div className="flex gap-2">
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">PYTORCH</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">MATLAB</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">PYTHON</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">TENSORFLOW</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">ROS2</span>
+                      <div className="space-y-4 font-PerfectDOSVGA437">
+                        <div className="bg-white/50 p-4 rounded border border-black">
+                        <p className="text-purple-800 font-bold text-lg">ROLE: MACHINE LEARNING RESEARCH ASSISTANT</p>
+                          <p className="text-gray-600 mt-2">PERIOD: JANUARY 2023 - MARCH 2024</p>
+                          <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
+                          <div className="mt-2 space-y-2">
+                            <p className="text-gray-600">RESPONSIBILITIES:</p>
+                            <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                              <li>Research on Internet of Things</li>
+                              <li>Rover Development using ROS2</li>
+                              <li>Data Collection and Visualization using TensorFlow</li>
+                            </ul>
                           </div>
                         </div>
                       </div>
-                    </Modal>
+                    </div>
+                  </Modal>
                   )}
 
                   {/* LA Modal */}
                   {showLAModal && (
                     <Modal onClose={() => setShowLAModal(false)} useFixed={true}>
-                      <div className="flex justify-between items-center mb-4">
-                        <a 
-                          href="https://www.ics.uci.edu/" 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-2xl font-mono font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
-                        >
-                          PERSONNEL FILE: DONALD BREN SCHOOL OF INFORMATION AND COMPUTER SCIENCES
-                        </a>
-                        <button onClick={() => setShowLAModal(false)} className="text-cyan-400 hover:text-cyan-300">
-                          ✕
+                    <div className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-lg border-4 border-blue-200">
+                      <div className="flex justify-between items-center mb-6">
+                        <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
+                          [THREAD] DONALD BREN SCHOOL OF ICS
+                        </h2>
+                        <button onClick={() => setShowLAModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                          [X]
                         </button>
                       </div>
-                      <div className="font-mono text-cyan-200 space-y-4">
-                        <p>ROLE: Discrete Mathematics Learning Assistant</p>
-                        <p>DIVISION: HIGH EDUCATION</p>
-                        <p>WORK: Discrete Mathematics, Graph Theory, Set Theory, Logic, Proofs, Mathematical Induction, Combinatorics, Probability, Teaching, Tutoring, Office Hours, Grading, Student Support</p>
-                        <p>PERIOD: SEPTEMBER 2022 - DECEMBER 2022</p>
-                        <div className="border-t border-cyan-400/30 pt-4">
-                          <h3 className="text-cyan-400 mb-2">CLEARANCE BADGES:</h3>
-                          <div className="flex gap-2">
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">TEACHING</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">STUDENT SUPPORT</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">LARGE SCALE CLASSROOM MANAGEMENT</span>
-                            <span className="bg-cyan-400/20 border border-cyan-400 px-3 py-1">COURSE PLANNING</span>
+                      <div className="space-y-4 font-PerfectDOSVGA437">
+                        <div className="bg-white/50 p-4 rounded border border-black">
+                        <p className="text-purple-800 font-bold text-lg">ROLE: LEARNING ASSISTANT</p>
+                          <p className="text-gray-600 mt-2">PERIOD: SEPTEMBER 2022 - DECEMBER 2022</p>
+                          <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
+                          <div className="mt-2 space-y-2">
+                            <p className="text-gray-600">RESPONSIBILITIES:</p>
+                            <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                              <li>Student Support & Tutoring</li>
+                              <li>Course Material Development and Preparation</li>
+                              <li>Office Hours Management</li>
+                            </ul>
                           </div>
                         </div>
                       </div>
-                    </Modal>
+                    </div>
+                  </Modal>
                   )}
-
 
                 </div>
               )}

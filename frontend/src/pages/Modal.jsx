@@ -14,7 +14,7 @@ export default function Modal({ children, onClose, useFixed = true }) {
     >
       <div 
         onClick={(e) => e.stopPropagation()} 
-        className="bg-black border-2 border-cyan-400 p-6 max-w-2xl w-full mx-4 rounded-sm shadow-[0_0_30px_rgba(0,255,255,0.3)]"
+        className="p-6 max-w-2xl w-full mx-4 rounded-sm"
       >
         {children}
       </div>
