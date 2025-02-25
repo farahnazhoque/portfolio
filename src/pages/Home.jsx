@@ -50,7 +50,7 @@ function Home() {
         <div className="bg-gradient-to-r from-[#000080] to-[#4169E1] px-3 py-2 flex items-center justify-between rounded-t-lg">
           <div className="flex items-center">
             <img
-              src="../../public/IEIcon.png"
+              src={import.meta.env.BASE_URL + 'IEIcon.png'}
               alt="IE Icon"
               className="w-5 h-5 mr-2 animate-pulse"
             />
@@ -213,7 +213,7 @@ function Home() {
                   {/* Large image at the top, reminiscent of Poolsuite's hero */}
                   <div className="overflow-hidden border-b border-black pb-4 mb-4">
                     <img 
-                      src="../../public/Mission.png" 
+                      src={import.meta.env.BASE_URL + 'Mission.png'}
                       alt="Courtyard" 
                       className="w-full h-auto object-cover"
                     />
@@ -228,7 +228,7 @@ function Home() {
                       className="md:mr-6 mb-4 md:mb-0"
                     >
                       <img 
-                        src="../../public/Farahnaz.webp" 
+                        src={import.meta.env.BASE_URL + 'Farahnaz.webp'} 
                         alt="Farahnaz Hoque"
                         className="w-64 h-auto rounded-2xl shadow-xl border-4 border-[#c0c0c0] hover:scale-105 transition-transform duration-200 cursor-pointer"
                       />
@@ -316,14 +316,14 @@ function Home() {
                   backgroundRepeat: 'repeat'
                 }}>
                   <div className="flex justify-center items-center mb-4" >
-                    <img src="../../public/Experiences.gif" alt="saturn" className="justify-center items-center mx-auto"/>
+                    <img src={import.meta.env.BASE_URL + 'Experiences.gif'} alt="saturn" className="justify-center items-center mx-auto"/>
                   </div>
                   <div className="border-4 border-dotted border-black p-6 space-y-4 bg-white/30 rounded-lg">
                     {[
                       {
                         title: "JOE C. WEN SCHOOL OF POPULATION AND PUBLIC HEALTH",
                         role: "DATA SCIENCE RESEARCH ASSISTANT",
-                        image: "../../public/jcwen.jpeg",
+                        image: import.meta.env.BASE_URL + 'jcwen.jpeg',
                         period: "JANUARY 2025 - PRESENT",
                         onClick: () => setShowUniversityModal(true),
                         href: "https://www.jocwen.uci.edu/",
@@ -333,7 +333,7 @@ function Home() {
                       {
                         title: "STUDENT OUTREACH AND RETENTION CENTER",
                         role: "WEBSITE AND COMMUNICATIONS COORDINATOR",
-                        image: "../../public/soar.jpeg", 
+                        image: import.meta.env.BASE_URL + 'soar.jpeg', 
                         href: "https://www.soar.uci.edu/",
                         period: "AUGUST 2024 - PRESENT",
                         onClick: () => setShowSOARModal(true),
@@ -343,7 +343,7 @@ function Home() {
                       {
                         title: "SOLO",
                         role: "LEAD SOFTWARE ENGINEER INTERN",
-                        image: "../../public/SOLOLogo.png",
+                        image: import.meta.env.BASE_URL + 'SOLOLogo.png',
                         href: "https://www.linkedin.com/in/jenelle-king/",
                         period: "MARCH 2024 - SEPTEMBER 2024",
                         onClick: () => setShowSOLOModal(true),
@@ -353,7 +353,7 @@ function Home() {
                       {
                         title: "STAND UP TO TRASH",
                         role: "FULL STACK DEVELOPER",
-                        image: "../../public/standup.avif",
+                        image: import.meta.env.BASE_URL + 'standup.avif',
                         href: "https://www.standuptotrash.com/",
                         period: "MARCH 2024 - SEPTEMBER 2024",
                         onClick: () => setShowCommitChangeModal(true),
@@ -363,7 +363,7 @@ function Home() {
                       {
                         title: "STUDENT OUTREACH AND RETENTION CENTER",
                         role: "PROGRAM CO-DIRECTOR",
-                        image: "../../public/soar.jpeg",
+                        image: import.meta.env.BASE_URL + 'soar.jpeg',
                         href: "https://www.soar.uci.edu/",
                         period: "AUGUST 2022 - JUNE 2024",
                         onClick: () => setShowProgramModal(true),
@@ -373,7 +373,7 @@ function Home() {
                       {
                         title: "DONALD BREN SCHOOL OF ICS",
                         role: "MACHINE LEARNING RESEARCH ASSISTANT",
-                        image: "../../public/dbh.jpeg",
+                        image: import.meta.env.BASE_URL + 'dbh.jpeg',
                         href: "https://www.ics.uci.edu/",
                         period: "JANUARY 2023 - MARCH 2024",
                         onClick: () => setShowMLModal(true),
@@ -383,7 +383,7 @@ function Home() {
                       {
                         title: "DONALD BREN SCHOOL OF ICS",
                         role: "LEARNING ASSISTANT",
-                        image: "../../public/dbh.jpeg",
+                        image: import.meta.env.BASE_URL + 'dbh.jpeg',
                         period: "JANUARY 2023 - MARCH 2024",
                         onClick: () => setShowLAModal(true),
                         badges: ["DISCRETE MATHEMATICS", "COURSE PLANNING", "TUTORING"],
@@ -638,8 +638,8 @@ function Home() {
                   {/* Header */}
                   <div className="flex items-center justify-between mb-6 bg-red-700 p-3 rounded-lg">
                     <div className="flex items-center">
-                      <img src="../../public/YoutubeLogo.png" alt="Retro YouTube" className="w-12 h-12 mr-2" />
-                      <h1 className="text-white font-PerfectDOSVGA437 text-xl">Farahnaz's Current Favorite Videos</h1>
+                      <img src={import.meta.env.BASE_URL + 'YoutubeLogo.png'} alt="Retro YouTube" className="w-12 h-12 mr-2" />
+                      <h1 className="text-white font-PerfectDOSVGA437 text-xl">Farahnaz&apos;s Current Favorite Videos</h1>
                     </div>
                   </div>
 
