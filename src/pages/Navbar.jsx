@@ -55,8 +55,8 @@ export default function Navbar() {
                       className="flex items-center gap-3 font-PerfectDOSVGA437 text-black hover:text-[#fbcfe8]"
                     >
                       <img 
-                        src={import.meta.env.BASE_URL + 'NavFolder.png'}
-                        alt={`${item.name} folder`}
+                      src={import.meta.env.BASE_URL + 'NavFolder.png'}
+                      alt={`${item.name} folder`}
                         className={`w-10 h-10 ${item.current ? 'brightness-110' : 'hover:brightness-110'}`}
                       />
                       {item.name}
