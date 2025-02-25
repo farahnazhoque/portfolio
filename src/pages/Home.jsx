@@ -648,7 +648,7 @@ function Home() {
                     <iframe
                       width="100%"
                       height="100%" 
-                      src="https://www.youtube.com/watch?v=zAQYtolfB4g&list=PL32z1p066aKhld-hXx6-T279zvA9sw1sD&pp=gAQB"
+                      src="https://www.youtube.com/embed/zAQYtolfB4g?si=EUt6Ko5GFPw5CzT1"
                       title="YouTube Channel"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
