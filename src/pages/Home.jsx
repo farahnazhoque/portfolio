@@ -634,7 +634,7 @@ function Home() {
                 </div>
               )}
               {activeSection === 'youtube' && (
-                <div className="p-6" style={{backgroundImage: "url('../../public/Youtube.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                <div className="p-6" style={{backgroundImage: `url('${import.meta.env.BASE_URL}Youtube.jpeg')`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                   {/* Header */}
                   <div className="flex items-center justify-between mb-6 bg-red-700 p-3 rounded-lg">
                     <div className="flex items-center">
