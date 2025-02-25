@@ -11,7 +11,7 @@ function Experiences() {
     {
       title: "JOE C. WEN SCHOOL OF POPULATION AND PUBLIC HEALTH.doc",
       role: "DATA SCIENCE RESEARCH ASSISTANT",
-      icon: "../../public/word-icon.png",
+      icon: import.meta.env.BASE_URL + 'wordDoc.png',
       period: "JANUARY 2025 - PRESENT",
       content: {
         responsibilities: [
@@ -25,7 +25,7 @@ function Experiences() {
     {
       title: "STUDENT OUTREACH AND RETENTION CENTER.doc",
       role: "WEBSITE AND COMMUNICATIONS COORDINATOR", 
-      icon: "../../public/word-icon.png",
+      icon: import.meta.env.BASE_URL + 'wordDoc.png',
       period: "AUGUST 2024 - PRESENT",
       content: {
         responsibilities: [
@@ -52,7 +52,7 @@ function Experiences() {
           <div className="bg-gradient-to-r from-[#000080] to-[#4169E1] px-3 py-2 flex items-center justify-between rounded-t-lg">
             <div className="flex items-center">
               <img
-                src="../../public/folder-icon.png" 
+                src={import.meta.env.BASE_URL + 'folder-icon.png'}  
                 alt="Folder Icon"
                 className="w-5 h-5 mr-2"
               />
@@ -141,7 +141,7 @@ function Experiences() {
         <div className="fixed top-0 left-0 right-0 z-50 bg-blue-200 text-black p-2 flex justify-between items-center border-b-4 border-black">
           <div className="flex items-center gap-2">
             <img
-              src="../../public/word-icon.png"
+              src={import.meta.env.BASE_URL + 'word-icon.png'}
               alt="Word"
               className="w-6 h-6"
             />
