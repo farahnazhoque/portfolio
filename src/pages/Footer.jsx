@@ -57,7 +57,7 @@ function Footer() {
             `}
             onClick={() => setIsStartMenuOpen(!isStartMenuOpen)}
           >
-            <span className="mr-1"><img src="../../public/StartIcon.png" alt="Start" className="w-6 h-6" /></span>
+            <span className="mr-1"><img src={import.meta.env.BASE_URL + 'StartIcon.png'} alt="Start" className="w-6 h-6" /></span>
             Start
           </Menu.Button>
 
