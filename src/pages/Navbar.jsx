@@ -27,7 +27,7 @@ export default function Navbar() {
             className="flex flex-col items-end"
           >
             <img 
-              src="../../public/NavFolder.png"
+              src={import.meta.env.BASE_URL + 'NavFolder.png'}
               alt="Menu folder"
               className="w-12 h-12 hover:brightness-110"
             />
@@ -36,7 +36,7 @@ export default function Navbar() {
 
           {/* Modal */}
           {isModalOpen && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center" style={{ backgroundImage: 'url(../../public/ModalBack.gif)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
+            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center" style={{ backgroundImage : import.meta.env.BASE_URL + 'ModalBack.gif', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
               <div className="bg-[#c0c0c0] p-6 rounded-lg border-2 border-white w-80">
                 <div className="flex justify-between items-center mb-4">.
                   <h2 className="font-PerfectDOSVGA437 text-lg">Menu</h2>
@@ -56,7 +56,7 @@ export default function Navbar() {
                       className="flex items-center gap-3 font-PerfectDOSVGA437 text-black hover:text-[#fbcfe8]"
                     >
                       <img 
-                        src="../../public/NavFolder.png"
+                        src={import.meta.env.BASE_URL + 'NavFolder.png'}
                         alt={`${item.name} folder`}
                         className={`w-10 h-10 ${item.current ? 'brightness-110' : 'hover:brightness-110'}`}
                       />
@@ -78,7 +78,7 @@ export default function Navbar() {
               className="flex flex-col items-end text-right justify-end font-PerfectDOSVGA437 text-white hover:text-[#fbcfe8] text-lg"
             >
               <img 
-                src="../../public/NavFolder.png"
+                src={import.meta.env.BASE_URL + 'NavFolder.png'}
                 alt={`${item.name} folder`}
                 className={`w-16 h-16 ${item.current ? 'brightness-110' : 'hover:brightness-110'}`}
               />
