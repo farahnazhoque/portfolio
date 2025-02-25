@@ -182,7 +182,7 @@ function Home() {
           <div className="bg-white flex-1 ie-load overflow-y-auto custom-scrollbar pb-8 relative">
             {activeSection === 'space-landing' && (
               <div className="p-8 w-[734px] h-[499px]" style={{
-                backgroundImage: 'url(../../public/LoadingHome.gif)', 
+                backgroundImage: import.meta.env.BASE_URL + 'LoadingHome.gif',
                 backgroundSize: 'cover', 
                 backgroundPosition: 'center', 
                 backgroundRepeat: 'no-repeat'
@@ -197,7 +197,7 @@ function Home() {
                 className="relative min-h-screen bg-[#f8f5ef] p-6 md:p-10 text-[#3d3d3d]" 
                 style={{
                   //If you have a paper/grain texture image, uncomment and adjust:
-                  backgroundImage: 'url("../../public/Mission.jpeg")',
+                  backgroundImage: import.meta.env.BASE_URL + 'Mission.jpeg',
                   backgroundSize: 'cover',
                   backgroundRepeat: 'repeat',
                 }}
@@ -310,7 +310,7 @@ function Home() {
 
               {activeSection === "experiences" && (
                 <div className="p-8" style={{
-                  backgroundImage: 'url(../../public/Experience.jpg)',
+                  backgroundImage: import.meta.env.BASE_URL + 'Experience.jpg',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'repeat'
