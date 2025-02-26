@@ -50,7 +50,62 @@ function Experiences() {
           "Power BI"
         ]
       }
-    }
+    },
+    {
+        title: "STUDENT OUTREACH AND RETENTION CENTER.doc",
+        role: "WEBSITE DEVELOPER, DESIGNER AND COMMUNICATIONS COORDINATOR",
+        icon: import.meta.env.BASE_URL + 'wordDoc.png',
+        link: "https://soar.uci.edu",
+        period: "JANUARY 2025 - PRESENT",
+        content: {
+          image: import.meta.env.BASE_URL + 'soar.png',
+  
+          summary: {
+            team: [
+              "1 Supervisor",
+              "1 Website Developer and Designer (just me)"
+            ],
+            myRole: "Website Developer and Designer",
+            timeline: "August 2024 - Present",
+            projectPhases: [
+              "Website Design (Aug 2024 - October 2024)",
+              "Website Development (October 2024 - Present)",
+              "Designing Newsletter Interface (Aug 2024 - September 2024)",
+              "Writing Newsletter Articles (September 2024 - Present)"
+            ]
+          },
+          responsibilities: [
+            "Design:",
+            "My designing process often begins looking at the brand colors, and observing closely the palettes and fonts used by the marketing team. I also sat with my supervisor on various sessions to showcase some of the inspiration I have gathered before starting the official design process.",
+            "Once the initial research was complete, I created various mockups and prototypes to visualize the different pages of the website. Afterwards, I sat with the other team members and worked with them closely to refine the design, and not just the student staff, but also some of our regular students.",
+            "Developement:",
+            "I was responsible for developing the website from scratch, and with my proficiency in HTML, CSS, and JavaScript, I was able to create a website that is both functional and according to the needs of the student`.",
+            "Most of the transitioning of the site links was completed by the Office of Information and Technology here at UCI, and I was able to work with them to ensure that the website is fully functional and that the links are working properly.",
+            "Communication:",
+            "I also had to design the newsletter interface in the same manner, and ususally maintain it with interfaces that change quarterly, alongside the content."
+            
+          ],
+          purpose: [
+            "My purpose for joining SOAR was to give back to the community that has given me so much, and to be able to help the students here at UCI to be able to get the most out of their time here.",
+            "As SOAR is a student organization serving primarily underserved students, I wanted to ensure the way they interact with our organization online is as seamless as possible, and that they are able to get the information they need in a way that is easy to understand and navigate.",
+            "I also wanted to ensure that the website is a reflection of the organization's values and mission, and that it is a tool that can be used by the organization to achieve their goals."
+          ],
+          technologies: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Figma",
+            "Adobe Photoshop",
+            "Adobe Illustrator",
+            "Adobe InDesign",
+            "Adobe XD",
+            "Adobe Premiere Pro",
+            "Adobe After Effects",
+            "Canva"
+          ]
+        }
+      }
   ];
 
   return (
