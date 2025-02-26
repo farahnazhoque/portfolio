@@ -387,10 +387,10 @@ function Experiences() {
 
                     <div id="image" className="mb-8">
                         <img 
-                            href={selectedFile.link}
+                            onClick={() => window.open(selectedFile.link, '_blank')}
                             src={selectedFile.content.image} 
                             alt="" 
-                            className="w-full h-120 object-cover rounded-lg shadow-lg border-2 border-black hover:scale-105 transition-all duration-300"
+                            className="w-full h-120 object-cover rounded-lg shadow-lg border-2 border-black hover:scale-105 transition-all duration-300 cursor-pointer"
                         />
                     </div>
                     <div id="responsibilities" className="mb-8">
