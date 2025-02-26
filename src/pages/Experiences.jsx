@@ -1,42 +1,56 @@
 import { useState } from 'react';
 import '../style/App.css';
 import { Link } from 'react-router-dom';
-import Modal from './Modal';    
-import Footer from './Footer';
+import Modal from './Modal';
+
 function Experiences() {
   const [selectedFile, setSelectedFile] = useState(null);
-  const [isMinimized, setIsMinimized] = useState(false);
 
   const experiences = [
     {
       title: "JOE C. WEN SCHOOL OF POPULATION AND PUBLIC HEALTH.doc",
-      role: "DATA SCIENCE RESEARCH ASSISTANT",
+      role: "DATA SCIENCE RESEARCH ASSISTANT INTERN",
       icon: import.meta.env.BASE_URL + 'wordDoc.png',
+      link: "https://drwulab.net/",
       period: "JANUARY 2025 - PRESENT",
       content: {
+        image: import.meta.env.BASE_URL + 'drWu.png',
+
+        summary: {
+          team: [
+            "1 Professor (Research Supervisor)",
+            "1 Research Lead", 
+            "3 Data Science Research Assistants (including myself)"
+          ],
+          myRole: "Data Science Research Assistant",
+          timeline: "January 2025 - Present",
+          projectPhases: [
+            "Data Collection (Jan 2025)",
+            "Data Processing & Analysis (Jan-Feb 2025)",
+            "Dashboard Development (Feb-Mar 2025)"
+          ]
+        },
         responsibilities: [
           "The focus of this research was to develop a comprehensive and efficient web crawling system to collect data from multiple years (2011-2024) of fire incidents that took place all over California, especially all the evacuation order, warnings and zones. The data was collected from the California Department of Forestry and Fire Protection (CAL FIRE) website.",
           "Our team of one Research Lead and three Data Science Research Assistants worked together to develop a web crawler that could crawl the website and extract the data in a structured format. The data was then cleaned and prepared for analysis.",
           "Using the data, we created a dashboard that allows users to visualize the data in a user-friendly manner. The dashboard was created using Tableau and Power BI.",
           "There were weekly meetings both with the Research Lead, the Professor who oversees the research, and the other team members to discuss the progress of the project and the challenges faced."
-          
         ],
         purpose: [
-            "My purpose for joining this research mainly stemmed from my passion to create software and conduct research to provide solutions to real-world problems, whose lack of attention are still being endured by the society today.",
-            "From my desire to problem solve came my need to solve the problem with the skills I have learned and should learn in the future.",
-            "As a result, I joined this research to gain experience in the field of data science and to be able to apply my skills to a real-world problem."
+          "My purpose for joining this research mainly stemmed from my passion to create software and conduct research to provide solutions to real-world problems, whose lack of attention are still being endured by the society today.",
+          "From my desire to problem solve came my need to solve the problem with the skills I have learned and should learn in the future.",
+          "As a result, I joined this research to gain experience in the field of data science and to be able to apply my skills to a real-world problem."
         ],
         technologies: [
-            "Python",
-            "Selenium",
-            "BeautifulSoup",
-            "Pandas",
-            "Tableau",
-            "Power BI"
+          "Python",
+          "Selenium",
+          "BeautifulSoup", 
+          "Pandas",
+          "Tableau",
+          "Power BI"
         ]
       }
-    },
-   
+    }
   ];
 
   return (
@@ -62,7 +76,6 @@ function Experiences() {
             <div className="flex gap-2">
               <button
                 className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
-                onClick={() => setIsMinimized(true)}
               >
                 _
               </button>
@@ -118,11 +131,11 @@ function Experiences() {
       {selectedFile && (
         <Modal onClose={() => setSelectedFile(null)}>
           <div className="fixed inset-0 bg-[#c0c0c0] flex items-center justify-center p-4 z-50">
-            <div className="w-[1200px] border-2 border-black bg-white text-black overflow-y-auto max-h-[90vh]">
-              <div className="fixed top-0 left-0 right-0 z-50 bg-blue-200 text-black p-2 flex justify-between items-center border-b-4 border-black">
+            <div className="w-[1200px] border-2 border-black bg-white text-black overflow-y-auto max-h-[100vh]">
+              <div className="fixed top-0 left-0 right-0 z-50 bg-blue-200 text-black p-2 flex justify-between items-center border-b-2 border-black">
                 <div className="flex items-center gap-2">
                   <img
-                    src={import.meta.env.BASE_URL + 'word-icon.png'}
+                    src={import.meta.env.BASE_URL + 'wordDoc.png'}
                     alt="Word"
                     className="w-6 h-6"
                   />
@@ -142,8 +155,10 @@ function Experiences() {
               
               <div className="bg-white border-b-4 border-black fixed top-[40px] left-0 right-0 z-50">
                 <div className="flex gap-4 p-2">
-                  <span className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">File</span>
-                  <span className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Home</span>
+                  {selectedFile.link && (
+                    <a href={selectedFile.link} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Link to Organization</a>
+                  )}
+                  <span onClick={() => setSelectedFile(null)} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Home</span>
                   <span className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Insert</span>
                   <span className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Layout</span>
                   <span className="text-lg font-PerfectDOSVGA437  hover:bg-gray-100 px-2 py-1 cursor-pointer">References</span>
@@ -236,20 +251,11 @@ function Experiences() {
                       }
                     }}
                   ></div>
-                  <div 
-                    className="w-6 h-6 bg-yellow-300 rounded cursor-pointer hover:opacity-80" 
-                    title="Highlight Color"
-                    onClick={() => {
-                      const content = document.querySelector('.p-8.bg-white');
-                      if (content) {
-                        content.style.backgroundColor = '#fef08a';
-                      }
-                    }}
-                  ></div>
+                  
                 </div>
               </div>
               
-              <div className="p-8 bg-white mt-[100px] overflow-y-auto h-[calc(100%-100px)]">
+              <div className="p-8 bg-white mt-40 overflow-y-auto h-[calc(100%-100px)] custom-scrollbar animate-fadeIn">
                 <div className="border-b-4 border-blue-200 pb-6 mb-8">
                   <h1 className="text-4xl font-bold text-blue-900 font-times mb-3">{selectedFile.role}</h1>
                   <p className="text-gray-600 italic font-arial">{selectedFile.period}</p>
@@ -258,66 +264,116 @@ function Experiences() {
                 <div className="flex">
                   {/* Sidebar with clickable headings */}
                   <div className="w-48 border-r border-gray-200 pr-4 sticky top-0">
-                    <div 
-                      onClick={() => document.getElementById('responsibilities').scrollIntoView({ behavior: 'smooth' })}
-                      className="flex items-center p-2 mb-2 cursor-pointer hover:bg-gray-100 rounded"
+                  <div
+                      onClick={() => document.getElementById('summary').scrollIntoView({ behavior: 'smooth' })}
+                      className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
-                      <img src={import.meta.env.BASE_URL + 'checklist.png'} alt="" className="w-4 h-4 mr-2"/>
+                      <img src={import.meta.env.BASE_URL + 'summary.png'} alt="" className="w-6 h-6 mr-2"/>
+                      <span className="text-sm font-medium">Summary</span>
+                    </div>
+                    <div
+                      onClick={() => document.getElementById('responsibilities').scrollIntoView({ behavior: 'smooth' })}
+                      className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
+                    >
+                      <img src={import.meta.env.BASE_URL + 'respon.png'} alt="" className="w-6 h-6 mr-2"/>
                       <span className="text-sm font-medium">Responsibilities</span>
                     </div>
                     <div
                       onClick={() => document.getElementById('purpose').scrollIntoView({ behavior: 'smooth' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
-                      <img src={import.meta.env.BASE_URL + 'skills.png'} alt="" className="w-4 h-4 mr-2"/>
+                      <img src={import.meta.env.BASE_URL + 'purpose.png'} alt="" className="w-6 h-6 mr-2"/>
                       <span className="text-sm font-medium">Purpose</span>
-                    </div> 
+                    </div>
                     <div
                       onClick={() => document.getElementById('technologies').scrollIntoView({ behavior: 'smooth' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
-                      <img src={import.meta.env.BASE_URL + 'skills.png'} alt="" className="w-4 h-4 mr-2"/>
+                      <img src={import.meta.env.BASE_URL + 'tech.png'} alt="" className="w-6 h-6 mr-2"/>
                       <span className="text-sm font-medium">Technologies</span>
                     </div>
                   </div>
 
+
                   {/* Main content */}
-                  <div className="flex-1 pl-8">
-                    <div id="responsibilities" className="mb-8">
-                      <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                  <div className="flex-1 pl-8 sticky top-0">
+                    <div id="summary" className="mb-8">
+                      <div className="bg-gray-50 p-6 rounded-lg border border-black hover:scale-105 transition-all duration-300">
                         <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
-                          <img src={import.meta.env.BASE_URL + 'checklist.png'} alt="" className="w-6 h-6 mr-2"/>
+                          <img src={import.meta.env.BASE_URL + 'summary.png'} alt="" className="w-8 h-8 mr-2"/>
+                          Project Summary
+                        </h2>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <h3 className="font-semibold text-gray-700 mb-2">Team Composition</h3>
+                            <ul className="list-disc list-inside space-y-1 text-gray-600">
+                              {selectedFile.content.summary.team.map((member, index) => (
+                                <li key={index}>{member}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-gray-700 mb-2">My Role</h3>
+                            <p className="text-gray-600">{selectedFile.content.summary.myRole}</p>
+                            <h3 className="font-semibold text-gray-700 mt-4 mb-2">Timeline</h3>
+                            <p className="text-gray-600">{selectedFile.content.summary.timeline}</p>
+                          </div>
+                          <div className="col-span-2">
+                            <h3 className="font-semibold text-gray-700 mb-2">Project Phases</h3>
+                            <ul className="list-disc list-inside space-y-1 text-gray-600">
+                              {selectedFile.content.summary.projectPhases.map((phase, index) => (
+                                <li key={index}>{phase}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="image" className="mb-8">
+                        <img 
+                            href={selectedFile.link}
+                            src={selectedFile.content.image} 
+                            alt="" 
+                            className="w-full h-120 object-cover rounded-lg shadow-lg border-2 border-black hover:scale-105 transition-all duration-300"
+                        />
+                    </div>
+                    <div id="responsibilities" className="mb-8">
+                      <div className="bg-gray-50 p-6 rounded-lg border border-black hover:scale-105 transition-all duration-300">
+                        <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+                          <img src={import.meta.env.BASE_URL + 'respon.png'} alt="" className="w-8 h-8 mr-2"/>
                           Responsibilities
                         </h2>
                         <ul className="space-y-3">
                           {selectedFile.content.responsibilities.map((resp, index) => (
-                            <ul key={index} className="flex items-center">
+                            <li key={index} className="flex items-center">
                               <span className="font-georgia text-gray-700">{resp}</span>
-                            </ul>
+                            </li>
                           ))}
                         </ul>
                       </div>
                     </div>
                     
                     <div id="purpose" className="mb-8">
-                        <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                            <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
-                                <img src={import.meta.env.BASE_URL + 'checklist.png'} alt="" className="w-6 h-6 mr-2"/>
-                                Purpose
-                            </h2>
-                            <ul className="space-y-3">
-                            {selectedFile.content.purpose.map((pur, index) => (
-                                <ul key={index} className="flex items-center">
-                                <span className="font-georgia text-gray-700">{pur}</span>
-                                </ul>
-                            ))}
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="technologies">
-                      <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
+                      <div className="bg-gray-50 p-6 rounded-lg border border-black hover:scale-105 transition-all duration-300">
                         <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
-                          <img src={import.meta.env.BASE_URL + 'skills.png'} alt="" className="w-6 h-6 mr-2"/>
+                          <img src={import.meta.env.BASE_URL + 'purpose.png'} alt="" className="w-8 h-8 mr-2"/>
+                          Purpose
+                        </h2>
+                        <ul className="space-y-3">
+                          {selectedFile.content.purpose.map((pur, index) => (
+                            <li key={index} className="flex items-center">
+                              <span className="font-georgia text-gray-700">{pur}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="technologies">
+                      <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 hover:scale-105 transition-all duration-300">
+                        <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+                          <img src={import.meta.env.BASE_URL + 'tech.png'} alt="" className="w-8 h-8 mr-2"/>
                           Technologies
                         </h2>
                         <div className="flex flex-wrap gap-3">
@@ -334,13 +390,11 @@ function Experiences() {
                     </div>
                   </div>
                 </div>
-                </div>
               </div>
+            </div>
           </div>
         </Modal>
       )}
-
-      <Footer />
     </div>
   );
 }
