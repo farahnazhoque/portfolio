@@ -58,7 +58,7 @@ function Experiences() {
         link: "https://soar.uci.edu",
         period: "JANUARY 2025 - PRESENT",
         content: {
-          image: import.meta.env.BASE_URL + 'solo.png',
+          image: import.meta.env.BASE_URL + 'soar.png',
   
           summary: {
             team: [
@@ -113,7 +113,7 @@ function Experiences() {
         link: "https://github.com/farahnazhoque/SOLOFinal",
         period: "MARCH 2024 - JUNE 2024",
         content: {
-          image: import.meta.env.BASE_URL + 'soar.png',
+          image: import.meta.env.BASE_URL + 'solo.png',
   
           summary: {
             team: [

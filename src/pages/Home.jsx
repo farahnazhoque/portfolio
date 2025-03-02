@@ -235,10 +235,10 @@ function Home() {
                       />
                     </a>
                     <div>
-                      <p className="font-kodchasan text-gray-700 text-base md:text-lg mb-4">
+                      <p className="font-kodchasan-regular text-gray-700 text-base md:text-lg mb-4">
                         I am a <span className="font-bold italic text-indigo-900">Computer Science</span> major specializing in <span className="font-bold italic text-indigo-900">Intelligent Systems</span> with a minor in <span className="font-bold italic text-indigo-900">Health Informatics</span>. I have a deep interest in <span className="font-bold italic text-indigo-900">AI-driven solutions for healthcare, safety, and community impact.</span> My mission is to leverage artificial intelligence, cloud computing, and data-driven insights to build scalable, innovative solutions that address real-world challenges.
                       </p>
-                      <p className="font-kodchasan text-gray-700 text-base md:text-lg">
+                      <p className="font-kodchasan-regular text-gray-700 text-base md:text-lg">
                         With a background in full-stack development, AI applications, and software engineering, <span className="font-bold italic text-indigo-900">I aim to bridge the gap between cutting-edge technology and practical implementation in industries such as:</span>
                       </p>
                     </div>
@@ -300,7 +300,7 @@ function Home() {
                   </div>
 
                   {/* Final paragraph */}
-                  <p className="font-kodchasan text-gray-700 text-base md:text-lg">
+                  <p className="font-kodchasan-regular text-gray-700 text-base md:text-lg">
                     Since my days in High School, I have always been passionate about communities and solving large scale problems that affect the lives of many, resulting in me co-founding <span className="font-bold italic text-indigo-900">Iccheghuri</span>, a non-profit organization in Bangladesh.
                   </p>
                 </div>
@@ -435,8 +435,8 @@ function Home() {
                             <p className="text-purple-800 font-bold text-lg">ROLE: Data Science Research Assistant</p>
                             <p className="text-gray-600 mt-2">PERIOD: JANUARY 2023 - PRESENT</p>
                               <p className="text-gray-600 mt-2">RESPONSIBILITIES:</p>
-                              <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
-                                <li>Website Crawling</li>
+                                <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
+                                  <li>Website Crawling</li>
                                 <li>Data Collection</li>
                                 <li>Data Analysis & Visualization</li>
                               </ul>
@@ -465,7 +465,7 @@ function Home() {
                             <p className="text-gray-600 mt-2">STATUS: ACTIVE</p>
                             <div className="mt-2 space-y-2">
                               <p className="text-gray-600">RESPONSIBILITIES:</p>
-                              <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                              <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
                                 <li>Website Design & Development</li>
                                 <li>Newsletter Design & Writing</li>
                                 <li>Engagement Campaigns</li>
@@ -496,7 +496,7 @@ function Home() {
                           <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
                           <div className="mt-2 space-y-2">
                             <p className="text-gray-600">RESPONSIBILITIES:</p>
-                            <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                            <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
                               <li>Application Design & Development</li>
                               <li>Database Creation & Management</li>
                               <li>AWS Cloud Services Integration</li>
@@ -527,7 +527,7 @@ function Home() {
                             <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
                             <div className="mt-2 space-y-2">
                               <p className="text-gray-600">RESPONSIBILITIES:</p>
-                              <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                              <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
                                 <li>Volunteer Management System</li>
                                 <li>Data Analytics Dashboard</li>
                                 <li>Cloud Infrastructure Setup</li>
@@ -558,7 +558,7 @@ function Home() {
                           <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
                           <div className="mt-2 space-y-2">
                             <p className="text-gray-600">RESPONSIBILITIES:</p>
-                            <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                            <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
                               <li>Budget Allocation and Management</li>
                               <li>Internship Management</li>
                               <li>Event Creation and Management</li>
@@ -589,7 +589,7 @@ function Home() {
                           <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
                           <div className="mt-2 space-y-2">
                             <p className="text-gray-600">RESPONSIBILITIES:</p>
-                            <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                            <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
                               <li>Research on Internet of Things</li>
                               <li>Rover Development using ROS2</li>
                               <li>Data Collection and Visualization using TensorFlow</li>
@@ -620,7 +620,7 @@ function Home() {
                           <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
                           <div className="mt-2 space-y-2">
                             <p className="text-gray-600">RESPONSIBILITIES:</p>
-                            <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                            <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
                               <li>Student Support & Tutoring</li>
                               <li>Course Material Development and Preparation</li>
                               <li>Office Hours Management</li>
