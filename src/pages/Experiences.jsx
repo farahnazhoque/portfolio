@@ -58,7 +58,7 @@ function Experiences() {
         link: "https://soar.uci.edu",
         period: "JANUARY 2025 - PRESENT",
         content: {
-          image: import.meta.env.BASE_URL + 'soar.png',
+          image: import.meta.env.BASE_URL + 'solo.png',
   
           summary: {
             team: [
@@ -102,6 +102,106 @@ function Experiences() {
             "Adobe XD",
             "Adobe Premiere Pro",
             "Adobe After Effects",
+            "Canva"
+          ]
+        }
+      },
+      {
+        title: "Stand Up to Trash.doc",
+        role: "FULL STACK DEVELOPER",
+        icon: import.meta.env.BASE_URL + 'wordDoc.png',
+        link: "https://www.standuptotrash.com/",
+        period: "OCTOBER 2023 - JUNE 2024",
+        content: {
+          image: import.meta.env.BASE_URL + 's2t.png',
+  
+          summary: {
+            team: [
+              "3 Founders",
+              "2 Tech Leads",
+              "10 Full Stack Developers (including myself)",
+              "3 Designers"
+            ],
+            myRole: "Full Stack Developer",
+            timeline: "October 2023 - June 2024",
+            projectPhases: [
+              "UI/UX Design (October 2023 - January 2024)",
+              "Frontend Development (October 2023 - June 2024)",
+              "Backend Development (October 2023 - June 2024)"
+            ]
+          },
+          responsibilities: [
+            
+          ],
+          purpose: [
+            "My initial reason for joining this project was to be able to work on a real-world problem and to work with a team of people to learn more about the latest technologies in the field of software engineering.",
+            "It was also a great opportunity to work with the founders of the projects, interact with stakeholders, and network with other professionals in the field."
+          ],
+          technologies: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Figma",
+            "Amazon S3",
+            "AWS Rekognition",
+            "MySQL",
+            "Node.js",
+            "Express",
+            "React Router",
+            "React Hook Form",
+            "Canva"
+          ]
+        }
+      },
+      {
+        title: "SOLO: A TRAINING APPLICATION FOR RUNNERS.doc",
+        role: "LEAD SOFTWARE ENGINEER INTERN",
+        icon: import.meta.env.BASE_URL + 'wordDoc.png',
+        link: "https://github.com/farahnazhoque/SOLOFinal",
+        period: "MARCH 2024 - JUNE 2024",
+        content: {
+          image: import.meta.env.BASE_URL + 'soar.png',
+  
+          summary: {
+            team: [
+              "2 Founders",
+              "2 Frontend Developers (including myself)",
+              "3 Backend Developers (including myself)",
+              "3 Designers"
+            ],
+            myRole: "Lead Software Engineer Intern",
+            timeline: "March 2024 - June 2024",
+            projectPhases: [
+              "UI/UX Design (January 2024 - March 2024)",
+              "Frontend Development (March 2024 - September 2024)",
+              "Backend Development (June 2024 - September 2024)"
+            ]
+          },
+          responsibilities: [
+            "With the initial design done by the interns before us, we had to make ensure that the founders were on board with the design, and that the design adhered to the user needs and preferences.",
+            "As a full stack developer, I was responsible for developing the frontend and backend of the application, and I also had to ensure that the application was responsive and that it adhered to the design.",
+            "We had to also perform research on the best practices for uploading and displaying the videos, using Amazon S3 and AWS Rekognition, and we had to ensure that the application was secure and that the data was stored properly.",
+            "To properly store all the data, we created an Amazon RDS instance and connected it to the MySQL Workbench, with proper user authentication and authorization.",
+            "We also had to ensure that the application was responsive and that it adhered to the design, and that the application was secure and that the data was stored properly."            
+          ],
+          purpose: [
+            "My initial reason for joining this project was to be able to work on a real-world problem and to work with a team of people to learn more about the latest technologies in the field of software engineering.",
+            "It was also a great opportunity to work with the founders of the projects, interact with stakeholders, and network with other professionals in the field."
+          ],
+          technologies: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Figma",
+            "Amazon S3",
+            "AWS Rekognition",
+            "MySQL",
+            "Node.js",
+            "Express",
+            "React Router",
+            "React Hook Form",
             "Canva"
           ]
         }
@@ -353,7 +453,7 @@ function Experiences() {
                   {/* Main content */}
                   <div className="flex-1 pl-8 sticky top-0">
                     <div id="summary" className="mb-8">
-                      <div className="bg-gray-50 p-6 rounded-lg border border-black hover:scale-105 transition-all duration-300">
+                      <div className="bg-gray-50 p-6 rounded-lg border border-black">
                         <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
                           <img src={import.meta.env.BASE_URL + 'summary.png'} alt="" className="w-8 h-8 mr-2"/>
                           Project Summary
@@ -387,14 +487,14 @@ function Experiences() {
 
                     <div id="image" className="mb-8">
                         <img 
-                            onClick={() => window.open(selectedFile.link, '_blank')}
                             src={selectedFile.content.image} 
+                            onClick={() => window.open(selectedFile.link, '_blank')}
                             alt="" 
-                            className="w-full h-120 object-cover rounded-lg shadow-lg border-2 border-black hover:scale-105 transition-all duration-300 cursor-pointer"
+                            className="w-full h-120 object-cover rounded-lg shadow-lg border-2 border-black cursor-pointer hover:scale-105 transition-all duration-300"
                         />
                     </div>
                     <div id="responsibilities" className="mb-8">
-                      <div className="bg-gray-50 p-6 rounded-lg border border-black hover:scale-105 transition-all duration-300">
+                      <div className="bg-gray-50 p-6 rounded-lg border border-black">
                         <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
                           <img src={import.meta.env.BASE_URL + 'respon.png'} alt="" className="w-8 h-8 mr-2"/>
                           Responsibilities
@@ -410,7 +510,7 @@ function Experiences() {
                     </div>
                     
                     <div id="purpose" className="mb-8">
-                      <div className="bg-gray-50 p-6 rounded-lg border border-black hover:scale-105 transition-all duration-300">
+                      <div className="bg-gray-50 p-6 rounded-lg border border-black">
                         <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
                           <img src={import.meta.env.BASE_URL + 'purpose.png'} alt="" className="w-8 h-8 mr-2"/>
                           Purpose
@@ -426,7 +526,7 @@ function Experiences() {
                     </div>
 
                     <div id="technologies">
-                      <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 hover:scale-105 transition-all duration-300">
+                      <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
                         <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
                           <img src={import.meta.env.BASE_URL + 'tech.png'} alt="" className="w-8 h-8 mr-2"/>
                           Technologies
