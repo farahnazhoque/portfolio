@@ -39,22 +39,18 @@ function Home() {
   }, [showUniversityModal, showSOARModal, showSOLOModal, showCommitChangeModal, showProgramModal]);
 
   return (
-    <div className="absolute lg:top-10 mt-20 left-1/2 -translate-x-1/2 
+    <div className="absolute lg:top-10 lg:mt-20 md:mt-20 sm:mt-20 mt-25 left-1/2 -translate-x-1/2 
       w-full sm:max-w-[500px] md:max-w-[80vw] lg:max-w-[1000px]
       bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl
       overflow-hidden 
       min-h-[450px] md:min-h-[600px] lg:min-h-[650px]">
       
-      <div className="w-full h-[450px] md:w-[80vw] md:h-[600px] lg:w-[1000px] lg:h-[650px] bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl relative">
+      <div className="w-full h-[650px] md:w-[80vw] md:h-[600px] lg:w-[1000px] lg:h-[650px] bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl relative">
         {/* Window Title Bar */}
         <div className="bg-gradient-to-r from-[#000080] to-[#4169E1] px-3 py-2 flex items-center justify-between rounded-t-lg">
           <div className="flex items-center">
-            <img
-              src={import.meta.env.BASE_URL + 'IEIcon.png'}
-              alt="IE Icon"
-              className="w-5 h-5 mr-2 animate-pulse"
-            />
-            <span className="text-white font-PerfectDOSVGA437 text-lg">Welcome - Home</span>
+            
+            <span className="text-white font-PerfectDOSVGA437 text-lg">🪐 Welcome - Home</span>
           </div>
           <div className="flex gap-2">
             <button
@@ -101,14 +97,12 @@ function Home() {
           >
             📝 Substack
           </a>
-          <a 
-            href="mailto:fhoque@uci.edu" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <button
+            onClick={() => window.location.href = 'mailto:fhoque@uci.edu'}
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
           >
             💌 Email
-          </a>
+          </button>
           <button 
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
             onClick={() => setIsSidebarExpanded(!isSidebarExpanded)}
