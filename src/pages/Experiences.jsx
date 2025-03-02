@@ -131,26 +131,38 @@ function Experiences() {
             ]
           },
           responsibilities: [
+            "Initially, I was tasked with following the design guidelines and creating the frontend of the website.",
+            "Using the Sandwich Model and Agile Methodology, I worked with the other developers to incrementally build the backend of the website, while the designers were working on other parts of the website.",
+            "We had weekly meetings with Tech Leads to discuss the progress, brainstorm implementation ideas, task distribution, and any other issues that needed to be addressed.",
+            "I personally worked more on the creation of the PostgreSQL database, and the backend API endpoints.",
+            "In the frontend, I worked mainly with the dashboard, login, signup and volunteer management pages."
             
           ],
           purpose: [
-            "My initial reason for joining this project was to be able to work on a real-world problem and to work with a team of people to learn more about the latest technologies in the field of software engineering.",
-            "It was also a great opportunity to work with the founders of the projects, interact with stakeholders, and network with other professionals in the field."
+            "As someone who is passionate about any form of community service, I was drawn to Stand Up to Trash because of the mission of the organization to clean up the community and make it a better place for everyone.",
+            "Through this project, I was able to learn more about what it is to work with clients first hand, interviewing them to understand their needs and preferences, and also socialize with the community and company to branch out my network.",
+            "However, mostly it was for creating a platform that is easy to use for the amazing volunteers and staff of Stand Up to Trash, and to make their lives much easier while performing such an incredible task."
           ],
           technologies: [
             "HTML",
             "CSS",
-            "JavaScript",
-            "React",
-            "Figma",
-            "Amazon S3",
-            "AWS Rekognition",
-            "MySQL",
+            "TypeScript",
             "Node.js",
             "Express",
-            "React Router",
-            "React Hook Form",
-            "Canva"
+            "MySQL",
+            "MySQL Workbench",
+            "React",
+            "Figma",
+            "Ionic",
+            "Capacitor",
+            "Angular",
+            "Git",
+            "GitHub",
+            "Docker",
+            "AWS",
+            "AWS RDS",
+            "AWS S3",
+            "AWS EC2"
           ]
         }
       },
@@ -197,12 +209,25 @@ function Experiences() {
             "Figma",
             "Amazon S3",
             "AWS Rekognition",
-            "MySQL",
+            "PostgreSQL",
             "Node.js",
             "Express",
             "React Router",
             "React Hook Form",
-            "Canva"
+            "Canva",
+            "Agile Methodology",
+            "Sandwich Model",
+            "Scrum",
+            "Jira",
+            "Notion",
+            "Slack",
+            "PgAdmin",
+            "Postman",
+            "AWS CLI",
+            "AWS SDK",
+            "AWS CLI",
+            "AWS SDK",
+            "AWS CLI",
           ]
         }
       }
