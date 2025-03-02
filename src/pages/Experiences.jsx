@@ -330,7 +330,7 @@ function Experiences() {
           {/* Window Content */}
           <div className="flex h-[calc(100%-3rem)]">
             {/* Left Sidebar */}
-            <div className="w-48 bg-[#c0c0c0] border-r-2 border-gray-400">
+            <div className="hidden md:block w-48 bg-[#c0c0c0] border-r-2 border-gray-400">
               <div className="p-2 border-b border-gray-400">
                 <div className="font-PerfectDOSVGA437 text-sm">
                   📁 My Computer
@@ -369,15 +369,15 @@ function Experiences() {
           <div className="fixed inset-0 bg-[#c0c0c0] flex items-center justify-center p-4 z-50">
             <div className="w-[1200px] border-2 border-black bg-white text-black overflow-y-auto max-h-[100vh]">
               <div className="fixed top-0 left-0 right-0 z-50 bg-blue-200 text-black p-2 flex justify-between items-center border-b-2 border-black">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 overflow-hidden">
                   <img
                     src={import.meta.env.BASE_URL + 'wordDoc.png'}
                     alt="Word"
-                    className="w-6 h-6"
+                    className="w-6 h-6 flex-shrink-0"
                   />
-                  <span className="font-kodchasan-bold text-xl">{selectedFile.title}</span>
+                  <span className="font-kodchasan-bold text-xl truncate">{selectedFile.title}</span>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex gap-2 flex-shrink-0">
                   <button className="px-1 py-0.5 hover:bg-[#1f4d86]">_</button>
                   <button className="px-2 py-1 hover:bg-[#1f4d86]">□</button>
                   <button
@@ -390,14 +390,34 @@ function Experiences() {
               </div>
               
               <div className="bg-white border-b-4 border-black fixed top-[40px] left-0 right-0 z-50">
-                <div className="flex gap-4 p-2">
-                  {selectedFile.link && (
-                    <a href={selectedFile.link} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Link to Organization</a>
-                  )}
-                  <span onClick={() => setSelectedFile(null)} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Home</span>
-                  <span className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Insert</span>
-                  <span className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Layout</span>
-                  <span className="text-lg font-PerfectDOSVGA437  hover:bg-gray-100 px-2 py-1 cursor-pointer">References</span>
+                <div className="relative">
+                  {/* Desktop view */}
+                  <div className="hidden md:flex gap-4 p-2">
+                    {selectedFile.link && (
+                      <a href={selectedFile.link} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Link to Organization</a>
+                    )}
+                    <span onClick={() => document.getElementById('summary').scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Summary</span>
+                    <span onClick={() => document.getElementById('responsibilities').scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Responsibilities</span>
+                    <span onClick={() => document.getElementById('purpose').scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Purpose</span>
+                    <span onClick={() => document.getElementById('technologies').scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Technologies</span>
+                  </div>
+
+                  {/* Mobile dropdown */}
+                  <select className="md:hidden w-full p-2 text-lg font-PerfectDOSVGA437 border rounded" onChange={(e) => {
+                    const element = document.getElementById(e.target.value);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                    } else if (e.target.value === 'link' && selectedFile.link) {
+                      window.location.href = selectedFile.link;
+                    }
+                  }}>
+                    <option value="">Navigate to...</option>
+                    {selectedFile.link && <option value="link">Link to Organization</option>}
+                    <option value="summary">Summary</option>
+                    <option value="responsibilities">Responsibilities</option>
+                    <option value="purpose">Purpose</option>
+                    <option value="technologies">Technologies</option>
+                  </select>
                 </div>
                 
                 <div className="flex items-center gap-4 px-4 py-2 border-t border-gray-200">
@@ -505,30 +525,30 @@ function Experiences() {
 
                 <div className="flex">
                   {/* Sidebar with clickable headings */}
-                  <div className="w-48 border-r border-gray-200 pr-4 sticky top-0">
-                  <div
-                      onClick={() => document.getElementById('summary').scrollIntoView({ behavior: 'smooth' })}
+                  <div className="hidden md:block w-48 border-r border-gray-200 pr-4 sticky top-0">
+                    <div
+                      onClick={() => document.getElementById('summary').scrollIntoView({ behavior: 'smooth', block: 'end' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
                       <img src={import.meta.env.BASE_URL + 'summary.png'} alt="" className="w-6 h-6 mr-2"/>
                       <span className="text-sm font-PerfectDOSVGA437">Summary</span>
                     </div>
                     <div
-                      onClick={() => document.getElementById('responsibilities').scrollIntoView({ behavior: 'smooth' })}
+                      onClick={() => document.getElementById('responsibilities').scrollIntoView({ behavior: 'smooth', block: 'end' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
                       <img src={import.meta.env.BASE_URL + 'respon.png'} alt="" className="w-6 h-6 mr-2"/>
                       <span className="text-sm font-PerfectDOSVGA437">Responsibilities</span>
                     </div>
                     <div
-                      onClick={() => document.getElementById('purpose').scrollIntoView({ behavior: 'smooth' })}
+                      onClick={() => document.getElementById('purpose').scrollIntoView({ behavior: 'smooth', block: 'end' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
                       <img src={import.meta.env.BASE_URL + 'purpose.png'} alt="" className="w-6 h-6 mr-2"/>
                       <span className="text-sm font-PerfectDOSVGA437">Purpose</span>
                     </div>
                     <div
-                      onClick={() => document.getElementById('technologies').scrollIntoView({ behavior: 'smooth' })}
+                      onClick={() => document.getElementById('technologies').scrollIntoView({ behavior: 'smooth', block: 'end' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
                       <img src={import.meta.env.BASE_URL + 'tech.png'} alt="" className="w-6 h-6 mr-2"/>
