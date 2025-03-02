@@ -131,7 +131,7 @@ function Experiences() {
             ]
           },
           responsibilities: [
-            "With the initial design done by the interns before us, we had to make ensure that the founders were on board with the design, and that the design adhered to the user needs and preferences.",
+            "With the initial design done by the interns before us, we had to make ensure that the founders were still on board with the previous designs, and that the design adhered to the user needs and preferences.",
             "As a full stack developer, I was responsible for developing the frontend and backend of the application, and I also had to ensure that the application was responsive and that it adhered to the design.",
             "We had to also perform research on the best practices for uploading and displaying the videos, using Amazon S3 and AWS Rekognition, and we had to ensure that the application was secure and that the data was stored properly.",
             "To properly store all the data, we created an Amazon RDS instance and connected it to the MySQL Workbench, with proper user authentication and authorization.",
