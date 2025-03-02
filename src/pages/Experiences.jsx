@@ -5,6 +5,7 @@ import Modal from './Modal';
 
 function Experiences() {
   const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFont, setSelectedFont] = useState('Arial'); // Add state for selected font
 
   const experiences = [
     {
@@ -374,7 +375,7 @@ function Experiences() {
                     alt="Word"
                     className="w-6 h-6"
                   />
-                  <span className="font-PerfectDOSVGA437 text-xl">{selectedFile.title}</span>
+                  <span className="font-kodchasan-bold text-xl">{selectedFile.title}</span>
                 </div>
                 <div className="flex gap-2">
                   <button className="px-1 py-0.5 hover:bg-[#1f4d86]">_</button>
@@ -402,10 +403,16 @@ function Experiences() {
                 <div className="flex items-center gap-4 px-4 py-2 border-t border-gray-200">
                   <select 
                     className="px-2 py-1 border rounded hover:bg-gray-50"
+                    value={selectedFont}
                     onChange={(e) => {
+                      setSelectedFont(e.target.value);
                       const content = document.querySelector('.p-8.bg-white');
                       if (content) {
-                        content.style.fontFamily = e.target.value;
+                        // Apply font to all text elements
+                        const textElements = content.querySelectorAll('h1, h2, h3, p, span, li');
+                        textElements.forEach(el => {
+                          el.style.fontFamily = e.target.value;
+                        });
                       }
                     }}
                   >
@@ -490,7 +497,7 @@ function Experiences() {
                 </div>
               </div>
               
-              <div className="p-8 bg-white mt-40 overflow-y-auto h-[calc(100%-100px)] custom-scrollbar animate-fadeIn">
+              <div className="p-8 bg-white mt-40 overflow-y-auto h-[calc(100%-100px)] custom-scrollbar animate-fadeIn" style={{fontFamily: selectedFont}}>
                 <div className="border-b-4 border-blue-200 pb-6 mb-8">
                   <h1 className="text-4xl font-bold text-blue-900 font-times mb-3">{selectedFile.role}</h1>
                   <p className="text-gray-600 italic font-arial">{selectedFile.period}</p>
@@ -541,7 +548,7 @@ function Experiences() {
                         <div className="grid grid-cols-2 gap-4">
                           <div>
                             <h3 className="font-kodchasan-bold text-gray-700 mb-2">Team Composition</h3>
-                            <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <ul className="list-disc font-kodchasan-regular list-inside space-y-1 text-gray-600">
                               {selectedFile.content.summary.team.map((member, index) => (
                                 <li key={index}>{member}</li>
                               ))}
@@ -549,13 +556,13 @@ function Experiences() {
                           </div>
                           <div>
                             <h3 className="font-kodchasan-bold text-gray-700 mb-2">My Role</h3>
-                            <p className="text-gray-600">{selectedFile.content.summary.myRole}</p>
+                            <p className="text-gray-600 font-kodchasan-regular">{selectedFile.content.summary.myRole}</p>
                             <h3 className="font-kodchasan-bold text-gray-700 mt-4 mb-2">Timeline</h3>
-                            <p className="text-gray-600">{selectedFile.content.summary.timeline}</p>
+                            <p className="text-gray-600 font-kodchasan-regular">{selectedFile.content.summary.timeline}</p>
                           </div>
                           <div className="col-span-2">
                             <h3 className="font-kodchasan-bold text-gray-700 mb-2">Project Phases</h3>
-                            <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <ul className="list-disc font-kodchasan-regular list-inside space-y-1 text-gray-600">
                               {selectedFile.content.summary.projectPhases.map((phase, index) => (
                                 <li key={index}>{phase}</li>
                               ))}
