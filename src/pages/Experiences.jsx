@@ -107,6 +107,65 @@ function Experiences() {
         }
       },
       {
+        title: "SOLO: A TRAINING APPLICATION FOR RUNNERS.doc",
+        role: "LEAD SOFTWARE ENGINEER INTERN",
+        icon: import.meta.env.BASE_URL + 'wordDoc.png',
+        link: "https://github.com/farahnazhoque/SOLOFinal",
+        period: "MARCH 2024 - JUNE 2024",
+        content: {
+          image: import.meta.env.BASE_URL + 'soar.png',
+  
+          summary: {
+            team: [
+              "2 Founders",
+              "2 Frontend Developers (including myself)",
+              "3 Backend Developers (including myself)",
+              "3 Designers"
+            ],
+            myRole: "Lead Software Engineer Intern",
+            timeline: "March 2024 - June 2024",
+            projectPhases: [
+              "UI/UX Design (January 2024 - March 2024)",
+              "Frontend Development (March 2024 - September 2024)",
+              "Backend Development (June 2024 - September 2024)"
+            ]
+          },
+          responsibilities: [
+            "With the initial design done by the interns before us, we had to make ensure that the founders were on board with the design, and that the design adhered to the user needs and preferences.",
+            "As a full stack developer, I was responsible for developing the frontend and backend of the application, and I also had to ensure that the application was responsive and that it adhered to the design.",
+            "We had to also perform research on the best practices for uploading and displaying the videos, using Amazon S3 and AWS Rekognition, and we had to ensure that the application was secure and that the data was stored properly.",
+            "To properly store all the data, we created an Amazon RDS instance and connected it to the MySQL Workbench, with proper user authentication and authorization.",
+            "We also had to ensure that the application was responsive and that it adhered to the design, and that the application was secure and that the data was stored properly."            
+          ],
+          purpose: [
+            "My initial reason for joining this project was to be able to work on a real-world problem and to work with a team of people to learn more about the latest technologies in the field of software engineering.",
+            "It was also a great opportunity to work with the founders of the projects, interact with stakeholders, and network with other professionals in the field."
+          ],
+          technologies: [
+            "HTML",
+            "CSS",
+            "TypeScript",
+            "Node.js",
+            "Express",
+            "MySQL",
+            "MySQL Workbench",
+            "React",
+            "Figma",
+            "Ionic",
+            "Capacitor",
+            "Angular",
+            "Git",
+            "GitHub",
+            "Docker",
+            "AWS",
+            "AWS RDS",
+            "AWS S3",
+            "AWS EC2"
+          ]
+          
+        }
+      },
+      {
         title: "Stand Up to Trash.doc",
         role: "FULL STACK DEVELOPER",
         icon: import.meta.env.BASE_URL + 'wordDoc.png',
@@ -146,64 +205,6 @@ function Experiences() {
           technologies: [
             "HTML",
             "CSS",
-            "TypeScript",
-            "Node.js",
-            "Express",
-            "MySQL",
-            "MySQL Workbench",
-            "React",
-            "Figma",
-            "Ionic",
-            "Capacitor",
-            "Angular",
-            "Git",
-            "GitHub",
-            "Docker",
-            "AWS",
-            "AWS RDS",
-            "AWS S3",
-            "AWS EC2"
-          ]
-        }
-      },
-      {
-        title: "SOLO: A TRAINING APPLICATION FOR RUNNERS.doc",
-        role: "LEAD SOFTWARE ENGINEER INTERN",
-        icon: import.meta.env.BASE_URL + 'wordDoc.png',
-        link: "https://github.com/farahnazhoque/SOLOFinal",
-        period: "MARCH 2024 - JUNE 2024",
-        content: {
-          image: import.meta.env.BASE_URL + 'soar.png',
-  
-          summary: {
-            team: [
-              "2 Founders",
-              "2 Frontend Developers (including myself)",
-              "3 Backend Developers (including myself)",
-              "3 Designers"
-            ],
-            myRole: "Lead Software Engineer Intern",
-            timeline: "March 2024 - June 2024",
-            projectPhases: [
-              "UI/UX Design (January 2024 - March 2024)",
-              "Frontend Development (March 2024 - September 2024)",
-              "Backend Development (June 2024 - September 2024)"
-            ]
-          },
-          responsibilities: [
-            "With the initial design done by the interns before us, we had to make ensure that the founders were on board with the design, and that the design adhered to the user needs and preferences.",
-            "As a full stack developer, I was responsible for developing the frontend and backend of the application, and I also had to ensure that the application was responsive and that it adhered to the design.",
-            "We had to also perform research on the best practices for uploading and displaying the videos, using Amazon S3 and AWS Rekognition, and we had to ensure that the application was secure and that the data was stored properly.",
-            "To properly store all the data, we created an Amazon RDS instance and connected it to the MySQL Workbench, with proper user authentication and authorization.",
-            "We also had to ensure that the application was responsive and that it adhered to the design, and that the application was secure and that the data was stored properly."            
-          ],
-          purpose: [
-            "My initial reason for joining this project was to be able to work on a real-world problem and to work with a team of people to learn more about the latest technologies in the field of software engineering.",
-            "It was also a great opportunity to work with the founders of the projects, interact with stakeholders, and network with other professionals in the field."
-          ],
-          technologies: [
-            "HTML",
-            "CSS",
             "JavaScript",
             "React",
             "Figma",
@@ -230,7 +231,61 @@ function Experiences() {
             "AWS CLI",
           ]
         }
-      }
+      },
+      {
+        title: "Donald Bren School of Information and Computer Sciences.doc",
+        role: "MACHINE LEARNING RESEARCH ASSISTANT",
+        icon: import.meta.env.BASE_URL + 'wordDoc.png',
+        link: "https://ics.uci.edu/~levorato/index.html",
+        period: "JANUARY 2022 - JUNE 2024",
+        content: {
+          image: import.meta.env.BASE_URL + 'mlresearch.png',
+  
+          summary: {
+            team: [
+              "1 Professor (Research Supervisor)",
+              "1 Research Lead",
+              "3 Machine Learning Research Assistants (including myself)"
+            ],
+            myRole: "Machine Learning Research Assistant",
+            timeline: "January 2022 - June 2024",
+            projectPhases: [
+              "Data Collection and Researching (January 2022 - June 2022)",
+              "Data Processing & Analysis (June 2022 - December 2022)",
+              "Model Development (December 2022 - June 2024)"
+            ]
+          },
+          responsibilities: [
+            "As one of three undergraduate research assistants, I collected internet data and researched advancements in machine learning.",
+            "I collaborated with my assigned research lead, reviewing relevant papers to support their development of an AR/VR application for assisting elderly individuals with daily tasks in household settings.",
+            "I also worked with the hardware team, contributing to the engineering of a data-collecting rover deployed in various locations, including Aldrich Park, the Anteater Recreation Center, and ICS buildings.",
+            "I further supported the other two research assistants with their research and data collection, meeting with each individually once or twice weekly.",
+            "Finally, I participated in weekly meetings with the professor to discuss project progress and address challenges faced by all teams."
+            
+          ],
+          purpose: [
+            "My purpose for joining research mainly was a form of exploration and learning, especially how computer science and machine learning looked like in a research setting.",
+            "It was gratifying to have the priviledge and opportunity to work with such forward-thinkers, and also to learn how papers were written for such technical topics, and how abstractions are conceptualized and implemented.",
+            "I also got to learn more about the importance of teamwork and collaboration, and how to effectively communicate with others to achieve a common goal through the process of working across different teams when it came to collaborating on a paper."
+          ],
+          technologies: [
+            "Python",
+            "Pandas",
+            "Numpy",
+            "Matplotlib",
+            "Seaborn",
+            "Scikit-learn",
+            "TensorFlow",
+            "ROS 1",
+            "ROS 2",
+            "ROS 2 Navigation",
+            "ROS 2 Mapping",
+            "ROS 2 SLAM",
+            "ROS 2 Gazebo",
+            "ROS 2 Rviz"
+          ]
+        }
+      },
   ];
 
   return (
