@@ -504,28 +504,28 @@ function Experiences() {
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
                       <img src={import.meta.env.BASE_URL + 'summary.png'} alt="" className="w-6 h-6 mr-2"/>
-                      <span className="text-sm font-medium">Summary</span>
+                      <span className="text-sm font-PerfectDOSVGA437">Summary</span>
                     </div>
                     <div
                       onClick={() => document.getElementById('responsibilities').scrollIntoView({ behavior: 'smooth' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
                       <img src={import.meta.env.BASE_URL + 'respon.png'} alt="" className="w-6 h-6 mr-2"/>
-                      <span className="text-sm font-medium">Responsibilities</span>
+                      <span className="text-sm font-PerfectDOSVGA437">Responsibilities</span>
                     </div>
                     <div
                       onClick={() => document.getElementById('purpose').scrollIntoView({ behavior: 'smooth' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
                       <img src={import.meta.env.BASE_URL + 'purpose.png'} alt="" className="w-6 h-6 mr-2"/>
-                      <span className="text-sm font-medium">Purpose</span>
+                      <span className="text-sm font-PerfectDOSVGA437">Purpose</span>
                     </div>
                     <div
                       onClick={() => document.getElementById('technologies').scrollIntoView({ behavior: 'smooth' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
                       <img src={import.meta.env.BASE_URL + 'tech.png'} alt="" className="w-6 h-6 mr-2"/>
-                      <span className="text-sm font-medium">Technologies</span>
+                      <span className="text-sm font-PerfectDOSVGA437">Technologies</span>
                     </div>
                   </div>
 
@@ -534,13 +534,13 @@ function Experiences() {
                   <div className="flex-1 pl-8 sticky top-0">
                     <div id="summary" className="mb-8">
                       <div className="bg-gray-50 p-6 rounded-lg border border-black">
-                        <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+                        <h2 className="text-2xl font-kodchasan-bold text-blue-800 mb-4 flex items-center">
                           <img src={import.meta.env.BASE_URL + 'summary.png'} alt="" className="w-8 h-8 mr-2"/>
                           Project Summary
                         </h2>
                         <div className="grid grid-cols-2 gap-4">
                           <div>
-                            <h3 className="font-semibold text-gray-700 mb-2">Team Composition</h3>
+                            <h3 className="font-kodchasan-bold text-gray-700 mb-2">Team Composition</h3>
                             <ul className="list-disc list-inside space-y-1 text-gray-600">
                               {selectedFile.content.summary.team.map((member, index) => (
                                 <li key={index}>{member}</li>
@@ -548,13 +548,13 @@ function Experiences() {
                             </ul>
                           </div>
                           <div>
-                            <h3 className="font-semibold text-gray-700 mb-2">My Role</h3>
+                            <h3 className="font-kodchasan-bold text-gray-700 mb-2">My Role</h3>
                             <p className="text-gray-600">{selectedFile.content.summary.myRole}</p>
-                            <h3 className="font-semibold text-gray-700 mt-4 mb-2">Timeline</h3>
+                            <h3 className="font-kodchasan-bold text-gray-700 mt-4 mb-2">Timeline</h3>
                             <p className="text-gray-600">{selectedFile.content.summary.timeline}</p>
                           </div>
                           <div className="col-span-2">
-                            <h3 className="font-semibold text-gray-700 mb-2">Project Phases</h3>
+                            <h3 className="font-kodchasan-bold text-gray-700 mb-2">Project Phases</h3>
                             <ul className="list-disc list-inside space-y-1 text-gray-600">
                               {selectedFile.content.summary.projectPhases.map((phase, index) => (
                                 <li key={index}>{phase}</li>
@@ -575,14 +575,14 @@ function Experiences() {
                     </div>
                     <div id="responsibilities" className="mb-8">
                       <div className="bg-gray-50 p-6 rounded-lg border border-black">
-                        <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+                        <h2 className="text-2xl font-kodchasan-bold text-blue-800 mb-4 flex items-center">
                           <img src={import.meta.env.BASE_URL + 'respon.png'} alt="" className="w-8 h-8 mr-2"/>
                           Responsibilities
                         </h2>
                         <ul className="space-y-3">
                           {selectedFile.content.responsibilities.map((resp, index) => (
                             <li key={index} className="flex items-center">
-                              <span className="font-georgia text-gray-700">{resp}</span>
+                              <span className="font-kodchasan-regular text-gray-700">{resp}</span>
                             </li>
                           ))}
                         </ul>
@@ -591,14 +591,14 @@ function Experiences() {
                     
                     <div id="purpose" className="mb-8">
                       <div className="bg-gray-50 p-6 rounded-lg border border-black">
-                        <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+                        <h2 className="text-2xl font-kodchasan-bold text-blue-800 mb-4 flex items-center">
                           <img src={import.meta.env.BASE_URL + 'purpose.png'} alt="" className="w-8 h-8 mr-2"/>
                           Purpose
                         </h2>
                         <ul className="space-y-3">
                           {selectedFile.content.purpose.map((pur, index) => (
                             <li key={index} className="flex items-center">
-                              <span className="font-georgia text-gray-700">{pur}</span>
+                              <span className="font-kodchasan-regular text-gray-700">{pur}</span>
                             </li>
                           ))}
                         </ul>
@@ -607,7 +607,7 @@ function Experiences() {
 
                     <div id="technologies">
                       <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
-                        <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+                        <h2 className="text-2xl font-PerfectDOSVGA437 text-blue-800 mb-4 flex items-center">
                           <img src={import.meta.env.BASE_URL + 'tech.png'} alt="" className="w-8 h-8 mr-2"/>
                           Technologies
                         </h2>
@@ -615,7 +615,7 @@ function Experiences() {
                           {selectedFile.content.technologies.map((technology, index) => (
                             <span
                               key={index}
-                              className="px-4 py-2 bg-white text-blue-700 rounded-full border-2 border-blue-200 font-semibold shadow-sm"
+                              className="px-4 py-2 bg-white text-blue-700 rounded-full border-2 border-blue-200 font-PerfectDOSVGA437 shadow-sm"
                             >
                               {technology}
                             </span>
