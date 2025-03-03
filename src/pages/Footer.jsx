@@ -120,8 +120,8 @@ function Footer() {
         </Menu>
 
         {showPaint && (
-          <div className="fixed bottom-16 left-0 p-4 bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl">
-            <div className="flex justify-between items-center mb-2 bg-gradient-to-r from-[#000080] to-[#4169E1] p-2">
+          <div className="fixed bottom-16 left-0 p-4 bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl w-full md:w-auto h-[90vh] md:h-auto">
+            <div className="flex justify-between items-center mb-2 bg-gradient-to-r from-[#000080] to-[#4169E1] p-2 sticky top-0">
               <h3 className="font-PerfectDOSVGA437 font-bold text-white">Paint</h3>
               <button 
                 onClick={() => setShowPaint(false)}
@@ -130,8 +130,8 @@ function Footer() {
                 ✖
               </button>
             </div>
-            <div className="flex bg-white border-2 border-gray-600">
-              <div className="flex flex-col gap-2 p-2 bg-[#c0c0c0] border-r-2 border-gray-600">
+            <div className="flex flex-col md:flex-row bg-white border-2 border-gray-600 h-[calc(90vh-4rem)] md:h-auto">
+              <div className="flex md:flex-col gap-2 p-2 bg-[#c0c0c0] border-b-2 md:border-b-0 md:border-r-2 border-gray-600">
                 <button 
                   onClick={() => setCurrentTool('pencil')}
                   className={`px-2 py-1 bg-[#c0c0c0] border-2 border-gray-500 hover:bg-[#b1b1b1] ${currentTool === 'pencil' ? 'bg-gray-400' : 'bg-[#b1b1b1]'}`}
@@ -177,25 +177,33 @@ function Footer() {
                 ref={canvasRef}
                 width="500"
                 height="400"
-                onMouseDown={(e) => {
+                onMouseDown={startDrawing}
+                onMouseUp={finishDrawing}
+                onMouseMove={draw}
+                onMouseLeave={finishDrawing}
+                onTouchStart={(e) => {
+                  const touch = e.touches[0];
                   if (currentTool === 'eraser') {
                     const ctx = canvasRef.current.getContext('2d');
                     ctx.globalCompositeOperation = 'destination-out';
-                    ctx.lineWidth = 20; // Larger width for eraser
+                    ctx.lineWidth = 20;
                   }
-                  startDrawing(e);
+                  startDrawing(touch);
                 }}
-                onMouseUp={(e) => {
+                onTouchEnd={(e) => {
                   if (currentTool === 'eraser') {
                     const ctx = canvasRef.current.getContext('2d');
                     ctx.globalCompositeOperation = 'source-over';
-                    ctx.lineWidth = 2; // Reset to default line width
+                    ctx.lineWidth = 2;
                   }
                   finishDrawing(e);
                 }}
-                onMouseMove={draw}
-                onMouseLeave={finishDrawing}
-                className="border border-gray-400 bg-white cursor-crosshair"
+                onTouchMove={(e) => {
+                  e.preventDefault();
+                  const touch = e.touches[0];
+                  draw(touch);
+                }}
+                className="border border-gray-400 bg-white cursor-crosshair w-full h-full touch-none"
               ></canvas>
             </div>
           </div>
