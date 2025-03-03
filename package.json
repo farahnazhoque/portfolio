@@ -3,11 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://farahnazhoque.tech/",
+  "homepage": "./",
   "scripts": {
-    
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp -r public/* dist/",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "yarn build",
