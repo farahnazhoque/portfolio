@@ -120,8 +120,8 @@ function Footer() {
         </Menu>
 
         {showPaint && (
-          <div className="fixed bottom-16 left-0 p-4 bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl w-full md:w-auto h-[90vh] md:h-auto">
-            <div className="flex justify-between items-center mb-2 bg-gradient-to-r from-[#000080] to-[#4169E1] p-2 sticky top-0">
+          <div className="fixed bottom-16 left-0 p-4 bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl w-full md:w-auto h-[90vh] md:h-auto overflow-y-auto">
+            <div className="flex justify-between items-center mb-2 bg-gradient-to-r from-[#000080] to-[#4169E1] p-2 sticky top-0 z-10">
               <h3 className="font-PerfectDOSVGA437 font-bold text-white">Paint</h3>
               <button 
                 onClick={() => setShowPaint(false)}
@@ -131,20 +131,20 @@ function Footer() {
               </button>
             </div>
             <div className="flex flex-col md:flex-row bg-white border-2 border-gray-600 h-[calc(90vh-4rem)] md:h-auto">
-              <div className="flex md:flex-col gap-2 p-2 bg-[#c0c0c0] border-b-2 md:border-b-0 md:border-r-2 border-gray-600">
+              <div className="flex flex-row md:flex-col gap-2 p-2 bg-[#c0c0c0] border-b-2 md:border-b-0 md:border-r-2 border-gray-600 overflow-x-auto md:overflow-x-visible">
                 <button 
                   onClick={() => setCurrentTool('pencil')}
-                  className={`px-2 py-1 bg-[#c0c0c0] border-2 border-gray-500 hover:bg-[#b1b1b1] ${currentTool === 'pencil' ? 'bg-gray-400' : 'bg-[#b1b1b1]'}`}
+                  className={`min-w-[2.5rem] px-2 py-1 bg-[#c0c0c0] border-2 border-gray-500 hover:bg-[#b1b1b1] ${currentTool === 'pencil' ? 'bg-gray-400' : 'bg-[#b1b1b1]'}`}
                 >✏️</button>
                 <button 
                   onClick={() => setCurrentTool('brush')}
-                  className={`px-2 py-1 bg-[#c0c0c0] border-2 border-gray-500 hover:bg-[#b1b1b1] ${currentTool === 'brush' ? 'bg-gray-400' : 'bg-[#b1b1b1]'}`}
+                  className={`min-w-[2.5rem] px-2 py-1 bg-[#c0c0c0] border-2 border-gray-500 hover:bg-[#b1b1b1] ${currentTool === 'brush' ? 'bg-gray-400' : 'bg-[#b1b1b1]'}`}
                 >🖌️</button>
                 <button 
                   onClick={() => setCurrentTool('eraser')}
-                  className={`px-2 py-1 bg-[#c0c0c0] border-2 border-gray-500 hover:bg-[#b1b1b1] ${currentTool === 'eraser' ? 'bg-gray-400' : 'bg-[#b1b1b1]'}`}
+                  className={`min-w-[2.5rem] px-2 py-1 bg-[#c0c0c0] border-2 border-gray-500 hover:bg-[#b1b1b1] ${currentTool === 'eraser' ? 'bg-gray-400' : 'bg-[#b1b1b1]'}`}
                 >🧹</button>
-                <div className="grid grid-cols-2 gap-1">
+                <div className="grid grid-cols-2 gap-1 min-w-fit">
                   <button
                     className="w-6 h-6 border-3 border-gray-600"
                     style={{backgroundColor: '#000000'}}
@@ -182,15 +182,21 @@ function Footer() {
                 onMouseMove={draw}
                 onMouseLeave={finishDrawing}
                 onTouchStart={(e) => {
+                  e.preventDefault();
                   const touch = e.touches[0];
+                  const rect = e.target.getBoundingClientRect();
+                  const x = touch.clientX - rect.left;
+                  const y = touch.clientY - rect.top;
+                  
                   if (currentTool === 'eraser') {
                     const ctx = canvasRef.current.getContext('2d');
                     ctx.globalCompositeOperation = 'destination-out';
                     ctx.lineWidth = 20;
                   }
-                  startDrawing(touch);
+                  startDrawing({clientX: x, clientY: y});
                 }}
                 onTouchEnd={(e) => {
+                  e.preventDefault();
                   if (currentTool === 'eraser') {
                     const ctx = canvasRef.current.getContext('2d');
                     ctx.globalCompositeOperation = 'source-over';
@@ -201,7 +207,10 @@ function Footer() {
                 onTouchMove={(e) => {
                   e.preventDefault();
                   const touch = e.touches[0];
-                  draw(touch);
+                  const rect = e.target.getBoundingClientRect();
+                  const x = touch.clientX - rect.left;
+                  const y = touch.clientY - rect.top;
+                  draw({clientX: x, clientY: y});
                 }}
                 className="border border-gray-400 bg-white cursor-crosshair w-full h-full touch-none"
               ></canvas>
@@ -210,8 +219,8 @@ function Footer() {
         )}
 
         {showSpotify && (
-          <div className="fixed bottom-16 left-0 p-4 bg-pink-100 border-2 border-r-gray-600 border-b-gray-600 border-l-gray-800 border-t-gray-800 rounded-sm shadow-xl">
-            <div className="flex justify-between items-center mb-2 bg-pink-100 border-2 border-r-white border-b-gray-200 border-l-gray-500 border-t-gray-500 p-2">
+          <div className="fixed bottom-16 left-0 p-4 bg-pink-100 border-2 border-r-gray-600 border-b-gray-600 border-l-gray-800 border-t-gray-800 rounded-sm shadow-xl w-full md:w-auto">
+            <div className="flex justify-between items-center mb-2 bg-pink-100 border-2 border-r-white border-b-gray-200 border-l-gray-500 border-t-gray-500 p-2 sticky top-0 z-10">
               <h3 className="font-PerfectDOSVGA437 font-bold">Music Player</h3>
               <button 
                 onClick={() => setShowSpotify(false)}
@@ -222,7 +231,7 @@ function Footer() {
             </div>
             <iframe
               src="https://open.spotify.com/embed/playlist/23PuoC9Hcj0oA8ZplGJOJ0?si=0200b97c7cd24269"
-              width="300"
+              width="100%"
               height="380"
               frameBorder="0"
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
