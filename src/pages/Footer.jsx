@@ -8,7 +8,6 @@ function Footer() {
   const [showSpotify, setShowSpotify] = useState(false);
   const [showPaint, setShowPaint] = useState(false);
   const [isDrawing, setIsDrawing] = useState(false);
-  const [isErasing, setIsErasing] = useState(false);
   const [currentColor, setCurrentColor] = useState('#000000');
   const [currentTool, setCurrentTool] = useState('pencil');
   const canvasRef = useRef(null);
@@ -21,27 +20,46 @@ function Footer() {
       const context = canvas.getContext('2d');
       context.lineCap = 'round';
       context.strokeStyle = currentColor;
-      context.lineWidth = 2;
+      context.lineWidth = currentTool === 'eraser' ? 20 : 2;
       contextRef.current = context;
     }
-  }, [showPaint, currentColor]);
+  }, [showPaint, currentColor, currentTool]);
 
-  const startDrawing = ({ nativeEvent }) => {
-    const { offsetX, offsetY } = nativeEvent;
+  const startDrawing = (event) => {
+    const canvas = canvasRef.current;
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    if (currentTool === 'eraser') {
+      contextRef.current.globalCompositeOperation = 'destination-out';
+    } else {
+      contextRef.current.globalCompositeOperation = 'source-over';
+      contextRef.current.strokeStyle = currentColor;
+    }
+
     contextRef.current.beginPath();
-    contextRef.current.moveTo(offsetX, offsetY);
+    contextRef.current.moveTo(x, y);
     setIsDrawing(true);
   };
 
   const finishDrawing = () => {
     contextRef.current.closePath();
     setIsDrawing(false);
+    if (currentTool === 'eraser') {
+      contextRef.current.globalCompositeOperation = 'source-over';
+    }
   };
 
-  const draw = ({ nativeEvent }) => {
+  const draw = (event) => {
     if (!isDrawing) return;
-    const { offsetX, offsetY } = nativeEvent;
-    contextRef.current.lineTo(offsetX, offsetY);
+    
+    const canvas = canvasRef.current;
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    contextRef.current.lineTo(x, y);
     contextRef.current.stroke();
   };
 
@@ -58,6 +76,10 @@ function Footer() {
               bg-blue-200 hover:bg-blue-300
             `}
             onClick={() => setIsStartMenuOpen(!isStartMenuOpen)}
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
           >
             <span className="mr-1"><img src={import.meta.env.BASE_URL + 'StartIcon.png'} alt="Start" className="w-6 h-6" /></span>
             Start
@@ -246,22 +268,11 @@ function Footer() {
                   const rect = e.target.getBoundingClientRect();
                   const x = touch.clientX - rect.left;
                   const y = touch.clientY - rect.top;
-                  
-                  if (currentTool === 'eraser') {
-                    const ctx = canvasRef.current.getContext('2d');
-                    ctx.globalCompositeOperation = 'destination-out';
-                    ctx.lineWidth = 20;
-                  }
-                  startDrawing({clientX: x, clientY: y});
+                  startDrawing({clientX: x + rect.left, clientY: y + rect.top});
                 }}
                 onTouchEnd={(e) => {
                   e.preventDefault();
-                  if (currentTool === 'eraser') {
-                    const ctx = canvasRef.current.getContext('2d');
-                    ctx.globalCompositeOperation = 'source-over';
-                    ctx.lineWidth = 2;
-                  }
-                  finishDrawing(e);
+                  finishDrawing();
                 }}
                 onTouchMove={(e) => {
                   e.preventDefault();
@@ -269,7 +280,7 @@ function Footer() {
                   const rect = e.target.getBoundingClientRect();
                   const x = touch.clientX - rect.left;
                   const y = touch.clientY - rect.top;
-                  draw({clientX: x, clientY: y});
+                  draw({clientX: x + rect.left, clientY: y + rect.top});
                 }}
                 className="border border-gray-400 bg-white cursor-crosshair w-full h-full touch-none"
               ></canvas>
@@ -278,11 +289,15 @@ function Footer() {
         )}
 
         {showSpotify && (
-          <div className="fixed bottom-16 left-0 p-4 bg-pink-100 border-2 border-r-gray-600 border-b-gray-600 border-l-gray-800 border-t-gray-800 rounded-sm shadow-xl w-full md:w-auto">
-            <div className="flex justify-between items-center mb-2 bg-pink-100 border-2 border-r-white border-b-gray-200 border-l-gray-500 border-t-gray-500 p-2 sticky top-0 z-10">
-              <h3 className="font-PerfectDOSVGA437 font-bold">Music Player</h3>
+          <div className="fixed bottom-16 left-0 p-4 bg-[#c0c0c0] border-2 border-white rounded-sm shadow-xl w-full md:w-auto">
+            <div className="flex justify-between items-center mb-2 bg-gradient-to-r from-[#000080] to-[#4169E1] p-2 sticky top-0 z-10">
+              <h3 className="font-PerfectDOSVGA437 font-bold text-white">Music Player</h3>
               <button 
                 onClick={() => setShowSpotify(false)}
+                onMouseDown={() => {
+                  const audio = new Audio(click);
+                  audio.play();
+                }}
                 className="px-2 py-1 bg-red-300 text-white hover:bg-red-400 border-2 border-r-white border-b-white border-l-gray-500 border-t-gray-500"
               >
                 ✖
