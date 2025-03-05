@@ -51,6 +51,7 @@ const Layout = memo(function Layout() {
           transform: 'translate(0, 0)',
           transition: 'background-image 0.1s ease-in-out',
           cursor: 'none'
+          
         }}
       />
 

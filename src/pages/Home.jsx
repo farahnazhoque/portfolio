@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import '../style/App.css';
 import { Link } from 'react-router-dom';
 import Modal from './Modal';
+import click from '../audio/click.mp3'; 
 
 function Home() {
   const [isMinimized, setIsMinimized] = useState(false);
@@ -56,6 +57,10 @@ function Home() {
             <button
               className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
               onClick={() => setIsMinimized(true)}
+              onMouseDown={() => {
+                const audio = new Audio(click);
+                audio.play();
+              }}
             >
               _
             </button>
@@ -67,6 +72,10 @@ function Home() {
               className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
             >
               ✖
+              onMouseDown={() => {
+                const audio = new Audio(click);
+                audio.play();
+              }}
             </Link>
           </div>
         </div>
@@ -78,14 +87,23 @@ function Home() {
             target="_blank" 
             rel="noopener noreferrer"
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
           >
             📁 LinkedIn
+
           </a>
           <a 
             href="https://github.com/farahnazhoque" 
             target="_blank" 
             rel="noopener noreferrer"
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
           >
             👾 GitHub
           </a>
@@ -94,18 +112,30 @@ function Home() {
             target="_blank" 
             rel="noopener noreferrer"
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
           >
             📝 Substack
           </a>
           <button
             onClick={() => window.location.href = 'mailto:fhoque@uci.edu'}
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
           >
             💌 Email
           </button>
           <button 
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
             onClick={() => setIsSidebarExpanded(!isSidebarExpanded)}
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
           >
             {isSidebarExpanded ? '⭐ Hide Favorites' : '⭐ Show Favorites'}
           </button>
@@ -141,13 +171,21 @@ function Home() {
                   <div 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'mission' ? 'bg-[#4169E1] text-white' : ''}`}
                     onClick={() => handleSectionClick('mission')}
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   >
                   <span className="font-PerfectDOSVGA437 text-sm">🎯 Mission</span>
                   </div>
                   <div 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'experiences' ? 'bg-[#4169E1] text-white' : ''}`}
                     onClick={() => handleSectionClick('experiences')}
-                  >
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
+                  > 
                     <span className="font-PerfectDOSVGA437 text-sm">💼 Experiences</span>
                   </div>
                   <div className="flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200">
@@ -158,12 +196,20 @@ function Home() {
                     href="https://pin.it/427HWOdjJ"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   >
                     <span className="font-PerfectDOSVGA437 text-sm">📌 Pinterest</span>
                   </a>
                   <div 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'youtube' ? 'bg-[#4169E1] text-white' : ''}`}
-                    onClick={() =>  handleSectionClick('youtube')}
+                    onClick={() =>  handleSectionClick('youtube')}  
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   >
                     <span className="font-PerfectDOSVGA437 text-sm">🎥 YouTube</span>
                   </div>
@@ -343,7 +389,11 @@ function Home() {
                         period: "MARCH 2024 - SEPTEMBER 2024",
                         onClick: () => setShowSOLOModal(true),
                         badges: ["MYSQL", "NODEJS", "AWS"],
-                        description: "Full Stack Development, App Design & Deployment"
+                        description: "Full Stack Development, App Design & Deployment",
+                        onMouseDown: () => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }
                       },
                       {
                         title: "STAND UP TO TRASH",
@@ -353,7 +403,11 @@ function Home() {
                         period: "MARCH 2024 - SEPTEMBER 2024",
                         onClick: () => setShowCommitChangeModal(true),
                         badges: ["REACT", "POSTGRESQL", "AWS"],
-                        description: "Volunteer Management System Development"
+                        description: "Volunteer Management System Development",
+                        onMouseDown: () => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }
                       },
                       {
                         title: "STUDENT OUTREACH AND RETENTION CENTER",
@@ -363,7 +417,11 @@ function Home() {
                         period: "AUGUST 2022 - JUNE 2024",
                         onClick: () => setShowProgramModal(true),
                         badges: ["LEADERSHIP", "EVENT PLANNING", "ADVOCACY"],
-                        description: "Community Programs & Volunteer Management"
+                        description: "Community Programs & Volunteer Management",
+                        onMouseDown: () => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }
                       },
                       {
                         title: "DONALD BREN SCHOOL OF ICS",
@@ -373,7 +431,11 @@ function Home() {
                         period: "JANUARY 2023 - MARCH 2024",
                         onClick: () => setShowMLModal(true),
                         badges: ["PYTORCH", "TENSORFLOW", "ROS2"],
-                        description: "ML Research & Robotics Development"
+                        description: "ML Research & Robotics Development",
+                        onMouseDown: () => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }
                       },
                       {
                         title: "DONALD BREN SCHOOL OF ICS",
@@ -382,12 +444,17 @@ function Home() {
                         period: "JANUARY 2023 - MARCH 2024",
                         onClick: () => setShowLAModal(true),
                         badges: ["DISCRETE MATHEMATICS", "COURSE PLANNING", "TUTORING"],
-                        description: "Learning Assistant & Tutoring"
+                        description: "Learning Assistant & Tutoring",
+                        onMouseDown: () => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }
                       }
                     ].map((exp, index) => (
                       <div key={index}
                         className="bg-purple-50 border-2 border-black p-4 rounded hover:bg-purple-100 transition-all cursor-pointer"
                         onClick={exp.onClick}
+                        onMouseDown={exp.onMouseDown}
                       >
                         <div className="flex items-start gap-4">
                           <img href={exp.href} src={exp.image} alt={exp.title} className="w-16 h-16 rounded-full border-2 border-black"/>
@@ -420,7 +487,10 @@ function Home() {
                             <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
                             [THREAD] JOE C. WEN SCHOOL OF POPULATION AND PUBLIC HEALTH
                           </h2>
-                          <button onClick={() => setShowUniversityModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                          <button onMouseDown={() => {
+                            const audio = new Audio(click);
+                            audio.play();
+                          }} onClick={() => setShowUniversityModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
                             [X]
                           </button>
                         </div>
@@ -448,7 +518,10 @@ function Home() {
                         <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
                         [THREAD] STUDENT OUTREACH AND RETENTION CENTER
                           </h2>
-                          <button onClick={() => setShowSOARModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                          <button onMouseDown={() => {
+                            const audio = new Audio(click);
+                            audio.play();
+                          }} onClick={() => setShowSOARModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
                             [X]
                           </button>
                         </div>
@@ -510,7 +583,10 @@ function Home() {
                             <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
                             [THREAD] STAND UP TO TRASH
                           </h2>
-                          <button onClick={() => setShowCommitChangeModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                          <button onMouseDown={() => {
+                            const audio = new Audio(click);
+                            audio.play();
+                          }} onClick={() => setShowCommitChangeModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
                             [X]
                           </button>
                         </div>
@@ -541,7 +617,10 @@ function Home() {
                         <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
                           [THREAD] STUDENT OUTREACH AND RETENTION CENTER
                         </h2>
-                        <button onClick={() => setShowProgramModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                        <button onMouseDown={() => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }} onClick={() => setShowProgramModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
                           [X]
                         </button>
                       </div>
@@ -572,7 +651,10 @@ function Home() {
                         <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
                           [THREAD] DONALD BREN SCHOOL OF ICS
                         </h2>
-                        <button onClick={() => setShowMLModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                        <button onMouseDown={() => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }} onClick={() => setShowMLModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
                           [X]
                         </button>
                       </div>
@@ -603,7 +685,10 @@ function Home() {
                         <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
                           [THREAD] DONALD BREN SCHOOL OF ICS
                         </h2>
-                        <button onClick={() => setShowLAModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                        <button onMouseDown={() => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }} onClick={() => setShowLAModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
                           [X]
                         </button>
                       </div>
