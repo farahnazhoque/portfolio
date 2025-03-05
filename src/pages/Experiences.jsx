@@ -419,10 +419,7 @@ function Experiences() {
                   {/* Desktop view */}
                   <div className="hidden md:flex gap-4 p-2">
                     {selectedFile.link && (
-                      <a href={selectedFile.link} onMouseDown={() => {
-                        const audio = new Audio(click);
-                        audio.play();
-                      }}  className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Link to Organization</a>
+                      <a href={selectedFile.link} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Link to Organization</a>
                     )}
                     <span onMouseDown={() => {
                       const audio = new Audio(click);
@@ -606,21 +603,13 @@ function Experiences() {
                   {/* Sidebar with clickable headings */}
                   <div className="hidden md:block w-48 border-r border-gray-200 pr-4 sticky top-0">
                     <div
-                      onMouseDown={() => {
-                        const audio = new Audio(click);
-                        audio.play();
-                      }}
-                      onClick={() => document.getElementById('summary').scrollIntoView({ behavior: 'smooth', block: 'end' })}
+                        onClick={() => document.getElementById('summary').scrollIntoView({ behavior: 'smooth', block: 'end' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
                       <img src={import.meta.env.BASE_URL + 'summary.png'} alt="" className="w-6 h-6 mr-2"/>
                       <span className="text-sm font-PerfectDOSVGA437">Summary</span>
                     </div>
                     <div
-                      onMouseDown={() => {
-                        const audio = new Audio(click);
-                        audio.play();
-                      }}
                       onClick={() => document.getElementById('responsibilities').scrollIntoView({ behavior: 'smooth', block: 'end' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
@@ -628,10 +617,6 @@ function Experiences() {
                       <span className="text-sm font-PerfectDOSVGA437">Responsibilities</span>
                     </div>
                     <div
-                      onMouseDown={() => {
-                        const audio = new Audio(click);
-                        audio.play();
-                      }}
                       onClick={() => document.getElementById('purpose').scrollIntoView({ behavior: 'smooth', block: 'end' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
@@ -639,10 +624,6 @@ function Experiences() {
                       <span className="text-sm font-PerfectDOSVGA437">Purpose</span>
                     </div>
                     <div
-                      onMouseDown={() => {
-                        const audio = new Audio(click);
-                        audio.play();
-                      }}
                       onClick={() => document.getElementById('technologies').scrollIntoView({ behavior: 'smooth', block: 'end' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >

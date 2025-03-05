@@ -63,7 +63,7 @@ export default function About() {
   }, [messages]);
 
   return (
-    <div className="flex border-2 border-black flex-col min-h-[450px] max-h-[650px] w-full md:w-[600px] mx-auto p-4 bg-yellow-100 rounded-lg shadow-lg lg:mt-[100px] md:mt-[100px] sm:mt-[100px] mt-[100px]">
+    <div className="flex border-2 border-black flex-col min-h-[450px] max-h-[650px] w-full md:w-[600px] mx-auto p-4 bg-[#c0c0c0] rounded-lg shadow-lg lg:mt-[100px] md:mt-[100px] sm:mt-[100px] mt-[100px]">
       
       {/* Header - Chat Title */}
       <div className="bg-pink-200 border-2 border-black px-3 py-2 flex items-center justify-between rounded-lg mb-4">

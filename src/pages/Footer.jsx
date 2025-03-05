@@ -58,10 +58,6 @@ function Footer() {
               bg-blue-200 hover:bg-blue-300
             `}
             onClick={() => setIsStartMenuOpen(!isStartMenuOpen)}
-            onMouseDown={() => {
-              const audio = new Audio(click);
-              audio.play();
-            }}
           >
             <span className="mr-1"><img src={import.meta.env.BASE_URL + 'StartIcon.png'} alt="Start" className="w-6 h-6" /></span>
             Start
