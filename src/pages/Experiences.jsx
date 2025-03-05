@@ -419,7 +419,10 @@ function Experiences() {
                   {/* Desktop view */}
                   <div className="hidden md:flex gap-4 p-2">
                     {selectedFile.link && (
-                      <a href={selectedFile.link} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Link to Organization</a>
+                      <a href={selectedFile.link} onMouseDown={() => {
+                        const audio = new Audio(click);
+                        audio.play();
+                      }}  className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Link to Organization</a>
                     )}
                     <span onMouseDown={() => {
                       const audio = new Audio(click);

@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import click from '../audio/click.mp3';
 const navigation = [
   { name: 'Home', to: '/home', current: false },
   { name: 'Experiences', to: '/experiences', current: false },
@@ -22,8 +23,13 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <div className="lg:hidden fixed top-4 left-4">
           <button
+          
             onClick={() => setIsModalOpen(true)}
-            className="flex flex-col items-end"
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
+            className="flex flex-col items-end hover:scale-110 transition-all duration-200"
           >
             <img 
               src={import.meta.env.BASE_URL + 'NavFolder.png'}
@@ -42,6 +48,10 @@ export default function Navbar() {
                   <button 
                     onClick={() => setIsModalOpen(false)}
                     className="text-black hover:text-gray-700"
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   >
                     ✖
                   </button>
@@ -52,12 +62,20 @@ export default function Navbar() {
                       key={item.name}
                       to={item.to}
                       onClick={() => setIsModalOpen(false)}
-                      className="flex items-center gap-3 font-PerfectDOSVGA437 text-black hover:text-[#fbcfe8]"
+                      onMouseDown={() => {
+                        const audio = new Audio(click);
+                        audio.play();
+                      }}
+                      className="flex items-center gap-3 font-PerfectDOSVGA437 text-black hover:text-[#fbcfe8] hover:scale-110 transition-all duration-200"
                     >
                       <img 
                       src={import.meta.env.BASE_URL + 'NavFolder.png'}
+                      onMouseDown={() => {
+                        const audio = new Audio(click);
+                        audio.play();
+                      }}
                       alt={`${item.name} folder`}
-                        className={`w-10 h-10 ${item.current ? 'brightness-110' : 'hover:brightness-110'}`}
+                        className={`w-10 h-10 ${item.current ? 'brightness-110' : 'hover:brightness-110 hover:scale-110 transition-all duration-200'}`}
                       />
                       {item.name}
                     </Link>
@@ -74,12 +92,16 @@ export default function Navbar() {
             <Link
               key={item.name}
               to={item.to}
+              onMouseDown={() => {
+                const audio = new Audio(click);
+                audio.play();
+              }}
               className="flex flex-col items-end text-right justify-end font-PerfectDOSVGA437 text-white hover:text-[#fbcfe8] text-lg"
             >
               <img 
                 src={import.meta.env.BASE_URL + 'NavFolder.png'}
                 alt={`${item.name} folder`}
-                className={`w-16 h-16 ${item.current ? 'brightness-110' : 'hover:brightness-110'}`}
+                className={`w-16 h-16 ${item.current ? 'brightness-110' : 'hover:brightness-110 hover:scale-110 transition-all duration-200'}`}
               />
               {item.name}
             </Link>

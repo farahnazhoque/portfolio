@@ -69,13 +69,14 @@ function Home() {
             </button>
             <Link
               to="/layout"
-              className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
-            >
-              ✖
               onMouseDown={() => {
                 const audio = new Audio(click);
                 audio.play();
               }}
+              className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
+            >
+              ✖
+             
             </Link>
           </div>
         </div>

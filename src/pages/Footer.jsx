@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Menu } from '@headlessui/react';
+import click from '../audio/click.mp3';
+
 
 function Footer() {
   const [isStartMenuOpen, setIsStartMenuOpen] = useState(false);
@@ -12,7 +14,7 @@ function Footer() {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const [showShutdownWarning, setShowShutdownWarning] = useState(false);
-
+  
   useEffect(() => {
     if (showPaint) {
       const canvas = canvasRef.current;
