@@ -58,6 +58,10 @@ function Footer() {
               bg-blue-200 hover:bg-blue-300
             `}
             onClick={() => setIsStartMenuOpen(!isStartMenuOpen)}
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
           >
             <span className="mr-1"><img src={import.meta.env.BASE_URL + 'StartIcon.png'} alt="Start" className="w-6 h-6" /></span>
             Start
@@ -70,6 +74,10 @@ function Footer() {
                   <button
                     onClick={() => setShowPaint(true)}
                     className={`w-full text-left px-4 py-2 font-PerfectDOSVGA437 ${active ? 'bg-[#000080] text-white' : ''}`}
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   >
                     <span className="mr-2">🎨</span>Paint
                   </button>
@@ -80,6 +88,10 @@ function Footer() {
                   <button
                     onClick={() => setShowSpotify(true)}
                     className={`w-full text-left px-4 py-2 font-PerfectDOSVGA437 ${active ? 'bg-[#000080] text-white' : ''}`}
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   >
                     <span className="mr-2">🎵</span>Music Player
                   </button>
@@ -87,21 +99,30 @@ function Footer() {
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <a href="https://pin.it/427HWOdjJ" className={`block px-4 py-2 font-PerfectDOSVGA437 ${active ? 'bg-[#000080] text-white' : ''}`}>
+                  <a href="https://pin.it/427HWOdjJ" onMouseDown={() => {
+                    const audio = new Audio(click);
+                    audio.play();
+                  }} className={`block px-4 py-2 font-PerfectDOSVGA437 ${active ? 'bg-[#000080] text-white' : ''}`}>
                     <span className="mr-2">📌</span>Pinterest
                   </a>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <a href="#" className={`block px-4 py-2 font-PerfectDOSVGA437 ${active ? 'bg-[#000080] text-white' : ''}`}>
+                  <a href="#" onMouseDown={() => {
+                    const audio = new Audio(click);
+                    audio.play();
+                  }} className={`block px-4 py-2 font-PerfectDOSVGA437 ${active ? 'bg-[#000080] text-white' : ''}`}>
                     <span className="mr-2">⚙️</span>Settings
                   </a>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <a href="#" className={`block px-4 py-2 font-PerfectDOSVGA437 ${active ? 'bg-[#000080] text-white' : ''}`}>
+                  <a href="#" onMouseDown={() => {
+                    const audio = new Audio(click);
+                    audio.play();
+                  }} className={`block px-4 py-2 font-PerfectDOSVGA437 ${active ? 'bg-[#000080] text-white' : ''}`}>
                     <span className="mr-2">❓</span>Help
                   </a>
                 )}
@@ -110,7 +131,11 @@ function Footer() {
               <Menu.Item>
                 {({ active }) => (
                   <button
-                    onClick={() => setShowShutdownWarning(true)}
+                    onClick={() => setShowShutdownWarning(true)} 
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                     className={`block w-full text-left px-4 py-2 font-PerfectDOSVGA437 ${active ? "bg-[#000080] text-white" : ""}`}
                   >
                     <span className="mr-2">🚪</span>Shut Down...
@@ -127,6 +152,10 @@ function Footer() {
               <h3 className="font-PerfectDOSVGA437 font-bold text-white">Paint</h3>
               <button 
                 onClick={() => setShowPaint(false)}
+                onMouseDown={() => {
+                  const audio = new Audio(click);
+                  audio.play();
+                }}
                 className="px-2 py-1 bg-[#c0c0c0] text-black hover:bg-red-600 hover:text-white rounded"
               >
                 ✖
@@ -136,14 +165,26 @@ function Footer() {
               <div className="flex flex-row md:flex-col gap-2 p-2 bg-[#c0c0c0] border-b-2 md:border-b-0 md:border-r-2 border-gray-600 overflow-x-auto md:overflow-x-visible">
                 <button 
                   onClick={() => setCurrentTool('pencil')}
+                  onMouseDown={() => {
+                    const audio = new Audio(click);
+                    audio.play();
+                  }}
                   className={`min-w-[2.5rem] px-2 py-1 bg-[#c0c0c0] border-2 border-gray-500 hover:bg-[#b1b1b1] ${currentTool === 'pencil' ? 'bg-gray-400' : 'bg-[#b1b1b1]'}`}
                 >✏️</button>
                 <button 
                   onClick={() => setCurrentTool('brush')}
+                  onMouseDown={() => {
+                    const audio = new Audio(click);
+                    audio.play();
+                  }}
                   className={`min-w-[2.5rem] px-2 py-1 bg-[#c0c0c0] border-2 border-gray-500 hover:bg-[#b1b1b1] ${currentTool === 'brush' ? 'bg-gray-400' : 'bg-[#b1b1b1]'}`}
                 >🖌️</button>
                 <button 
                   onClick={() => setCurrentTool('eraser')}
+                  onMouseDown={() => {
+                    const audio = new Audio(click);
+                    audio.play();
+                  }}
                   className={`min-w-[2.5rem] px-2 py-1 bg-[#c0c0c0] border-2 border-gray-500 hover:bg-[#b1b1b1] ${currentTool === 'eraser' ? 'bg-gray-400' : 'bg-[#b1b1b1]'}`}
                 >🧹</button>
                 <div className="grid grid-cols-2 gap-1 min-w-fit">
@@ -151,27 +192,47 @@ function Footer() {
                     className="w-6 h-6 border-3 border-gray-600"
                     style={{backgroundColor: '#000000'}}
                     onClick={() => setCurrentColor('#000000')}
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   />
                   <button 
                     className="w-6 h-6 border-3 border-gray-500"
                     style={{backgroundColor: '#ff0000'}}
                     onClick={() => setCurrentColor('#ff0000')}
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   />
                   <button
                     className="w-6 h-6 border-3 border-gray-500" 
                     style={{backgroundColor: '#00ff00'}}
                     onClick={() => setCurrentColor('#00ff00')}
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   />
                   <button
                     className="w-6 h-6 border-3 border-gray-500"
                     style={{backgroundColor: '#0000ff'}}
                     onClick={() => setCurrentColor('#0000ff')}
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   />
                   <input 
                     type="color" 
                     className="w-12 h-12 col-span-2 border-3 border-gray-500"
                     value={currentColor}
                     onChange={(e) => setCurrentColor(e.target.value)}
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   />
                 </div>
               </div>
@@ -248,7 +309,10 @@ function Footer() {
             <div className="w-96 border border-gray-900 bg-gray-200 shadow-md">
               <div className="bg-[#000080] text-white px-2 py-1 flex justify-between items-center font-PerfectDOSVGA437 text-sm">
                 <span>You made an oopsie!</span>
-                <button onClick={() => setShowShutdownWarning(false)} className="text-white hover:bg-gray-500 px-1">
+                <button onClick={() => setShowShutdownWarning(false)} onMouseDown={() => {
+                  const audio = new Audio(click);
+                  audio.play();
+                }} className="text-white hover:bg-gray-500 px-1">
                   ✕
                 </button>
               </div>
@@ -261,6 +325,10 @@ function Footer() {
                   <button
                     onClick={() => setShowShutdownWarning(false)}
                     className="border border-black px-4 py-1 bg-gray-300 hover:bg-gray-400 active:bg-gray-500 shadow-md"
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   >
                     OK!
                   </button>
