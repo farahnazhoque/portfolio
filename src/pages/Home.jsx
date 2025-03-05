@@ -48,14 +48,14 @@ function Home() {
       
       <div className="w-full h-[650px] md:w-[80vw] md:h-[600px] lg:w-[1000px] lg:h-[650px] bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl relative">
         {/* Window Title Bar */}
-        <div className="bg-gradient-to-r from-[#000080] to-[#4169E1] px-3 py-2 flex items-center justify-between rounded-t-lg">
+        <div className="bg-pink-200 px-3 py-2 flex items-center justify-between rounded-t-lg">
           <div className="flex items-center">
             
-            <span className="text-white font-PerfectDOSVGA437 text-lg">🪐 Welcome - Home</span>
+            <span className="text-black font-PerfectDOSVGA437 text-lg">🪐 Welcome - Home</span>
           </div>
           <div className="flex gap-2">
             <button
-              className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
+              className="px-3 py-1 bg-yellow-100 rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
               onClick={() => setIsMinimized(true)}
               onMouseDown={() => {
                 const audio = new Audio(click);
@@ -64,7 +64,7 @@ function Home() {
             >
               _
             </button>
-            <button className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200">
+            <button className="px-3 py-1 bg-yellow-100 rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200">
               □
             </button>
             <Link
@@ -73,7 +73,7 @@ function Home() {
                 const audio = new Audio(click);
                 audio.play();
               }}
-              className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
+              className="px-3 py-1  bg-yellow-100 rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
             >
               ✖
              
@@ -82,12 +82,12 @@ function Home() {
         </div>
 
         {/* Window Menu Bar */}
-        <div className="bg-[#c0c0c0] border-b-2 border-gray-400 px-4 py-2 font-PerfectDOSVGA437 text-sm">
+        <div className="bg-yellow-100 border-b-2 border-black px-4 py-2 font-PerfectDOSVGA437 text-sm">
           <a 
             href="https://www.linkedin.com/in/farahnazhoque/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
+            className="mr-6 hover:text-black hover:underline cursor-pointer transition-colors duration-200"
             onMouseDown={() => {
               const audio = new Audio(click);
               audio.play();
@@ -143,7 +143,7 @@ function Home() {
         </div>
 
         {/* URL Bar */}
-        <div className="bg-[#c0c0c0] border-b-2 border-gray-400 px-4 py-2 flex items-center">
+        <div className="bg-yellow-100 border-b-2 border-black px-4 py-2 flex items-center">
           <span className="font-PerfectDOSVGA437 text-sm mr-2">Address:</span>
           <div className="flex-1 bg-white border-2 border-gray-600 px-2 py-1">
             <input 
@@ -164,13 +164,13 @@ function Home() {
         {/* Window Content */}
         <div className="flex h-[calc(100%-6rem)]">
           {/* Favorites Sidebar */}
-          <div className={`transition-all duration-300 ${isSidebarExpanded ? 'w-64' : 'w-12'} lg:w-64 bg-gradient-to-b from-[#c0c0c0] to-[#d3d3d3] border-r-2 border-gray-400 relative z-10`}>
+          <div className={`transition-all duration-300 ${isSidebarExpanded ? 'w-64' : 'w-12'} lg:w-64 bg-yellow-100 border-r-2 border-black relative z-10`}>
             <div className={`${isSidebarExpanded ? 'opacity-100' : 'opacity-0 lg:opacity-100'} transition-opacity duration-300`}>
               <div className="p-4">
                 <div className="font-PerfectDOSVGA437 text-sm mb-4 font-bold rounded-lg text-[#000080]">✨ Favorites ✨</div>
                 <div className="space-y-2">
                   <div 
-                    className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'mission' ? 'bg-[#4169E1] text-white' : ''}`}
+                    className={`flex items-center hover:bg-blue-200 hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'mission' ? 'bg-blue-200 text-black' : ''}`}
                     onClick={() => handleSectionClick('mission')}
                     onMouseDown={() => {
                       const audio = new Audio(click);
@@ -180,7 +180,7 @@ function Home() {
                   <span className="font-PerfectDOSVGA437 text-sm">🎯 Mission</span>
                   </div>
                   <div 
-                    className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'experiences' ? 'bg-[#4169E1] text-white' : ''}`}
+                    className={`flex items-center hover:bg-blue-200 hover:text-blue-400 cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'experiences' ? 'bg-blue-200 text-black' : ''}`}
                     onClick={() => handleSectionClick('experiences')}
                     onMouseDown={() => {
                       const audio = new Audio(click);
@@ -189,11 +189,11 @@ function Home() {
                   > 
                     <span className="font-PerfectDOSVGA437 text-sm">💼 Experiences</span>
                   </div>
-                  <div className="flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200">
+                    <div className="flex items-center hover:bg-blue-200 hover:text-blue-400 cursor-pointer p-2 rounded-md transition-all duration-200">
                     <span className="font-PerfectDOSVGA437 text-sm">🛠️ Tech Stacks</span>
                   </div>
                   <a 
-                    className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'pinterest' ? 'bg-[#4169E1] text-white' : ''}`}
+                    className={`flex items-center hover:bg-blue-200 hover:text-blue-400 cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'pinterest' ? 'bg-blue-200 text-black' : ''}`}
                     href="https://pin.it/427HWOdjJ"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -205,7 +205,7 @@ function Home() {
                     <span className="font-PerfectDOSVGA437 text-sm">📌 Pinterest</span>
                   </a>
                   <div 
-                    className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'youtube' ? 'bg-[#4169E1] text-white' : ''}`}
+                    className={`flex items-center hover:bg-blue-200 hover:text-blue-400 cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'youtube' ? 'bg-blue-200 text-black' : ''}`}
                     onClick={() =>  handleSectionClick('youtube')}  
                     onMouseDown={() => {
                       const audio = new Audio(click);
