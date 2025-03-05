@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../style/App.css';
 import { Link } from 'react-router-dom';
 import Modal from './Modal';
-
+import click from '../audio/click.mp3';
 function Experiences() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [selectedFont, setSelectedFont] = useState('Arial'); // Add state for selected font
@@ -312,15 +312,26 @@ function Experiences() {
             <div className="flex gap-2">
               <button
                 className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
+                onMouseDown={() => {
+                  const audio = new Audio(click);
+                  audio.play();
+                }}
               >
                 _
               </button>
-              <button className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200">
+              <button onMouseDown={() => {
+                const audio = new Audio(click);
+                audio.play();
+              }} className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200">
                 □
               </button>
               <Link
                 to="/layout"
                 className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
+                onMouseDown={() => {
+                  const audio = new Audio(click);
+                  audio.play();
+                }}
               >
                 ✖
               </Link>
@@ -352,6 +363,10 @@ function Experiences() {
                     key={index}
                     className="flex flex-col items-center p-2 hover:bg-[#000080] hover:text-white cursor-pointer"
                     onClick={() => setSelectedFile(exp)}
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   >
                     <img src={exp.icon} alt="Word doc" className="w-12 h-12 mb-2" />
                     <span className="font-PerfectDOSVGA437 text-xs text-center">{exp.title}</span>
@@ -378,10 +393,20 @@ function Experiences() {
                   <span className="font-kodchasan-bold text-xl truncate">{selectedFile.title}</span>
                 </div>
                 <div className="flex gap-2 flex-shrink-0">
-                  <button className="px-1 py-0.5 hover:bg-[#1f4d86]">_</button>
-                  <button className="px-2 py-1 hover:bg-[#1f4d86]">□</button>
+                  <button onMouseDown={() => {
+                    const audio = new Audio(click);
+                    audio.play();
+                  }} className="px-1 py-0.5 hover:bg-[#1f4d86]">_</button>
+                  <button onMouseDown={() => {
+                    const audio = new Audio(click);
+                    audio.play();
+                  }} className="px-2 py-1 hover:bg-[#1f4d86]">□</button>
                   <button
                     onClick={() => setSelectedFile(null)}
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                     className="px-2 py-1 hover:bg-[#1f4d86]"
                   >
                     ✕
@@ -396,10 +421,22 @@ function Experiences() {
                     {selectedFile.link && (
                       <a href={selectedFile.link} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Link to Organization</a>
                     )}
-                    <span onClick={() => document.getElementById('summary').scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Summary</span>
-                    <span onClick={() => document.getElementById('responsibilities').scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Responsibilities</span>
-                    <span onClick={() => document.getElementById('purpose').scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Purpose</span>
-                    <span onClick={() => document.getElementById('technologies').scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Technologies</span>
+                    <span onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }} onClick={() => document.getElementById('summary').scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Summary</span>
+                    <span onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }} onClick={() => document.getElementById('responsibilities').scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Responsibilities</span>
+                    <span onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }} onClick={() => document.getElementById('purpose').scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Purpose</span>
+                    <span onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }} onClick={() => document.getElementById('technologies').scrollIntoView({ behavior: 'smooth', block: 'end' })} className="text-lg font-PerfectDOSVGA437 hover:bg-gray-100 px-2 py-1 cursor-pointer">Technologies</span>
                   </div>
 
                   {/* Mobile dropdown */}
@@ -412,16 +449,35 @@ function Experiences() {
                     }
                   }}>
                     <option value="">Navigate to...</option>
-                    {selectedFile.link && <option value="link">Link to Organization</option>}
-                    <option value="summary">Summary</option>
-                    <option value="responsibilities">Responsibilities</option>
-                    <option value="purpose">Purpose</option>
-                    <option value="technologies">Technologies</option>
+                    {selectedFile.link && <option onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }} value="link">Link to Organization</option>}
+                    <option onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }} value="summary">Summary</option>
+                    <option onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }} value="responsibilities">Responsibilities</option>
+                    <option onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }} value="purpose">Purpose</option>
+                    <option onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }} value="technologies">Technologies</option>
                   </select>
                 </div>
                 
                 <div className="flex items-center gap-4 px-4 py-2 border-t border-gray-200">
                   <select 
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                     className="px-2 py-1 border rounded hover:bg-gray-50"
                     value={selectedFont}
                     onChange={(e) => {
@@ -445,6 +501,10 @@ function Experiences() {
 
                   <select 
                     className="px-2 py-1 border rounded hover:bg-gray-50 font-PerfectDOSVGA437 text-lg"
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                     onChange={(e) => {
                       const content = document.querySelector('.p-8.bg-white');
                       if (content) {
@@ -469,6 +529,10 @@ function Experiences() {
 
                   <div className="flex gap-2">
                     <button 
+                      onMouseDown={() => {
+                        const audio = new Audio(click);
+                        audio.play();
+                      }}
                       className="p-1 hover:bg-gray-100 border rounded"
                       onClick={() => {
                         const content = document.querySelector('.p-8.bg-white');
@@ -480,6 +544,10 @@ function Experiences() {
                       <span className="font-bold font-PerfectDOSVGA437 text-lg">B</span>
                     </button>
                     <button 
+                      onMouseDown={() => {
+                        const audio = new Audio(click);
+                        audio.play();
+                      }}
                       className="p-1 hover:bg-gray-100 border rounded"
                       onClick={() => {
                         const content = document.querySelector('.p-8.bg-white');
@@ -491,6 +559,10 @@ function Experiences() {
                       <span className="italic font-PerfectDOSVGA437 text-lg">I</span>
                     </button>
                     <button 
+                      onMouseDown={() => {
+                        const audio = new Audio(click);
+                        audio.play();
+                      }}
                       className="p-1 hover:bg-gray-100 border rounded"
                       onClick={() => {
                         const content = document.querySelector('.p-8.bg-white');
@@ -506,6 +578,10 @@ function Experiences() {
                   <div 
                     className="w-6 h-6 bg-black rounded cursor-pointer hover:opacity-80" 
                     title="Text Color"
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                     onClick={() => {
                       const content = document.querySelector('.p-8.bg-white');
                       if (content) {
@@ -527,6 +603,10 @@ function Experiences() {
                   {/* Sidebar with clickable headings */}
                   <div className="hidden md:block w-48 border-r border-gray-200 pr-4 sticky top-0">
                     <div
+                      onMouseDown={() => {
+                        const audio = new Audio(click);
+                        audio.play();
+                      }}
                       onClick={() => document.getElementById('summary').scrollIntoView({ behavior: 'smooth', block: 'end' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
@@ -534,6 +614,10 @@ function Experiences() {
                       <span className="text-sm font-PerfectDOSVGA437">Summary</span>
                     </div>
                     <div
+                      onMouseDown={() => {
+                        const audio = new Audio(click);
+                        audio.play();
+                      }}
                       onClick={() => document.getElementById('responsibilities').scrollIntoView({ behavior: 'smooth', block: 'end' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
@@ -541,6 +625,10 @@ function Experiences() {
                       <span className="text-sm font-PerfectDOSVGA437">Responsibilities</span>
                     </div>
                     <div
+                      onMouseDown={() => {
+                        const audio = new Audio(click);
+                        audio.play();
+                      }}
                       onClick={() => document.getElementById('purpose').scrollIntoView({ behavior: 'smooth', block: 'end' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
@@ -548,6 +636,10 @@ function Experiences() {
                       <span className="text-sm font-PerfectDOSVGA437">Purpose</span>
                     </div>
                     <div
+                      onMouseDown={() => {
+                        const audio = new Audio(click);
+                        audio.play();
+                      }}
                       onClick={() => document.getElementById('technologies').scrollIntoView({ behavior: 'smooth', block: 'end' })}
                       className="flex items-center p-2 cursor-pointer hover:bg-gray-100 rounded"
                     >
