@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self' data: https:;
-    font-src 'self' data: https:;
-    img-src 'self' data: https:;
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https:;
-    style-src 'self' 'unsafe-inline' https:;
-  ">
-      <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+      default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https: *;
+      font-src 'self' data: https: * fonts.gstatic.com fonts.googleapis.com;
+      img-src 'self' data: https: *;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' 'unsafe-hashes' https: *;
+      style-src 'self' 'unsafe-inline' https: *;
+      connect-src 'self' https: *;
+    ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Farahnaz Hoque</title>
   </head>
