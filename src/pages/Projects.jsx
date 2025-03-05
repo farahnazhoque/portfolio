@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import Modal from './Modal';
+import flip from '../audio/page.mp3';
 
 const Projects = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -67,7 +68,11 @@ const Projects = () => {
                     maxShadowOpacity={0.5}
                     showPageCorners={true}
                     disableFlipByClick={false}
-                    onFlip={onPage}
+                    onFlip={onPage} 
+                    onFlipEnd={() => {
+                        const audio = new Audio(flip);
+                        audio.play();
+                    }}
                 >
                     {projectPages.map((page, index) => (
                         <div 

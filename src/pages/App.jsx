@@ -5,6 +5,7 @@ import Layout from './Layout';
 import Loading from './Loading';
 import Experiences from './Experiences';
 import Projects from './Projects';
+import About from './About';
 export default function App() {
   const [homeLoaded, setHomeLoaded] = useState(false);
 
@@ -22,7 +23,7 @@ export default function App() {
         />
         <Route path="/experiences" element={<Experiences />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<div>About Page</div>} />
+        <Route path="/about" element={<About />} />
         <Route path="/where" element={<div>This page is located at frontend/src/pages/App.jsx</div>} />
         <Route path="/layout" element={<Layout />} />
       </Route>
