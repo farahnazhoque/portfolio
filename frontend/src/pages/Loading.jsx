@@ -7,8 +7,6 @@ export default function Loading({ setHomeLoaded }) {
 
   const loadingText = [
     'Initializing system...',
-    'Checking memory...',
-    'Loading kernel...',
     'System check complete...',
     'Rebooting...',
     'Starting computer...'

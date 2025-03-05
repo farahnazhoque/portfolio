@@ -1,15 +1,9 @@
 @import "tailwindcss";
 
-  
 
-/* Remove default cursor from all elements */
-* {
-  cursor: none !important;
-}
-
+/* Import Kodchasan font */
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500;700&display=swap');
 
-/* Apply Kodchasan to all elements by default */
 body {
   font-family: 'Kodchasan', sans-serif;
 }

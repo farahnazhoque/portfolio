@@ -32,7 +32,7 @@ const Layout = memo(function Layout() {
     <div 
       className="relative w-screen h-screen overflow-hidden"
       style={{
-        backgroundImage: `url('../../public/BackgroundGif.gif')`,
+        backgroundImage: `url('${import.meta.env.BASE_URL}BackgroundGif.gif')`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -45,12 +45,13 @@ const Layout = memo(function Layout() {
         style={{
           left: cursorPosition.x - 16,
           top: cursorPosition.y - 16,
-          backgroundImage: `url('${isHovering ? '../../public/SelectCursor.png' : '../../public/RegularCursor.png'}')`,
+          backgroundImage: `url('${import.meta.env.BASE_URL}${isHovering ? 'SelectCursor.png' : 'RegularCursor.png'}')`,
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
           transform: 'translate(0, 0)',
           transition: 'background-image 0.1s ease-in-out',
           cursor: 'none'
+          
         }}
       />
 

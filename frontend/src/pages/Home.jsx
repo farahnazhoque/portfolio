@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import '../style/App.css';
 import { Link } from 'react-router-dom';
 import Modal from './Modal';
+import click from '../audio/click.mp3'; 
 
 function Home() {
   const [isMinimized, setIsMinimized] = useState(false);
@@ -39,27 +40,27 @@ function Home() {
   }, [showUniversityModal, showSOARModal, showSOLOModal, showCommitChangeModal, showProgramModal]);
 
   return (
-    <div className="absolute lg:top-10 mt-20 left-1/2 -translate-x-1/2 
+    <div className="absolute lg:top-10 lg:mt-20 md:mt-20 sm:mt-20 mt-25 left-1/2 -translate-x-1/2 
       w-full sm:max-w-[500px] md:max-w-[80vw] lg:max-w-[1000px]
       bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl
       overflow-hidden 
       min-h-[450px] md:min-h-[600px] lg:min-h-[650px]">
       
-      <div className="w-full h-[450px] md:w-[80vw] md:h-[600px] lg:w-[1000px] lg:h-[650px] bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl relative">
+      <div className="w-full h-[650px] md:w-[80vw] md:h-[600px] lg:w-[1000px] lg:h-[650px] bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl relative">
         {/* Window Title Bar */}
         <div className="bg-gradient-to-r from-[#000080] to-[#4169E1] px-3 py-2 flex items-center justify-between rounded-t-lg">
           <div className="flex items-center">
-            <img
-              src="../../public/IEIcon.png"
-              alt="IE Icon"
-              className="w-5 h-5 mr-2 animate-pulse"
-            />
-            <span className="text-white font-PerfectDOSVGA437 text-lg">Welcome - Home</span>
+            
+            <span className="text-white font-PerfectDOSVGA437 text-lg">🪐 Welcome - Home</span>
           </div>
           <div className="flex gap-2">
             <button
               className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
               onClick={() => setIsMinimized(true)}
+              onMouseDown={() => {
+                const audio = new Audio(click);
+                audio.play();
+              }}
             >
               _
             </button>
@@ -68,9 +69,14 @@ function Home() {
             </button>
             <Link
               to="/layout"
+              onMouseDown={() => {
+                const audio = new Audio(click);
+                audio.play();
+              }}
               className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
             >
               ✖
+             
             </Link>
           </div>
         </div>
@@ -82,14 +88,23 @@ function Home() {
             target="_blank" 
             rel="noopener noreferrer"
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
           >
             📁 LinkedIn
+
           </a>
           <a 
             href="https://github.com/farahnazhoque" 
             target="_blank" 
             rel="noopener noreferrer"
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
           >
             👾 GitHub
           </a>
@@ -98,20 +113,30 @@ function Home() {
             target="_blank" 
             rel="noopener noreferrer"
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
           >
             📝 Substack
           </a>
-          <a 
-            href="mailto:fhoque@uci.edu" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <button
+            onClick={() => window.location.href = 'mailto:fhoque@uci.edu'}
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
           >
             💌 Email
-          </a>
+          </button>
           <button 
             className="mr-6 hover:text-[#000080] hover:underline cursor-pointer transition-colors duration-200"
             onClick={() => setIsSidebarExpanded(!isSidebarExpanded)}
+            onMouseDown={() => {
+              const audio = new Audio(click);
+              audio.play();
+            }}
           >
             {isSidebarExpanded ? '⭐ Hide Favorites' : '⭐ Show Favorites'}
           </button>
@@ -147,32 +172,54 @@ function Home() {
                   <div 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'mission' ? 'bg-[#4169E1] text-white' : ''}`}
                     onClick={() => handleSectionClick('mission')}
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   >
                   <span className="font-PerfectDOSVGA437 text-sm">🎯 Mission</span>
                   </div>
                   <div 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'experiences' ? 'bg-[#4169E1] text-white' : ''}`}
                     onClick={() => handleSectionClick('experiences')}
-                  >
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
+                  > 
                     <span className="font-PerfectDOSVGA437 text-sm">💼 Experiences</span>
                   </div>
                   <div className="flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200">
-                    <span className="font-PerfectDOSVGA437 text-sm">🛠️ Tech Stacks</span>
+                    <a href="https://are.na/farahnaz-hoque" target="_blank" rel="noopener noreferrer" onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}>
+                    <span className="font-PerfectDOSVGA437 text-sm">🛠️ Are.na</span>
+                    </a>
                   </div>
                   <a 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'pinterest' ? 'bg-[#4169E1] text-white' : ''}`}
                     href="https://pin.it/427HWOdjJ"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   >
                     <span className="font-PerfectDOSVGA437 text-sm">📌 Pinterest</span>
                   </a>
                   <div 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'youtube' ? 'bg-[#4169E1] text-white' : ''}`}
-                    onClick={() =>  handleSectionClick('youtube')}
+                    onClick={() =>  handleSectionClick('youtube')}  
+                    onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}
                   >
                     <span className="font-PerfectDOSVGA437 text-sm">🎥 YouTube</span>
                   </div>
+                  
                 </div>
               </div>
             </div>
@@ -182,7 +229,7 @@ function Home() {
           <div className="bg-white flex-1 ie-load overflow-y-auto custom-scrollbar pb-8 relative">
             {activeSection === 'space-landing' && (
               <div className="p-8 w-[734px] h-[499px]" style={{
-                backgroundImage: 'url(../../public/LoadingHome.gif)', 
+                backgroundImage: `url('${import.meta.env.BASE_URL}LoadingHome.gif')`,
                 backgroundSize: 'cover', 
                 backgroundPosition: 'center', 
                 backgroundRepeat: 'no-repeat'
@@ -197,7 +244,7 @@ function Home() {
                 className="relative min-h-screen bg-[#f8f5ef] p-6 md:p-10 text-[#3d3d3d]" 
                 style={{
                   //If you have a paper/grain texture image, uncomment and adjust:
-                  backgroundImage: 'url("../../public/Mission.jpeg")',
+                  backgroundImage: `url('${import.meta.env.BASE_URL}Mission.jpeg')`,
                   backgroundSize: 'cover',
                   backgroundRepeat: 'repeat',
                 }}
@@ -213,7 +260,7 @@ function Home() {
                   {/* Large image at the top, reminiscent of Poolsuite's hero */}
                   <div className="overflow-hidden border-b border-black pb-4 mb-4">
                     <img 
-                      src="../../public/Mission.png" 
+                      src={import.meta.env.BASE_URL + 'Mission.png'}
                       alt="Courtyard" 
                       className="w-full h-auto object-cover"
                     />
@@ -228,16 +275,16 @@ function Home() {
                       className="md:mr-6 mb-4 md:mb-0"
                     >
                       <img 
-                        src="../../public/Farahnaz.webp" 
+                        src={import.meta.env.BASE_URL + 'Farahnaz.webp'} 
                         alt="Farahnaz Hoque"
                         className="w-64 h-auto rounded-2xl shadow-xl border-4 border-[#c0c0c0] hover:scale-105 transition-transform duration-200 cursor-pointer"
                       />
                     </a>
                     <div>
-                      <p className="font-kodchasan text-gray-700 text-base md:text-lg mb-4">
+                      <p className="font-kodchasan-regular text-gray-700 text-base md:text-lg mb-4">
                         I am a <span className="font-bold italic text-indigo-900">Computer Science</span> major specializing in <span className="font-bold italic text-indigo-900">Intelligent Systems</span> with a minor in <span className="font-bold italic text-indigo-900">Health Informatics</span>. I have a deep interest in <span className="font-bold italic text-indigo-900">AI-driven solutions for healthcare, safety, and community impact.</span> My mission is to leverage artificial intelligence, cloud computing, and data-driven insights to build scalable, innovative solutions that address real-world challenges.
                       </p>
-                      <p className="font-kodchasan text-gray-700 text-base md:text-lg">
+                      <p className="font-kodchasan-regular text-gray-700 text-base md:text-lg">
                         With a background in full-stack development, AI applications, and software engineering, <span className="font-bold italic text-indigo-900">I aim to bridge the gap between cutting-edge technology and practical implementation in industries such as:</span>
                       </p>
                     </div>
@@ -299,7 +346,7 @@ function Home() {
                   </div>
 
                   {/* Final paragraph */}
-                  <p className="font-kodchasan text-gray-700 text-base md:text-lg">
+                  <p className="font-kodchasan-regular text-gray-700 text-base md:text-lg">
                     Since my days in High School, I have always been passionate about communities and solving large scale problems that affect the lives of many, resulting in me co-founding <span className="font-bold italic text-indigo-900">Iccheghuri</span>, a non-profit organization in Bangladesh.
                   </p>
                 </div>
@@ -310,20 +357,20 @@ function Home() {
 
               {activeSection === "experiences" && (
                 <div className="p-8" style={{
-                  backgroundImage: 'url(../../public/Experience.jpg)',
+                  backgroundImage: `url('${import.meta.env.BASE_URL}Experience.jpg')`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'repeat'
                 }}>
                   <div className="flex justify-center items-center mb-4" >
-                    <img src="../../public/Experiences.gif" alt="saturn" className="justify-center items-center mx-auto"/>
+                    <img src={import.meta.env.BASE_URL + 'Experiences.gif'} alt="saturn" className="justify-center items-center mx-auto"/>
                   </div>
                   <div className="border-4 border-dotted border-black p-6 space-y-4 bg-white/30 rounded-lg">
                     {[
                       {
                         title: "JOE C. WEN SCHOOL OF POPULATION AND PUBLIC HEALTH",
                         role: "DATA SCIENCE RESEARCH ASSISTANT",
-                        image: "../../public/jcwen.jpeg",
+                        image: import.meta.env.BASE_URL + 'jcwen.jpeg',
                         period: "JANUARY 2025 - PRESENT",
                         onClick: () => setShowUniversityModal(true),
                         href: "https://www.jocwen.uci.edu/",
@@ -333,7 +380,7 @@ function Home() {
                       {
                         title: "STUDENT OUTREACH AND RETENTION CENTER",
                         role: "WEBSITE AND COMMUNICATIONS COORDINATOR",
-                        image: "../../public/soar.jpeg", 
+                        image: import.meta.env.BASE_URL + 'soar.jpeg', 
                         href: "https://www.soar.uci.edu/",
                         period: "AUGUST 2024 - PRESENT",
                         onClick: () => setShowSOARModal(true),
@@ -343,56 +390,77 @@ function Home() {
                       {
                         title: "SOLO",
                         role: "LEAD SOFTWARE ENGINEER INTERN",
-                        image: "../../public/SOLOLogo.png",
+                        image: import.meta.env.BASE_URL + 'SOLOLogo.png',
                         href: "https://www.linkedin.com/in/jenelle-king/",
                         period: "MARCH 2024 - SEPTEMBER 2024",
                         onClick: () => setShowSOLOModal(true),
                         badges: ["MYSQL", "NODEJS", "AWS"],
-                        description: "Full Stack Development, App Design & Deployment"
+                        description: "Full Stack Development, App Design & Deployment",
+                        onMouseDown: () => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }
                       },
                       {
                         title: "STAND UP TO TRASH",
                         role: "FULL STACK DEVELOPER",
-                        image: "../../public/standup.avif",
+                        image: import.meta.env.BASE_URL + 'standup.avif',
                         href: "https://www.standuptotrash.com/",
                         period: "MARCH 2024 - SEPTEMBER 2024",
                         onClick: () => setShowCommitChangeModal(true),
                         badges: ["REACT", "POSTGRESQL", "AWS"],
-                        description: "Volunteer Management System Development"
+                        description: "Volunteer Management System Development",
+                        onMouseDown: () => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }
                       },
                       {
                         title: "STUDENT OUTREACH AND RETENTION CENTER",
                         role: "PROGRAM CO-DIRECTOR",
-                        image: "../../public/soar.jpeg",
+                        image: import.meta.env.BASE_URL + 'soar.jpeg',
                         href: "https://www.soar.uci.edu/",
                         period: "AUGUST 2022 - JUNE 2024",
                         onClick: () => setShowProgramModal(true),
                         badges: ["LEADERSHIP", "EVENT PLANNING", "ADVOCACY"],
-                        description: "Community Programs & Volunteer Management"
+                        description: "Community Programs & Volunteer Management",
+                        onMouseDown: () => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }
                       },
                       {
                         title: "DONALD BREN SCHOOL OF ICS",
                         role: "MACHINE LEARNING RESEARCH ASSISTANT",
-                        image: "../../public/dbh.jpeg",
+                        image: import.meta.env.BASE_URL + 'dbh.jpeg',
                         href: "https://www.ics.uci.edu/",
                         period: "JANUARY 2023 - MARCH 2024",
                         onClick: () => setShowMLModal(true),
                         badges: ["PYTORCH", "TENSORFLOW", "ROS2"],
-                        description: "ML Research & Robotics Development"
+                        description: "ML Research & Robotics Development",
+                        onMouseDown: () => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }
                       },
                       {
                         title: "DONALD BREN SCHOOL OF ICS",
                         role: "LEARNING ASSISTANT",
-                        image: "../../public/dbh.jpeg",
+                        image: import.meta.env.BASE_URL + 'dbh.jpeg',
                         period: "JANUARY 2023 - MARCH 2024",
                         onClick: () => setShowLAModal(true),
                         badges: ["DISCRETE MATHEMATICS", "COURSE PLANNING", "TUTORING"],
-                        description: "Learning Assistant & Tutoring"
+                        description: "Learning Assistant & Tutoring",
+                        onMouseDown: () => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }
                       }
                     ].map((exp, index) => (
                       <div key={index}
                         className="bg-purple-50 border-2 border-black p-4 rounded hover:bg-purple-100 transition-all cursor-pointer"
                         onClick={exp.onClick}
+                        onMouseDown={exp.onMouseDown}
                       >
                         <div className="flex items-start gap-4">
                           <img href={exp.href} src={exp.image} alt={exp.title} className="w-16 h-16 rounded-full border-2 border-black"/>
@@ -425,7 +493,10 @@ function Home() {
                             <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
                             [THREAD] JOE C. WEN SCHOOL OF POPULATION AND PUBLIC HEALTH
                           </h2>
-                          <button onClick={() => setShowUniversityModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                          <button onMouseDown={() => {
+                            const audio = new Audio(click);
+                            audio.play();
+                          }} onClick={() => setShowUniversityModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
                             [X]
                           </button>
                         </div>
@@ -434,8 +505,8 @@ function Home() {
                             <p className="text-purple-800 font-bold text-lg">ROLE: Data Science Research Assistant</p>
                             <p className="text-gray-600 mt-2">PERIOD: JANUARY 2023 - PRESENT</p>
                               <p className="text-gray-600 mt-2">RESPONSIBILITIES:</p>
-                              <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
-                                <li>Website Crawling</li>
+                                <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
+                                  <li>Website Crawling</li>
                                 <li>Data Collection</li>
                                 <li>Data Analysis & Visualization</li>
                               </ul>
@@ -453,7 +524,10 @@ function Home() {
                         <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
                         [THREAD] STUDENT OUTREACH AND RETENTION CENTER
                           </h2>
-                          <button onClick={() => setShowSOARModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                          <button onMouseDown={() => {
+                            const audio = new Audio(click);
+                            audio.play();
+                          }} onClick={() => setShowSOARModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
                             [X]
                           </button>
                         </div>
@@ -464,7 +538,7 @@ function Home() {
                             <p className="text-gray-600 mt-2">STATUS: ACTIVE</p>
                             <div className="mt-2 space-y-2">
                               <p className="text-gray-600">RESPONSIBILITIES:</p>
-                              <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                              <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
                                 <li>Website Design & Development</li>
                                 <li>Newsletter Design & Writing</li>
                                 <li>Engagement Campaigns</li>
@@ -495,7 +569,7 @@ function Home() {
                           <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
                           <div className="mt-2 space-y-2">
                             <p className="text-gray-600">RESPONSIBILITIES:</p>
-                            <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                            <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
                               <li>Application Design & Development</li>
                               <li>Database Creation & Management</li>
                               <li>AWS Cloud Services Integration</li>
@@ -515,7 +589,10 @@ function Home() {
                             <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
                             [THREAD] STAND UP TO TRASH
                           </h2>
-                          <button onClick={() => setShowCommitChangeModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                          <button onMouseDown={() => {
+                            const audio = new Audio(click);
+                            audio.play();
+                          }} onClick={() => setShowCommitChangeModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
                             [X]
                           </button>
                         </div>
@@ -526,7 +603,7 @@ function Home() {
                             <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
                             <div className="mt-2 space-y-2">
                               <p className="text-gray-600">RESPONSIBILITIES:</p>
-                              <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                              <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
                                 <li>Volunteer Management System</li>
                                 <li>Data Analytics Dashboard</li>
                                 <li>Cloud Infrastructure Setup</li>
@@ -546,7 +623,10 @@ function Home() {
                         <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
                           [THREAD] STUDENT OUTREACH AND RETENTION CENTER
                         </h2>
-                        <button onClick={() => setShowProgramModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                        <button onMouseDown={() => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }} onClick={() => setShowProgramModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
                           [X]
                         </button>
                       </div>
@@ -557,7 +637,7 @@ function Home() {
                           <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
                           <div className="mt-2 space-y-2">
                             <p className="text-gray-600">RESPONSIBILITIES:</p>
-                            <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                            <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
                               <li>Budget Allocation and Management</li>
                               <li>Internship Management</li>
                               <li>Event Creation and Management</li>
@@ -577,7 +657,10 @@ function Home() {
                         <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
                           [THREAD] DONALD BREN SCHOOL OF ICS
                         </h2>
-                        <button onClick={() => setShowMLModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                        <button onMouseDown={() => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }} onClick={() => setShowMLModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
                           [X]
                         </button>
                       </div>
@@ -588,7 +671,7 @@ function Home() {
                           <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
                           <div className="mt-2 space-y-2">
                             <p className="text-gray-600">RESPONSIBILITIES:</p>
-                            <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                            <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
                               <li>Research on Internet of Things</li>
                               <li>Rover Development using ROS2</li>
                               <li>Data Collection and Visualization using TensorFlow</li>
@@ -608,7 +691,10 @@ function Home() {
                         <h2 className="text-2xl font-PerfectDOSVGA437  text-gray-600">
                           [THREAD] DONALD BREN SCHOOL OF ICS
                         </h2>
-                        <button onClick={() => setShowLAModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
+                        <button onMouseDown={() => {
+                          const audio = new Audio(click);
+                          audio.play();
+                        }} onClick={() => setShowLAModal(false)} className="text-pink-500 hover:text-pink-600 text-xl">
                           [X]
                         </button>
                       </div>
@@ -619,7 +705,7 @@ function Home() {
                           <p className="text-gray-600 mt-2">STATUS: INACTIVE</p>
                           <div className="mt-2 space-y-2">
                             <p className="text-gray-600">RESPONSIBILITIES:</p>
-                            <ul className="list-disc pl-5 text-gray-600 font-['Kodchasan']">
+                            <ul className="list-disc pl-5 text-gray-600 font-kodchasan-regular">
                               <li>Student Support & Tutoring</li>
                               <li>Course Material Development and Preparation</li>
                               <li>Office Hours Management</li>
@@ -634,12 +720,12 @@ function Home() {
                 </div>
               )}
               {activeSection === 'youtube' && (
-                <div className="p-6" style={{backgroundImage: "url('../../public/Youtube.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                <div className="p-6" style={{backgroundImage: `url('${import.meta.env.BASE_URL}Youtube.jpeg')`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                   {/* Header */}
                   <div className="flex items-center justify-between mb-6 bg-red-700 p-3 rounded-lg">
                     <div className="flex items-center">
-                      <img src="../../public/YoutubeLogo.png" alt="Retro YouTube" className="w-12 h-12 mr-2" />
-                      <h1 className="text-white font-PerfectDOSVGA437 text-xl">Farahnaz's Current Favorite Videos</h1>
+                      <img src={import.meta.env.BASE_URL + 'YoutubeLogo.png'} alt="Retro YouTube" className="w-12 h-12 mr-2" />
+                      <h1 className="text-white font-PerfectDOSVGA437 text-xl">Farahnaz&apos;s Current Favorite Videos</h1>
                     </div>
                   </div>
 
@@ -648,7 +734,7 @@ function Home() {
                     <iframe
                       width="100%"
                       height="100%" 
-                      src="https://www.youtube.com/watch?v=zAQYtolfB4g&list=PL32z1p066aKhld-hXx6-T279zvA9sw1sD&pp=gAQB"
+                      src="https://www.youtube.com/embed/zAQYtolfB4g?si=EUt6Ko5GFPw5CzT1"
                       title="YouTube Channel"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

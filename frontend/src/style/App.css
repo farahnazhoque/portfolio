@@ -1,9 +1,16 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500;700&display=swap');
+/* Import Kodchasan font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* Apply Kodchasan to all elements by default */
 body {
   font-family: 'Kodchasan', sans-serif;
+}
+
+.kodchasan-regular {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @keyframes ie-load {
@@ -74,3 +81,50 @@ body {
 .font-PerfectDOSVGA437 {
   font-family: 'Perfect DOS VGA 437', sans-serif;
 }
+
+@font-face {
+  font-family: 'Kodchasan Bold';
+  src: url('../fonts/Kodchasan/Kodchasan-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.font-kodchasan-bold {
+  font-family: 'Kodchasan Bold', sans-serif;
+}
+
+@font-face {
+  font-family: 'Kodchasan Italic';
+  src: url('../fonts/Kodchasan/Kodchasan-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+.font-kodchasan-italic {
+  font-family: 'Kodchasan Italic', sans-serif;
+}
+
+@font-face {
+  font-family: 'Kodchasan Bold Italic';
+  src: url('../fonts/Kodchasan/Kodchasan-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+.font-kodchasan-bold-italic {
+  font-family: 'Kodchasan Bold Italic', sans-serif;
+}
+
+@font-face {
+  font-family: 'Kodchasan Regular';
+  src: url('../fonts/Kodchasan/Kodchasan-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-kodchasan-regular {
+  font-family: 'Kodchasan Regular', sans-serif;
+}
+
+
