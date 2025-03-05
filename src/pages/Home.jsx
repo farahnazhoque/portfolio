@@ -190,7 +190,12 @@ function Home() {
                     <span className="font-PerfectDOSVGA437 text-sm">💼 Experiences</span>
                   </div>
                   <div className="flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200">
-                    <span className="font-PerfectDOSVGA437 text-sm">🛠️ Tech Stacks</span>
+                    <a href="https://are.na/farahnaz-hoque" target="_blank" rel="noopener noreferrer" onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}>
+                    <span className="font-PerfectDOSVGA437 text-sm">🛠️ Are.na</span>
+                    </a>
                   </div>
                   <a 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'pinterest' ? 'bg-[#4169E1] text-white' : ''}`}
