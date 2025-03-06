@@ -165,7 +165,7 @@ function Footer() {
         </Menu>
 
         {showPaint && (
-          <div className="fixed bottom-16 left-0 p-4 bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl w-full md:w-auto h-[90vh] md:h-auto overflow-y-auto">
+          <div className="fixed bottom-16 left-0 p-4 bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl w-[90%] md:w-auto h-[70vh] md:h-auto overflow-y-auto">
             <div className="flex justify-between items-center mb-2 bg-gradient-to-r from-[#000080] to-[#4169E1] p-2 sticky top-0 z-10">
               <h3 className="font-PerfectDOSVGA437 font-bold text-white">Paint</h3>
               <button 

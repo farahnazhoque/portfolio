@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
+import '../style/App.css';
 
 export default function Loading({ setHomeLoaded }) {
   const [text, setText] = useState('');
@@ -65,7 +66,7 @@ export default function Loading({ setHomeLoaded }) {
   return (
     <div className="h-screen w-screen bg-blue-900 flex justify-start p-8">
       <div className="w-96 bg-transparent">
-        <pre className="font-mono text-pink-400 whitespace-pre-line text-left">
+        <pre className="font-mono text-pink-200 whitespace-pre-line font-PerfectDOSVGA437 text-left">
           {text}
           <span className="animate-pulse">_</span>
         </pre>
