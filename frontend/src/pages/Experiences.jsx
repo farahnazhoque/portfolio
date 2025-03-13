@@ -32,8 +32,9 @@ function Experiences() {
           ]
         },
         responsibilities: [
-          "The focus of this research was to develop a comprehensive and efficient web crawling system to collect data from multiple years (2011-2024) of fire incidents that took place all over California, especially all the evacuation order, warnings and zones. The data was collected from the California Department of Forestry and Fire Protection (CAL FIRE) website.",
-          "Our team of one Research Lead and three Data Science Research Assistants worked together to develop a web crawler that could crawl the website and extract the data in a structured format. The data was then cleaned and prepared for analysis.",
+          "This research focused on developing a comprehensive and efficient web crawling system to collect data from multiple years (2011–2024) of fire incidents that took place all over California, especially all the evacuation order and warning zones. The data was collected from the California Department of Forestry and Fire Protection (CAL FIRE) website.",
+          "Our team, consisting of one lead and three interns (Hannah Huynh, Farahnaz Hoque, and Eric Li) collaborated to develop a web crawler capable of extracting zones from a website in a structured format. Given the complexity of the data, where hundreds of fires had multiple updates and zones were listed in an unstructured manner, our primary focus was to ensure accurate and efficient crawling.",
+          "To achieve this, we designed a web crawler that leverages multi-threading, batch configuration, and advanced regex techniques. This allowed us to extract zones even when no consistent patterns were followed. Once the data was collected, we cleaned and processed it for further analysis, ensuring its accuracy and usability.",
           "Using the data, we created a dashboard that allows users to visualize the data in a user-friendly manner. The dashboard was created using Tableau and Power BI.",
           "There were weekly meetings both with the Research Lead, the Professor who oversees the research, and the other team members to discuss the progress of the project and the challenges faced."
         ],
