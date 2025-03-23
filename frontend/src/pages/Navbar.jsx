@@ -2,10 +2,10 @@ import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import click from '../audio/click.mp3';
 const navigation = [
-  { name: 'Home', to: '/home', current: false },
-  { name: 'Experiences', to: '/experiences', current: false },
-  { name: 'Projects', to: '/projects', current: false }, 
-  { name: 'About', to: '/about', current: false },
+  { name: 'Home', to: '/home', current: false, icon: 'missionM.png' },
+  { name: 'Experiences', to: '/experiences', current: false, icon: 'experiencesM.png' },
+  { name: 'Projects', to: '/projects', current: false, icon: 'projectsM.png' }, 
+  { name: 'About', to: '/about', current: false, icon: 'aboutM.png' },
 ];
 
 export default function Navbar() {
@@ -69,7 +69,7 @@ export default function Navbar() {
                       className="flex items-center gap-3 font-PerfectDOSVGA437 text-black hover:text-[#fbcfe8] hover:scale-110 transition-all duration-200"
                     >
                       <img 
-                      src={import.meta.env.BASE_URL + 'NavFolder.png'}
+                      src={import.meta.env.BASE_URL + item.icon}
                       onMouseDown={() => {
                         const audio = new Audio(click);
                         audio.play();
@@ -99,7 +99,7 @@ export default function Navbar() {
               className="flex flex-col items-end text-right justify-end font-PerfectDOSVGA437 text-white hover:text-[#fbcfe8] text-lg"
             >
               <img 
-                src={import.meta.env.BASE_URL + 'NavFolder.png'}
+                src={import.meta.env.BASE_URL + item.icon}
                 alt={`${item.name} folder`}
                 className={`w-16 h-16 ${item.current ? 'brightness-110' : 'hover:brightness-110 hover:scale-110 transition-all duration-200'}`}
               />
