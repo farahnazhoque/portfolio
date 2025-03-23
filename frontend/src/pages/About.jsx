@@ -19,7 +19,7 @@ export default function About() {
     techstack: "I've worked with React, Node.js, Tailwind CSS, MySQL, AWS, PostgreSQL, Google Firebase, OpenAI, Gemini, and more!",
     projects: `One of my favorite projects was a personal safety app for women, built with React Native and AWS services. 
                Here is the link to the GitHub repository: <a href='https://github.com/G-Zhen/Safe-Circle' target='_blank' rel='noopener noreferrer' class="text-blue-500 underline">SafeCircle GitHub</a>`,
-    goals: "My career goal is to innovate software solutions to pressing matters in the world, especially serving underserved communities. But on a personal level, I wish to grow and be a better version of myself from yesterday me.",
+    goals: "My career goal is to innovate software solutions for pressing matters in the world, especially serving underserved communities. But on a personal level, I wish to grow and be a better version of myself from yesterday me.",
     hobbies: "I love reading, writing, making playlists and graphics, and watching movies!",
     music: "Here is a collection of my favorite songs at the moment: <a href='https://open.spotify.com/playlist/23PuoC9Hcj0oA8ZplGJOJ0?si=80c7a7694e0b4031' target='_blank' rel='noopener noreferrer' style='color: blue; text-decoration: underline;'>My Favorite Songs</a>",
     movies: "La La Land, Dead Poets Society, Interstellar and Kiki's Delivery Service. Here is my Letterboxd: <a href='https://letterboxd.com/withlovefh/' target='_blank' rel='noopener noreferrer' style='color: blue; text-decoration: underline;'>Letterboxd</a>",
