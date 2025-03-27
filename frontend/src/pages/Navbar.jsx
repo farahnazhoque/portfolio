@@ -1,11 +1,15 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import click from '../audio/click.mp3';
+import about from '../audio/about.wav';
+import experiences from '../audio/experiences.mp3';
+import projects from '../audio/projects.mp3';
+import explorer from '../audio/explorer.wav';
 const navigation = [
-  { name: 'Home', to: '/home', current: false, icon: 'missionM.png' },
-  { name: 'Experiences', to: '/experiences', current: false, icon: 'experiencesM.png' },
-  { name: 'Projects', to: '/projects', current: false, icon: 'projectsM.png' }, 
-  { name: 'About', to: '/about', current: false, icon: 'aboutM.png' },
+  { name: 'Home', to: '/home', current: false, icon: 'missionM.png', sound: explorer },
+  { name: 'Experiences', to: '/experiences', current: false, icon: 'experiencesM.png', sound: experiences },
+  { name: 'Projects', to: '/projects', current: false, icon: 'projectsM.png', sound: projects }, 
+  { name: 'About', to: '/about', current: false, icon: 'aboutM.png', sound: about },
 ];
 
 export default function Navbar() {
@@ -34,7 +38,7 @@ export default function Navbar() {
             <img 
               src={import.meta.env.BASE_URL + 'NavFolder.png'}
               alt="Menu folder"
-              className="w-12 h-12 hover:brightness-110"
+              className="w-12 h-12 hover:brightness-110 "
             />
             <span className="font-PerfectDOSVGA437 text-white">Menu</span>
           </button>
@@ -62,6 +66,10 @@ export default function Navbar() {
                       key={item.name}
                       to={item.to}
                       onClick={() => setIsModalOpen(false)}
+                      onMouseEnter={() => {
+                        const audio = new Audio(item.sound);
+                        audio.play();
+                      }}
                       onMouseDown={() => {
                         const audio = new Audio(click);
                         audio.play();
@@ -70,6 +78,7 @@ export default function Navbar() {
                     >
                       <img 
                       src={import.meta.env.BASE_URL + item.icon}
+                    
                       onMouseDown={() => {
                         const audio = new Audio(click);
                         audio.play();
@@ -92,6 +101,10 @@ export default function Navbar() {
             <Link
               key={item.name}
               to={item.to}
+              onMouseEnter={() => {
+                const audio = new Audio(item.sound);
+                audio.play();
+              }}
               onMouseDown={() => {
                 const audio = new Audio(click);
                 audio.play();

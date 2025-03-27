@@ -14,13 +14,14 @@ export default function About() {
   // Map questions to predefined responses
   const responses = {
     swe: "I pursued software development mainly because since seventh grade, I have always been interested in learning the inner workings of how computers, websites, and apps work. When I heard about the opportunity to not only create applications like some of my favorite games, and websites, but also problem-solve (I was really into maths and investigative journalism), I knew it was the right choice.",
+    languages: "I have worked with Python, Java, C++/C, JavaScript, TypeScript, HTML, and CSS!",
     lang: "My favorite programming language is Python because, like many others, this was the first language I learned the most in-depth. I also like it because it's a very versatile language that can be used for a wide range of applications, from web development to machine learning.",
-    team: "I enjoy working in a team because I feel like the beauty of developing and creation is inspiration and guidance from others. Without the minds of others, I do not think I would have been able to create the projects I have today.",
-    techstack: "I've worked with React, Node.js, Tailwind CSS, MySQL, AWS, PostgreSQL, Google Firebase, OpenAI, Gemini, and more!",
+    team: "I enjoy working in a team because I feel like the most beautiful parts of developing and creation are inspiration and guidance from others. Without the minds of others, I do not think I would have been able to create the projects thatI have today.",
+    techstack: "I have worked with React, Node.js, MySQL, AWS, PostgreSQL, Google Firebase, Supabase, MongoDB, Docker and more!",
     projects: `One of my favorite projects was a personal safety app for women, built with React Native and AWS services. 
                Here is the link to the GitHub repository: <a href='https://github.com/G-Zhen/Safe-Circle' target='_blank' rel='noopener noreferrer' class="text-blue-500 underline">SafeCircle GitHub</a>`,
     goals: "My career goal is to innovate software solutions for pressing matters in the world, especially serving underserved communities. But on a personal level, I wish to grow and be a better version of myself from yesterday me.",
-    hobbies: "I love reading, writing, making playlists and graphics, and watching movies!",
+    hobbies: "I love reading, writing, making playlists, designing graphics, watching movies and deep diving into topics that interest me!",
     music: "Here is a collection of my favorite songs at the moment: <a href='https://open.spotify.com/playlist/23PuoC9Hcj0oA8ZplGJOJ0?si=80c7a7694e0b4031' target='_blank' rel='noopener noreferrer' style='color: blue; text-decoration: underline;'>My Favorite Songs</a>",
     movies: "La La Land, Dead Poets Society, Interstellar and Kiki's Delivery Service. Here is my Letterboxd: <a href='https://letterboxd.com/withlovefh/' target='_blank' rel='noopener noreferrer' style='color: blue; text-decoration: underline;'>Letterboxd</a>",
     books: "I can never pick a favorite book but the one that I still go back to has to be Beartown by Fredrik Backman. Here is my bookstagram: <a href='https://www.instagram.com/farahinthemaking/' target='_blank' rel='noopener noreferrer' style='color: blue; text-decoration: underline;'>Bookstagram</a>",
@@ -107,6 +108,7 @@ export default function About() {
         >
           <option value="">Select a question...</option>
           <option value="swe">Why did you pursue a career in software development?</option>
+          <option value="languages">What languages have you worked with?</option>
           <option value="lang">What is your favorite programming language?</option>
           <option value="team">Why do you like working in a team?</option>
           <option value="techstack">What are some tech stacks you have worked with?</option>
