@@ -7,7 +7,7 @@ import projects from '../audio/projects.mp3';
 import explorer from '../audio/explorer.wav';
 const navigation = [
   { name: 'Home', to: '/home', current: false, icon: 'missionM.png', sound: explorer },
-  { name: 'Experiences', to: '/experiences', current: false, icon: 'experiencesM.png', sound: experiences },
+  { name: 'Experiences', to: '/experiences', current: false, icon: 'experiencesM.png', sound: experiences.slice(0, 1000) },
   { name: 'Projects', to: '/projects', current: false, icon: 'projectsM.png', sound: projects }, 
   { name: 'About', to: '/about', current: false, icon: 'aboutM.png', sound: about },
 ];
