@@ -2,12 +2,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import click from '../audio/click.mp3';
 import about from '../audio/about.wav';
-import experiences from '../audio/experiences.mp3';
+import experiences from '../audio/experiences.m4a';
 import projects from '../audio/projects.mp3';
 import explorer from '../audio/explorer.wav';
 const navigation = [
   { name: 'Home', to: '/home', current: false, icon: 'missionM.png', sound: explorer },
-  { name: 'Experiences', to: '/experiences', current: false, icon: 'experiencesM.png', sound: experiences.slice(0, 1000) },
+  { name: 'Experiences', to: '/experiences', current: false, icon: 'experiencesM.png', sound: experiences },
   { name: 'Projects', to: '/projects', current: false, icon: 'projectsM.png', sound: projects }, 
   { name: 'About', to: '/about', current: false, icon: 'aboutM.png', sound: about },
 ];
