@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import '../style/App.css';
 import loading from '../audio/loading.mp3'; 
 
@@ -59,7 +60,7 @@ export default function Loading({ setHomeLoaded }) {
     return () => {
       mounted = false;
     };
-  }, [setHomeLoaded]);
+  }, [setHomeLoaded, loadingText]);
 
   // Audio playback effect
   useEffect(() => {
@@ -89,3 +90,7 @@ export default function Loading({ setHomeLoaded }) {
     </div>
   );
 }
+
+Loading.propTypes = {
+  setHomeLoaded: PropTypes.func.isRequired
+};
