@@ -2,21 +2,21 @@ import { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../style/App.css';
-import loading from '../audio/loading.mp3'; 
+import loading from '../audio/loading.mp3';
 
 export default function Loading({ setHomeLoaded }) {
   const [text, setText] = useState('');
   const [redirect, setRedirect] = useState(false);
 
-  const loadingText = [
-    'Initializing system...',
-    'System check complete...',
-    'Rebooting...',
-    'Starting computer...'
-  ];
-
   // Typing animation effect
   useEffect(() => {
+    const loadingText = [
+      'Initializing system...',
+      'System check complete...',
+      'Rebooting...',
+      'Starting computer...'
+    ];
+
     let currentIndex = 0;
     let currentChar = 0;
     let mounted = true;
@@ -47,10 +47,8 @@ export default function Loading({ setHomeLoaded }) {
       }
     };
 
-    // Start the typing animation
     setTimeout(typeText, 100);
 
-    // Preload the home page in background
     setTimeout(() => {
       if (mounted) {
         setHomeLoaded(true);
@@ -60,7 +58,7 @@ export default function Loading({ setHomeLoaded }) {
     return () => {
       mounted = false;
     };
-  }, [setHomeLoaded, loadingText]);
+  }, [setHomeLoaded]);
 
   // Audio playback effect
   useEffect(() => {
@@ -69,7 +67,7 @@ export default function Loading({ setHomeLoaded }) {
       console.error('Error playing audio:', error);
     });
 
-    // Optionally pause the audio if the component unmounts
+    // Cleanup audio when component unmounts
     return () => {
       audioObj.pause();
     };
@@ -82,7 +80,7 @@ export default function Loading({ setHomeLoaded }) {
   return (
     <div className="h-screen w-screen bg-blue-900 flex justify-start p-8">
       <div className="w-96 bg-transparent">
-        <pre className="font-mono text-pink-200 whitespace-pre-line font-PerfectDOSVGA437 text-left">
+        <pre className="font-mono text-pink-200 whitespace-pre-line text-left">
           {text}
           <span className="animate-pulse">_</span>
         </pre>
