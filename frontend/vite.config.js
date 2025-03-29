@@ -1,14 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 import { fileURLToPath } from 'url'
 import { dirname, resolve } from 'path'
+  
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: '/portfolio/', // Changed to match your GitHub repo name
+  plugins: [react(), tailwindcss()],
+  base: './',
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
+    assetsDir: 'assets' // Ensures files go into dist/assets/
   },
 })
