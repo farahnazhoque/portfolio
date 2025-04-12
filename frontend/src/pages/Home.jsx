@@ -209,6 +209,14 @@ function Home() {
                   >
                     <span className="font-PerfectDOSVGA437 text-sm">📌 Pinterest</span>
                   </a>
+                  <div className="flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200">
+                    <a href="https://adhocmusings.vercel.app/" target="_blank" rel="noopener noreferrer" onMouseDown={() => {
+                      const audio = new Audio(click);
+                      audio.play();
+                    }}>
+                    <span className="font-PerfectDOSVGA437 text-sm">🌱 My Digital Garden</span>
+                    </a>
+                  </div>
                   <div 
                     className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'youtube' ? 'bg-[#4169E1] text-white' : ''}`}
                     onClick={() =>  handleSectionClick('youtube')}  
