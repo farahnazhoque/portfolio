@@ -42,10 +42,10 @@ function Home() {
   return (
     <div className="absolute lg:top-10 lg:mt-20 md:mt-20 sm:mt-20 mt-25 left-1/2 -translate-x-1/2 
       w-full sm:max-w-[500px] md:max-w-[80vw] lg:max-w-[1000px]
-      bg-[#dcdcdc] border-[2.5px] border-[#a0a0a0] shadow-[inset_0_0_4px_#999]
+      bg-[#dcdcdc] shadow-[inset_0_0_4px_#999]
       overflow-hidden 
       min-h-[450px] md:min-h-[600px] lg:min-h-[650px] font-apple-garamond
-      border border-black">
+      border-[2.5px] border-black">
 
       
       <div className="w-full h-[650px] md:w-[80vw] md:h-[600px] lg:w-[1000px] lg:h-[650px] bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl relative">
@@ -82,9 +82,12 @@ function Home() {
             </Link>
           </div>
         </div>
+        <div
+          className="w-full h-[10px] border-t border-[#999] bg-[repeating-linear-gradient(to-bottom,#b0b0b0_0px,#b0b0b0_1px,#d0d0d0_1px,#d0d0d0_2px)]"
+        ></div>
 
         {/* Window Menu Bar */}
-        <div className="bg-[#c0c0c0] border-b-2 border-gray-400 px-4 py-2 font-PerfectDOSVGA437 text-sm">
+        <div className="bg-[#c0c0c0] border-b-2 border-black px-4 py-2 font-PerfectDOSVGA437 text-sm">
           <a 
             href="https://www.linkedin.com/in/farahnazhoque/" 
             target="_blank" 
@@ -145,9 +148,9 @@ function Home() {
         </div>
 
         {/* URL Bar */}
-        <div className="bg-[#c0c0c0] border-b-2 border-gray-400 px-4 py-2 flex items-center">
+        <div className="bg-[#c0c0c0] border-b-2 border-black px-4 py-2 flex items-center">
           <span className="font-PerfectDOSVGA437 text-sm mr-2">Address:</span>
-          <div className="flex-1 bg-white border-2 border-gray-600 px-2 py-1">
+          <div className="flex-1 bg-white border-2 border-black px-2 py-1">
             <input 
               type="text" 
               value={currentUrl}
