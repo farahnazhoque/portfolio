@@ -49,7 +49,7 @@ const Layout = memo(function Layout() {
       }}
     >
       {/* Mac-style top menu bar */}
-      <div className="fixed top-0 left-0 right-0 h-6 bg-[#dcdcdc] text-black flex items-center justify-between px-4 z-[100] font-PerfectDOSVGA437 text-sm">
+      <div className="fixed top-0 left-0 right-0 h-6 bg-[#dcdcdc] text-black flex items-center justify-between px-4 z-[100] border-b border-black font-PerfectDOSVGA437 text-sm">
         <div className="flex items-center space-x-4">
           <span className="text-black">🍎</span>
           <span>File</span>
