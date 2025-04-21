@@ -382,7 +382,7 @@ function Experiences() {
       {/* Word Document Modal */}
       {selectedFile && (
         <Modal onClose={() => setSelectedFile(null)}>
-          <div className="fixed inset-0 bg-[#c0c0c0] flex items-center justify-center p-4 z-50">
+          <div className="z-150 fixed inset-0 bg-[#c0c0c0] flex items-center justify-center p-4">
             <div className="w-[1200px] border-2 border-black bg-white text-black overflow-y-auto max-h-[100vh]">
               <div className="fixed top-0 left-0 right-0 z-50 bg-blue-200 text-black p-2 flex justify-between items-center border-b-2 border-black">
                 <div className="flex items-center gap-2 overflow-hidden">

@@ -164,7 +164,7 @@ body {
 
 @font-face {
   font-family: 'Apple Garamond Bold';
-  src: url('../fonts/AppleGaramond/AppleGaramondBold.ttf') format('truetype');
+  src: url('../fonts/AppleGaramond/AppleGaramond-Bold.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
