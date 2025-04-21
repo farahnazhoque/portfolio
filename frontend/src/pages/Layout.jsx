@@ -7,6 +7,7 @@ import Footer from './Footer';
 const Layout = memo(function Layout() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
     const updateCursorPosition = (e) => {
@@ -15,6 +16,13 @@ const Layout = memo(function Layout() {
 
     window.addEventListener('mousemove', updateCursorPosition);
     return () => window.removeEventListener('mousemove', updateCursorPosition);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
   }, []);
 
   useEffect(() => {
@@ -40,6 +48,22 @@ const Layout = memo(function Layout() {
         cursor: 'none' // Hide the default cursor
       }}
     >
+      {/* Mac-style top menu bar */}
+      <div className="fixed top-0 left-0 right-0 h-6 bg-[#dcdcdc] text-black flex items-center justify-between px-4 z-[100] font-PerfectDOSVGA437 text-sm">
+        <div className="flex items-center space-x-4">
+          <span className="text-black">🍎</span>
+          <span>File</span>
+          <span>Edit</span>
+          <span>View</span>
+          <span>Help</span>
+        </div>
+        <div className="flex items-center space-x-4">
+          <span>🔋 100%</span>
+          <span>📶 Wi-Fi</span>
+          <span>{currentTime.toLocaleTimeString()}</span>
+        </div>
+      </div>
+
       <div
         className="fixed w-10 h-10 pointer-events-none z-[100]"
         style={{
@@ -51,12 +75,11 @@ const Layout = memo(function Layout() {
           transform: 'translate(0, 0)',
           transition: 'background-image 0.1s ease-in-out',
           cursor: 'none'
-          
         }}
       />
 
-      {/* Main content has bottom padding to avoid overlap with fixed footer */}
-      <main className="pb-20">
+      {/* Main content has top and bottom padding to avoid overlap with menu bar and footer */}
+      <main className="pt-6 pb-20">
         <Outlet /> {/* Renders Home or other pages */}
       </main>
 
