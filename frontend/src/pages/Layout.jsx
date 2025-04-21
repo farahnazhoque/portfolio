@@ -32,7 +32,7 @@ const Layout = memo(function Layout() {
     <div 
       className="relative w-screen h-screen overflow-hidden"
       style={{
-        backgroundImage: `url('${import.meta.env.BASE_URL}BackgroundGif.gif')`,
+        backgroundImage: `url('${import.meta.env.BASE_URL}Background.png')`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',

@@ -128,3 +128,49 @@ body {
 }
 
 
+@font-face {
+  font-family: 'Apple Garamond';
+  src: url('../fonts/AppleGaramond/AppleGaramond.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.font-apple-garamond {
+  font-family: 'Apple Garamond', sans-serif;
+}
+
+@font-face {
+  font-family: 'Apple Garamond Italic';
+  src: url('../fonts/AppleGaramond/AppleGaramond-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+.font-apple-garamond-italic {
+  font-family: 'Apple Garamond Italic', sans-serif;
+}
+
+@font-face {
+  font-family: 'Apple Garamond Bold Italic';
+  src: url('../fonts/AppleGaramond/AppleGaramond-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+.font-apple-garamond-bold-italic {
+  font-family: 'Apple Garamond Bold Italic', sans-serif;
+}
+
+@font-face {
+  font-family: 'Apple Garamond Bold';
+  src: url('../fonts/AppleGaramond/AppleGaramondBold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-apple-garamond-bold {
+  font-family: 'Apple Garamond Bold', sans-serif;
+}
+
+

@@ -391,7 +391,7 @@ function Experiences() {
                     alt="Word"
                     className="w-6 h-6 flex-shrink-0"
                   />
-                  <span className="font-kodchasan-bold text-xl truncate">{selectedFile.title}</span>
+                  <span className="font-apple-garamond-bold text-xl truncate">{selectedFile.title}</span>
                 </div>
                 <div className="flex gap-2 flex-shrink-0">
                   <button onMouseDown={() => {
@@ -638,28 +638,28 @@ function Experiences() {
                   <div className="flex-1 pl-8 sticky top-0">
                     <div id="summary" className="mb-8">
                       <div className="bg-gray-50 p-6 rounded-lg border border-black">
-                        <h2 className="text-2xl font-kodchasan-bold text-blue-800 mb-4 flex items-center">
+                        <h2 className="text-2xl font-apple-garamond-bold text-blue-800 mb-4 flex items-center">
                           <img src={import.meta.env.BASE_URL + 'summary.png'} alt="" className="w-8 h-8 mr-2"/>
                           Project Summary
                         </h2>
                         <div className="grid grid-cols-2 gap-4">
                           <div>
-                            <h3 className="font-kodchasan-bold text-gray-700 mb-2">Team Composition</h3>
-                            <ul className="list-disc font-kodchasan-regular list-inside space-y-1 text-gray-600">
+                            <h3 className="font-apple-garamond-bold text-gray-700 mb-2">Team Composition</h3>
+                            <ul className="list-disc font-apple-garamond list-inside space-y-1 text-gray-600">
                               {selectedFile.content.summary.team.map((member, index) => (
                                 <li key={index}>{member}</li>
                               ))}
                             </ul>
                           </div>
                           <div>
-                            <h3 className="font-kodchasan-bold text-gray-700 mb-2">My Role</h3>
-                            <p className="text-gray-600 font-kodchasan-regular">{selectedFile.content.summary.myRole}</p>
-                            <h3 className="font-kodchasan-bold text-gray-700 mt-4 mb-2">Timeline</h3>
-                            <p className="text-gray-600 font-kodchasan-regular">{selectedFile.content.summary.timeline}</p>
+                            <h3 className="font-apple-garamond-bold text-gray-700 mb-2">My Role</h3>
+                            <p className="text-gray-600 font-apple-garamond">{selectedFile.content.summary.myRole}</p>
+                            <h3 className="font-apple-garamond-bold text-gray-700 mt-4 mb-2">Timeline</h3>
+                            <p className="text-gray-600 font-apple-garamond">{selectedFile.content.summary.timeline}</p>
                           </div>
                           <div className="col-span-2">
-                            <h3 className="font-kodchasan-bold text-gray-700 mb-2">Project Phases</h3>
-                            <ul className="list-disc font-kodchasan-regular list-inside space-y-1 text-gray-600">
+                            <h3 className="font-apple-garamond-bold text-gray-700 mb-2">Project Phases</h3>
+                            <ul className="list-disc font-apple-garamond list-inside space-y-1 text-gray-600">
                               {selectedFile.content.summary.projectPhases.map((phase, index) => (
                                 <li key={index}>{phase}</li>
                               ))}
@@ -679,14 +679,14 @@ function Experiences() {
                     </div>
                     <div id="responsibilities" className="mb-8">
                       <div className="bg-gray-50 p-6 rounded-lg border border-black">
-                        <h2 className="text-2xl font-kodchasan-bold text-blue-800 mb-4 flex items-center">
+                        <h2 className="text-2xl font-apple-garamond-bold text-blue-800 mb-4 flex items-center">
                           <img src={import.meta.env.BASE_URL + 'respon.png'} alt="" className="w-8 h-8 mr-2"/>
                           Responsibilities
                         </h2>
                         <ul className="space-y-3">
                           {selectedFile.content.responsibilities.map((resp, index) => (
                             <li key={index} className="flex items-center">
-                              <span className="font-kodchasan-regular text-gray-700">{resp}</span>
+                              <span className="font-apple-garamond text-gray-700">{resp}</span>
                             </li>
                           ))}
                         </ul>
@@ -695,14 +695,14 @@ function Experiences() {
                     
                     <div id="purpose" className="mb-8">
                       <div className="bg-gray-50 p-6 rounded-lg border border-black">
-                        <h2 className="text-2xl font-kodchasan-bold text-blue-800 mb-4 flex items-center">
+                        <h2 className="text-2xl font-apple-garamond-bold text-blue-800 mb-4 flex items-center">
                           <img src={import.meta.env.BASE_URL + 'purpose.png'} alt="" className="w-8 h-8 mr-2"/>
                           Purpose
                         </h2>
                         <ul className="space-y-3">
                           {selectedFile.content.purpose.map((pur, index) => (
                             <li key={index} className="flex items-center">
-                              <span className="font-kodchasan-regular text-gray-700">{pur}</span>
+                              <span className="font-apple-garamond text-gray-700">{pur}</span>
                             </li>
                           ))}
                         </ul>
