@@ -48,6 +48,17 @@ const Layout = memo(function Layout() {
         cursor: 'none' // Hide the default cursor
       }}
     >
+      {/* Sticky Note */}
+      <div className="hidden md:block fixed top-20 left-4 w-48 h-48 border-2 border-black bg-[#FAF6F2] shadow-lg z-50 transform rotate-2" style={{
+        boxShadow: '2px 2px 10px rgba(0,0,0,0.2)',
+        clipPath: 'polygon(0% 0%, 100% 2%, 98% 100%, 2% 98%)'
+      }}>
+        <div className="p-4 font-PerfectDOSVGA437 text-sm">
+          <p>Welcome to my digital space! Feel free to explore and have fun 🚀</p>
+          <p className="mt-4">- Farahnaz</p>
+        </div>
+      </div>
+
       {/* Mac-style top menu bar */}
       <div className="fixed top-0 left-0 right-0 h-6 bg-[#dcdcdc] text-black flex items-center justify-between px-4 z-[100] border-b border-black font-PerfectDOSVGA437 text-sm">
         <div className="flex items-center space-x-4">
