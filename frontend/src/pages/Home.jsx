@@ -241,7 +241,7 @@ function Home() {
           <div className="bg-white flex-1 ie-load overflow-y-auto custom-scrollbar pb-8 relative">
             {activeSection === 'space-landing' && (
               <div className="p-8 w-[734px] h-[499px]" style={{
-                backgroundImage: `url('${import.meta.env.BASE_URL}LoadingHome.gif')`,
+                backgroundImage: `url('${import.meta.env.BASE_URL}LoadingHome.png')`,
                 backgroundSize: 'cover', 
                 backgroundPosition: 'center', 
                 backgroundRepeat: 'no-repeat'
