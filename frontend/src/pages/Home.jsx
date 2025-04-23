@@ -57,7 +57,7 @@ function Home() {
         </div>
           <div className="flex gap-2">
             <button
-              className="w-5 h-5 bg-[#c0c0c0] border border-black shadow-[inset_1px_1px_0px_white] hover:bg-[#b0b0b0] transition-colors duration-200"
+              className="w-6 h-6 bg-[#c0c0c0] border border-black shadow-[inset_1px_1px_0px_white] hover:bg-[#b0b0b0] transition-colors duration-200"
               onClick={() => setIsMinimized(true)}
               onMouseDown={() => {
                 const audio = new Audio(click);
@@ -66,7 +66,7 @@ function Home() {
             >
               _
             </button>
-            <button className="w-5 h-5 bg-[#c0c0c0] border border-black shadow-[inset_1px_1px_0px_white] hover:bg-[#b0b0b0] transition-colors duration-200">
+            <button className="w-6 h-6 bg-[#c0c0c0] border border-black shadow-[inset_1px_1px_0px_white] hover:bg-[#b0b0b0] transition-colors duration-200">
             □
             </button>
             <Link
@@ -75,10 +75,9 @@ function Home() {
                 const audio = new Audio(click);
                 audio.play();
               }}
-              className="w-5 h-5 bg-[#c0c0c0] border border-black shadow-[inset_1px_1px_0px_white] hover:bg-[#b0b0b0] transition-colors duration-200"
+              className="w-6 h-6 bg-[#c0c0c0] border border-black shadow-[inset_1px_1px_0px_white] hover:bg-[#b0b0b0] transition-colors duration-200"
             >
               ✖
-             
             </Link>
           </div>
         </div>

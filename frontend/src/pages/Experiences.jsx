@@ -299,45 +299,45 @@ function Experiences() {
         overflow-hidden 
         min-h-[450px] md:min-h-[600px] lg:min-h-[650px]">
         
-        <div className="w-full h-[450px] md:w-[80vw] md:h-[600px] lg:w-[1000px] lg:h-[650px] bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl relative">
-          {/* Window Title Bar */}
-          <div className="bg-gradient-to-r from-[#000080] to-[#4169E1] px-3 py-2 flex items-center justify-between rounded-t-lg">
-            <div className="flex items-center">
-              <img
-                src={import.meta.env.BASE_URL + 'folder-icon.png'}  
-                alt="Folder Icon"
-                className="w-5 h-5 mr-2"
-              />
-              <span className="text-white font-PerfectDOSVGA437 text-lg">File Explorer - Experiences</span>
-            </div>
-            <div className="flex gap-2">
-              <button
-                className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
-                onMouseDown={() => {
-                  const audio = new Audio(click);
-                  audio.play();
-                }}
-              >
-                _
-              </button>
-              <button onMouseDown={() => {
+        <div className="w-full h-[650px] md:w-[80vw] md:h-[600px] lg:w-[1000px] lg:h-[650px] bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl relative">
+        {/* Window Title Bar */}
+        <div className="bg-[#dcdcdc] px-3 py-1 flex items-center justify-between border-b border-[#a0a0a0]">
+        <div className="flex items-center">
+            
+        <span className="text-black font-PerfectDOSVGA437 text-base tracking-tight">Welcome Home</span>
+        </div>
+          <div className="flex gap-2">
+            <button
+              className="w-6 h-6 bg-[#c0c0c0] border border-black shadow-[inset_1px_1px_0px_white] hover:bg-[#b0b0b0] transition-colors duration-200"
+              onClick={() => {
                 const audio = new Audio(click);
                 audio.play();
-              }} className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200">
-                □
-              </button>
-              <Link
-                to="/layout"
-                className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200"
-                onMouseDown={() => {
-                  const audio = new Audio(click);
-                  audio.play();
-                }}
-              >
-                ✖
-              </Link>
-            </div>
+              }}
+              onMouseDown={() => {
+                const audio = new Audio(click);
+                audio.play();
+              }}
+            >
+              _
+            </button>
+            <button className="w-6 h-6 bg-[#c0c0c0] border border-black shadow-[inset_1px_1px_0px_white] hover:bg-[#b0b0b0] transition-colors duration-200">
+            □
+            </button>
+            <Link
+              to="/layout"
+              onMouseDown={() => {
+                const audio = new Audio(click);
+                audio.play();
+              }}
+              className="w-6 h-6 bg-[#c0c0c0] border border-black shadow-[inset_1px_1px_0px_white] hover:bg-[#b0b0b0] transition-colors duration-200"
+            >
+              ✖
+            </Link>
           </div>
+        </div>
+        <div
+          className="w-full h-[10px] border-t border-[#999] bg-[repeating-linear-gradient(to-bottom,#b0b0b0_0px,#b0b0b0_1px,#d0d0d0_1px,#d0d0d0_2px)]"
+        ></div>
 
           {/* Window Content */}
           <div className="flex h-[calc(100%-3rem)]">
