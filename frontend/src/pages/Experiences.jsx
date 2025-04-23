@@ -295,9 +295,9 @@ function Experiences() {
       {/* Main Window */}
       <div className="absolute lg:top-10 mt-20 left-1/2 -translate-x-1/2 
         w-full sm:max-w-[500px] md:max-w-[80vw] lg:max-w-[1000px]
-        bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl
+        bg-[#c0c0c0] shadow-xl
         overflow-hidden 
-        min-h-[450px] md:min-h-[600px] lg:min-h-[650px]">
+        min-h-[450px] md:min-h-[600px] lg:min-h-[650px] border-2 border-black">
         
         <div className="w-full h-[650px] md:w-[80vw] md:h-[600px] lg:w-[1000px] lg:h-[650px] bg-[#c0c0c0] border-2 border-white rounded-lg shadow-xl relative">
         {/* Window Title Bar */}
