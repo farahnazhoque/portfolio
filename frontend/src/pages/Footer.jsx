@@ -81,7 +81,7 @@ function Footer() {
               audio.play();
             }}
           >
-            <span className="mr-1"><img src={import.meta.env.BASE_URL + 'StartIcon.png'} alt="Start" className="w-6 h-6" /></span>
+            <span className="mr-1 font-PerfectDOSVGA437"><img src={import.meta.env.BASE_URL + 'StartIcon.png'} alt="Start" className="w-6 h-6" /></span>
             Start
           </Menu.Button>
 
@@ -351,7 +351,7 @@ function Footer() {
 
       
         <div className="flex-1"></div>
-        <div className="hidden md:block bg-blue-100 px-4 py-1 border-2 border-t-gray-600 border-l-gray-600 border-r-white border-b-white font-kodchasan-regular text-sm">
+        <div className="hidden md:block bg-blue-100 px-4 py-1 border-2 border-t-gray-600 border-l-gray-600 border-r-white border-b-white font-PerfectDOSVGA437 text-sm">
           © All rights reserved Farahnaz Hoque 2025
         </div>
       </div>

@@ -23,7 +23,7 @@ export default function About() {
     goals: "My career goal is to innovate software solutions for pressing matters in the world, especially serving underserved communities. But on a personal level, I wish to grow and be a better version of myself from yesterday me.",
     hobbies: "I love reading, writing, making playlists, designing graphics, watching movies and deep diving into topics that interest me!",
     music: "Here is a collection of my favorite songs at the moment: <a href='https://open.spotify.com/playlist/23PuoC9Hcj0oA8ZplGJOJ0?si=80c7a7694e0b4031' target='_blank' rel='noopener noreferrer' style='color: blue; text-decoration: underline;'>My Favorite Songs</a>",
-    movies: "La La Land, Dead Poets Society, Interstellar and Kiki's Delivery Service. Here is my Letterboxd: <a href='https://letterboxd.com/withlovefh/' target='_blank' rel='noopener noreferrer' style='color: blue; text-decoration: underline;'>Letterboxd</a>",
+    movies: "La La Land,The Pianist, Interstellar and Kiki's Delivery Service. Here is my Letterboxd: <a href='https://letterboxd.com/withlovefh/' target='_blank' rel='noopener noreferrer' style='color: blue; text-decoration: underline;'>Letterboxd</a>",
     books: "I can never pick a favorite book but the one that I still go back to has to be Beartown by Fredrik Backman. Here is my bookstagram: <a href='https://www.instagram.com/farahinthemaking/' target='_blank' rel='noopener noreferrer' style='color: blue; text-decoration: underline;'>Bookstagram</a>",
   };
 
@@ -64,47 +64,47 @@ export default function About() {
   }, [messages]);
 
   return (
-    <div className="flex border-2 border-black flex-col min-h-[450px] max-h-[650px] w-full md:w-[600px] mx-auto p-4 bg-[#c0c0c0] rounded-lg shadow-lg lg:mt-[100px] md:mt-[100px] sm:mt-[100px] mt-[100px]">
+    <div className="flex border-2 border-black flex-col min-h-[450px] max-h-[650px] w-full md:w-[600px] mx-auto p-4 bg-[#c0c0c0] shadow-lg lg:mt-[100px] md:mt-[100px] sm:mt-[100px] mt-[100px]">
       
       {/* Header - Chat Title */}
-      <div className="bg-pink-200 border-2 border-black px-3 py-2 flex items-center justify-between rounded-lg mb-4">
-        <span className="text-pink-800 font-PerfectDOSVGA437 text-lg">💬 About Me - Chat</span>
+      <div className="bg-[#e0e0e0] border-2 border-black px-3 py-2 flex items-center justify-between mb-4">
+        <span className="text-black font-PerfectDOSVGA437 text-lg">💬 About Me - Chat</span>
         <div className="flex gap-2">
-          <button className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200">_</button>
-          <button className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200">□</button>
+          <button className="px-2 py-1 bg-[#c0c0c0] border border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300">_</button>
+          <button className="px-2 py-1 bg-[#c0c0c0] border border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300">□</button>
           <Link to="/layout" onMouseDown={() => {
             const audio = new Audio(click);
             audio.play();
-          }} className="px-3 py-1 bg-[#c0c0c0] rounded-md border-2 border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 transition-colors duration-200">✖</Link>
+          }} className="px-2 py-1 bg-[#c0c0c0] border border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300">✖</Link>
         </div>
       </div>
 
       {/* Messages List - Scrollable */}
       <div 
         id="message-container" 
-        className="flex-1 overflow-y-auto space-y-4 p-4 border-2 border-black bg-white rounded-lg"
+        className="flex-1 overflow-y-auto space-y-4 p-4 border-2 border-black bg-white"
       >
         {messages.map(message => (
           <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`max-w-[70%] rounded-lg p-3 ${message.sender === 'user' ? 'bg-pink-200 text-black' : 'bg-blue-200 text-black'}`}>
               {message.sender === 'bot' ? (
-                <p dangerouslySetInnerHTML={{ __html: message.text }} />
+                <p className="font-apple-garamond" dangerouslySetInnerHTML={{ __html: message.text }} />
               ) : (
-                <p>{message.text}</p>
+                <p className="font-apple-garamond">{message.text}</p>
               )}
-              <p className="text-xs opacity-70 mt-1">{message.timestamp.toLocaleTimeString()}</p>
+              <p className="text-xs opacity-70 mt-1 font-apple-garamond">{message.timestamp.toLocaleTimeString()}</p>
             </div>
           </div>
         ))}
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Select Box & Send Button - Stuck at Bottom */}
-      <div className="sticky bottom-0 left-0 right-0 bg-white p-4 border-t flex gap-2 justify-between">
+      {/* Select Box & Send Button */}
+      <div className="sticky bottom-0 left-0 right-0 bg-[#e0e0e0] p-4 border-2 border-black flex gap-2 justify-between mt-4">
         <select
           value={selectedOption}
           onChange={handleSelectChange}
-          className="block w-full bg-white text-black p-2 rounded-lg border border-gray-400 focus:ring-2 focus:ring-blue-500"
+          className="block w-full bg-white text-black p-2 border border-black focus:outline-none font-apple-garamond"
         >
           <option value="">Select a question...</option>
           <option value="swe">Why did you pursue a career in software development?</option>
@@ -125,12 +125,11 @@ export default function About() {
             const audio = new Audio(click);
             audio.play();
           }} 
-          className="bg-pink-200 text-pink-800 px-4 py-2 rounded-lg hover:bg-pink-400 transition-colors duration-200"
+          className="bg-[#c0c0c0] text-black px-4 py-2 border border-t-white border-l-white border-r-black border-b-black hover:bg-gray-300 font-PerfectDOSVGA437"
         >
           Send
         </button>
       </div>
-
     </div>
   );
 }

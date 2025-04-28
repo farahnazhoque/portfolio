@@ -42,7 +42,7 @@ function Home() {
   return (
     <div className="absolute lg:top-10 lg:mt-20 md:mt-20 sm:mt-20 mt-25 left-1/2 -translate-x-1/2 
       w-full sm:max-w-[500px] md:max-w-[80vw] lg:max-w-[1000px]
-      bg-[#dcdcdc] shadow-[inset_0_0_4px_#999]
+      bg-[#dcdcdc]shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]
       overflow-hidden 
       min-h-[450px] md:min-h-[600px] lg:min-h-[650px] font-apple-garamond
       border-[2.5px] border-black">
