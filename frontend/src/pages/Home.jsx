@@ -174,7 +174,7 @@ function Home() {
                 <div className="font-PerfectDOSVGA437 text-sm mb-4 font-bold rounded-lg text-[#000080]">✨ Favorites ✨</div>
                 <div className="space-y-2">
                   <div 
-                    className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'mission' ? 'bg-[#4169E1] text-white' : ''}`}
+                    className={`flex items-center hover:bg-[#0000ff] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'mission' ? 'bg-[#0000ff] text-white' : ''}`}
                     onClick={() => handleSectionClick('mission')}
                     onMouseDown={() => {
                       const audio = new Audio(click);
@@ -184,7 +184,7 @@ function Home() {
                   <span className="font-PerfectDOSVGA437 text-sm">🎯 Mission</span>
                   </div>
                   <div 
-                    className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'experiences' ? 'bg-[#4169E1] text-white' : ''}`}
+                    className={`flex items-center hover:bg-[#0000ff] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'experiences' ? 'bg-[#0000ff] text-white' : ''}`}
                     onClick={() => handleSectionClick('experiences')}
                     onMouseDown={() => {
                       const audio = new Audio(click);
@@ -193,7 +193,7 @@ function Home() {
                   > 
                     <span className="font-PerfectDOSVGA437 text-sm">💼 Experiences</span>
                   </div>
-                  <div className="flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200">
+                  <div className="flex items-center hover:bg-[#0000ff] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200">
                     <a href="https://are.na/farahnaz-hoque" target="_blank" rel="noopener noreferrer" onMouseDown={() => {
                       const audio = new Audio(click);
                       audio.play();
@@ -213,7 +213,7 @@ function Home() {
                   >
                     <span className="font-PerfectDOSVGA437 text-sm">📌 Pinterest</span>
                   </a>
-                  <div className="flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200">
+                  <div className="flex items-center hover:bg-[#0000ff] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200">
                     <a href="https://adhocmusings.vercel.app/" target="_blank" rel="noopener noreferrer" onMouseDown={() => {
                       const audio = new Audio(click);
                       audio.play();
@@ -222,7 +222,7 @@ function Home() {
                     </a>
                   </div>
                   <div 
-                    className={`flex items-center hover:bg-[#4169E1] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'youtube' ? 'bg-[#4169E1] text-white' : ''}`}
+                    className={`flex items-center hover:bg-[#0000ff] hover:text-white cursor-pointer p-2 rounded-md transition-all duration-200 ${activeSection === 'youtube' ? 'bg-[#0000ff] text-white' : ''}`}
                     onClick={() =>  handleSectionClick('youtube')}  
                     onMouseDown={() => {
                       const audio = new Audio(click);
@@ -256,7 +256,7 @@ function Home() {
                 className="relative min-h-screen bg-[#f8f5ef] p-6 md:p-10 text-[#3d3d3d]" 
                 style={{
                   //If you have a paper/grain texture image, uncomment and adjust:
-                  backgroundImage: `url('${import.meta.env.BASE_URL}Mission.jpeg')`,
+                  backgroundImage: `url('${import.meta.env.BASE_URL}Mission.jpg')`,
                   backgroundSize: 'cover',
                   backgroundRepeat: 'repeat',
                 }}

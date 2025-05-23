@@ -40,7 +40,7 @@ const Layout = memo(function Layout() {
     <div 
       className="relative w-screen h-screen overflow-hidden"
       style={{
-        backgroundImage: `url('${import.meta.env.BASE_URL}Background.png')`,
+        backgroundImage: `url('${import.meta.env.BASE_URL}Background.gif')`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -56,22 +56,6 @@ const Layout = memo(function Layout() {
         <div className="p-4 font-PerfectDOSVGA437 text-sm">
           <p>Welcome to my digital space! Feel free to explore and have fun 🚀</p>
           <p className="mt-4">- Farahnaz</p>
-        </div>
-      </div>
-
-      {/* Mac-style top menu bar */}
-      <div className="fixed top-0 left-0 right-0 h-6 bg-[#dcdcdc] text-black flex items-center justify-between px-4 z-[100] border-b border-black font-PerfectDOSVGA437 text-sm">
-        <div className="flex items-center space-x-4">
-          <span className="text-black">🍎</span>
-          <span>File</span>
-          <span>Edit</span>
-          <span>View</span>
-          <span>Help</span>
-        </div>
-        <div className="flex items-center space-x-4">
-          <span>🔋 100%</span>
-          <span>📶 Wi-Fi</span>
-          <span>{currentTime.toLocaleTimeString()}</span>
         </div>
       </div>
 

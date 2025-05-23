@@ -8,7 +8,7 @@ import explorer from '../audio/explorer.wav';
 const navigation = [
   { name: 'Home', to: '/home', current: false, icon: 'missionM.png', sound: explorer },
   { name: 'Experiences', to: '/experiences', current: false, icon: 'experiencesM.png', sound: experiences },
-  { name: 'Projects', to: '/projects', current: false, icon: 'projectsM.png', sound: projects }, 
+  { name: 'Projects', to: '/projects', current: false, icon: 'projectM.png', sound: projects }, 
   { name: 'About', to: '/about', current: false, icon: 'aboutM.png', sound: about },
 ];
 
@@ -109,7 +109,7 @@ export default function Navbar() {
                 const audio = new Audio(click);
                 audio.play();
               }}
-              className="flex flex-col items-end text-right justify-end font-PerfectDOSVGA437 text-white hover:text-[#fbcfe8] text-lg"
+              className="flex flex-col items-end text-right justify-end font-PerfectDOSVGA437 active:text-[#0000ff] text-white hover:text-[#0000ff] text-lg"
             >
               <img 
                 src={import.meta.env.BASE_URL + item.icon}
