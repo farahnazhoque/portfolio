@@ -9,11 +9,63 @@ function Experiences() {
 
   const experiences = [
     {
+      title: "CONIC.doc",
+      role: "CONTRACT SOFTWARE ENGINEER",
+      icon: import.meta.env.BASE_URL + 'wordDoc.png',
+      link: "https://conicgroup.com/",
+      period: "JUNE 2025 - PRESENT",
+      content: {
+        image: import.meta.env.BASE_URL + 'conic.jpeg',
+
+        summary: {
+          team: [
+            "1 Chief Executive Officer",
+            "1 Executive Manager", 
+            "2 Developers"
+          ],
+          myRole: "Contract Software Engineer",
+          timeline: "June 2025 - Present",
+          projectPhases: [
+            "Software Development (June 2025 - Present)"
+          ]
+        },
+        responsibilities: [
+          "Architecting and implementing a multi-source AI suggestion engine using the Zerowidth Workbench, orchestrating queries across a vector database, a curated knowledge base, and external APIs to guide users in creating data-driven logic models.",
+          "Developing a complete data ingestion pipeline for user-uploaded documents (PDFs, DOCs), which automates the parsing, chunking, and creation of vector embeddings to enable Retrieval-Augmented Generation (RAG) for contextual AI analysis.",
+          "Engineering the full backend system for the application, including designing the database schemas for user projects and knowledge bases, and building the API endpoints to support the core UI and a real-time progress tracking dashboard.",
+          "Designing scalable database schemas for storing complex user-generated logic models and the curated knowledge base powering the AI.",
+          "Building RESTful API endpoints to support the core application UI, enabling real-time creation and manipulation of visual logic models.",
+          "Collaborating within a cross-functional team (design, front-end) and with the Zerowidth lead developer to engineer dedicated data endpoints, powering a real-time dashboard for visualizing user impact.",
+        ],
+        purpose: [
+          "The mission of Conic truly spoke to my philanthropic heart as they are trying to solve a significant gap within the civic sector, especially when it comes to Urban Planning and Development.",
+          "I am a strong believer in the power of technology to solve real-world problems, and I am excited to be a part of a team that is using technology to make a difference in the world."
+        ],
+        technologies: [
+          "Zerowidth Workbench",
+          "Python",
+          "FastAPI",
+          "PostgreSQL",
+          "LangChain",
+          "AWS",
+          "AWS S3",
+          "TypeScript",
+          "React",
+          "Tailwind CSS",
+          "Shadcn UI",
+          "Vercel",
+          "Docker",
+          "Git",
+          "GitHub"
+        ]
+      }
+    },
+    {
       title: "JOE C. WEN SCHOOL OF POPULATION AND PUBLIC HEALTH.doc",
       role: "DATA SCIENCE RESEARCH ASSISTANT INTERN",
       icon: import.meta.env.BASE_URL + 'wordDoc.png',
       link: "https://drwulab.net/",
-      period: "JANUARY 2025 - PRESENT",
+      period: "JANUARY 2025 - JUNE 2025",
       content: {
         image: import.meta.env.BASE_URL + 'drWu.png',
 
@@ -24,7 +76,7 @@ function Experiences() {
             "3 Data Science Research Assistants (including myself)"
           ],
           myRole: "Data Science Research Assistant",
-          timeline: "January 2025 - Present",
+          timeline: "January 2025 - June 2025",
           projectPhases: [
             "Data Collection (Jan 2025)",
             "Data Processing & Analysis (Jan-Feb 2025)",
@@ -58,7 +110,7 @@ function Experiences() {
         role: "WEBSITE DEVELOPER, DESIGNER AND COMMUNICATIONS COORDINATOR",
         icon: import.meta.env.BASE_URL + 'wordDoc.png',
         link: "https://soar.uci.edu",
-        period: "JANUARY 2025 - PRESENT",
+        period: "AUGUST 2024 - JUNE 2025",
         content: {
           image: import.meta.env.BASE_URL + 'soar.png',
   
@@ -68,7 +120,7 @@ function Experiences() {
               "1 Website Developer and Designer (just me)"
             ],
             myRole: "Website Developer and Designer",
-            timeline: "August 2024 - Present",
+            timeline: "August 2024 - June 2025",
             projectPhases: [
               "Website Design (Aug 2024 - October 2024)",
               "Website Development (October 2024 - Present)",
@@ -304,7 +356,7 @@ function Experiences() {
         <div className="bg-[#dcdcdc] px-3 py-1 flex items-center justify-between border-b border-[#a0a0a0]">
         <div className="flex items-center">
             
-        <span className="text-black font-PerfectDOSVGA437 text-base tracking-tight">Welcome Home</span>
+        <span className="text-black font-PerfectDOSVGA437 text-base tracking-tight">Experiences Document</span>
         </div>
           <div className="flex gap-2">
             <button
@@ -370,7 +422,7 @@ function Experiences() {
                     }}
                   >
                     <img src={exp.icon} alt="Word doc" className="w-12 h-12 mb-2" />
-                    <span className="font-PerfectDOSVGA437 text-xs text-center">{exp.title}</span>
+                    <span className="font-PerfectDOSVGA437 text-xs text-center text-[#0000ff]">{exp.title}</span>
                   </div>
                 ))}
               </div>
